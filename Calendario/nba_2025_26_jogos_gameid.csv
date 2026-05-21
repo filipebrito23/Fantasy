@@ -1,0 +1,1402 @@
+﻿SEASON,GAME_DATE,GAME_ID,AWAY_TEAM_ABBR,AWAY_TEAM_NAME,HOME_TEAM_ABBR,HOME_TEAM_NAME
+2024-25,2024-10-04,0012400001,DEN,Denver Nuggets,,
+2024-25,2024-10-04,0012400002,NZB,New Zealand Breakers,UTA,Utah Jazz
+2024-25,2024-10-04,0012400003,MIN,Minnesota Timberwolves,LAL,Los Angeles Lakers
+2024-25,2024-10-05,0012400004,GSW,Golden State Warriors,LAC,LA Clippers
+2024-25,2024-10-06,0012400005,DEN,Denver Nuggets,,
+2024-25,2024-10-06,0012400006,NYK,New York Knicks,CHA,Charlotte Hornets
+2024-25,2024-10-06,0012400007,WAS,Washington Wizards,,
+2024-25,2024-10-06,0012400008,MIL,Milwaukee Bucks,DET,Detroit Pistons
+2024-25,2024-10-06,0012400009,PHX,Phoenix Suns,LAL,Los Angeles Lakers
+2024-25,2024-10-07,0012400010,ORL,Orlando Magic,NOP,New Orleans Pelicans
+2024-25,2024-10-07,0012400011,NZB,New Zealand Breakers,PHI,Philadelphia 76ers
+2024-25,2024-10-07,0012400012,MEM,Memphis Grizzlies,DAL,Dallas Mavericks
+2024-25,2024-10-07,0012400013,OKC,Oklahoma City Thunder,SAS,San Antonio Spurs
+2024-25,2024-10-07,0012400014,HOU,Houston Rockets,UTA,Utah Jazz
+2024-25,2024-10-08,0012400015,MIA,Miami Heat,CHA,Charlotte Hornets
+2024-25,2024-10-08,0012400016,CHI,Chicago Bulls,CLE,Cleveland Cavaliers
+2024-25,2024-10-08,0012400017,PHX,Phoenix Suns,DET,Detroit Pistons
+2024-25,2024-10-08,0012400018,IND,Indiana Pacers,ATL,Atlanta Hawks
+2024-25,2024-10-08,0012400019,BKN,Brooklyn Nets,LAC,LA Clippers
+2024-25,2024-10-09,0012400020,WAS,Washington Wizards,NYK,New York Knicks
+2024-25,2024-10-09,0012400021,HOU,Houston Rockets,OKC,Oklahoma City Thunder
+2024-25,2024-10-09,0012400022,ORL,Orlando Magic,SAS,San Antonio Spurs
+2024-25,2024-10-09,0012400023,GSW,Golden State Warriors,SAC,Sacramento Kings
+2024-25,2024-10-10,0012400024,IND,Indiana Pacers,CLE,Cleveland Cavaliers
+2024-25,2024-10-10,0012400026,UTA,Utah Jazz,DAL,Dallas Mavericks
+2024-25,2024-10-10,0012400027,CHA,Charlotte Hornets,MEM,Memphis Grizzlies
+2024-25,2024-10-10,0012400028,LAL,Los Angeles Lakers,MIL,Milwaukee Bucks
+2024-25,2024-10-10,0012400029,NZB,New Zealand Breakers,OKC,Oklahoma City Thunder
+2024-25,2024-10-11,0012400031,TOR,Toronto Raptors,WAS,Washington Wizards
+2024-25,2024-10-11,0012400032,PHI,Philadelphia 76ers,MIN,Minnesota Timberwolves
+2024-25,2024-10-11,0012400033,SAC,Sacramento Kings,GSW,Golden State Warriors
+2024-25,2024-10-11,0012400034,DET,Detroit Pistons,PHX,Phoenix Suns
+2024-25,2024-10-11,0012400035,POR,Portland Trail Blazers,LAC,LA Clippers
+2024-25,2024-10-12,0012400036,PHI,Philadelphia 76ers,BOS,Boston Celtics
+2024-25,2024-10-12,0012400037,MEM,Memphis Grizzlies,CHI,Chicago Bulls
+2024-25,2024-10-12,0012400038,UTA,Utah Jazz,SAS,San Antonio Spurs
+2024-25,2024-10-13,0012400039,NOP,New Orleans Pelicans,MIA,Miami Heat
+2024-25,2024-10-13,0012400040,MIN,Minnesota Timberwolves,NYK,New York Knicks
+2024-25,2024-10-13,0012400041,POR,Portland Trail Blazers,SAC,Sacramento Kings
+2024-25,2024-10-13,0012400042,TOR,Toronto Raptors,BOS,Boston Celtics
+2024-25,2024-10-13,0012400043,PHX,Phoenix Suns,DEN,Denver Nuggets
+2024-25,2024-10-13,0012400044,DET,Detroit Pistons,GSW,Golden State Warriors
+2024-25,2024-10-14,0012400045,MEM,Memphis Grizzlies,IND,Indiana Pacers
+2024-25,2024-10-14,0012400046,PHI,Philadelphia 76ers,ATL,Atlanta Hawks
+2024-25,2024-10-14,0012400047,WAS,Washington Wizards,BKN,Brooklyn Nets
+2024-25,2024-10-14,0012400048,CHI,Chicago Bulls,MIL,Milwaukee Bucks
+2024-25,2024-10-14,0012400049,DAL,Dallas Mavericks,LAC,LA Clippers
+2024-25,2024-10-15,0012400050,BOS,Boston Celtics,TOR,Toronto Raptors
+2024-25,2024-10-15,0012400051,SAS,San Antonio Spurs,MIA,Miami Heat
+2024-25,2024-10-15,0012400052,CHA,Charlotte Hornets,NYK,New York Knicks
+2024-25,2024-10-15,0012400053,NOP,New Orleans Pelicans,HOU,Houston Rockets
+2024-25,2024-10-15,0012400054,OKC,Oklahoma City Thunder,DEN,Denver Nuggets
+2024-25,2024-10-15,0012400055,SAC,Sacramento Kings,UTA,Utah Jazz
+2024-25,2024-10-15,0012400056,GSW,Golden State Warriors,LAL,Los Angeles Lakers
+2024-25,2024-10-16,0012400025,ATL,Atlanta Hawks,MIA,Miami Heat
+2024-25,2024-10-16,0012400057,CLE,Cleveland Cavaliers,DET,Detroit Pistons
+2024-25,2024-10-16,0012400058,BKN,Brooklyn Nets,PHI,Philadelphia 76ers
+2024-25,2024-10-16,0012400059,MIN,Minnesota Timberwolves,CHI,Chicago Bulls
+2024-25,2024-10-16,0012400060,ULM,Ratiopharm Ulm,POR,Portland Trail Blazers
+2024-25,2024-10-17,0012400061,CHA,Charlotte Hornets,IND,Indiana Pacers
+2024-25,2024-10-17,0012400062,MIL,Milwaukee Bucks,DAL,Dallas Mavericks
+2024-25,2024-10-17,0012400063,SAS,San Antonio Spurs,HOU,Houston Rockets
+2024-25,2024-10-17,0012400064,ATL,Atlanta Hawks,OKC,Oklahoma City Thunder
+2024-25,2024-10-17,0012400065,LAL,Los Angeles Lakers,PHX,Phoenix Suns
+2024-25,2024-10-17,0012400066,SAC,Sacramento Kings,LAC,LA Clippers
+2024-25,2024-10-17,0012400072,DEN,Denver Nuggets,MIN,Minnesota Timberwolves
+2024-25,2024-10-18,0012400067,PHI,Philadelphia 76ers,ORL,Orlando Magic
+2024-25,2024-10-18,0012400068,NYK,New York Knicks,WAS,Washington Wizards
+2024-25,2024-10-18,0012400069,TOR,Toronto Raptors,BKN,Brooklyn Nets
+2024-25,2024-10-18,0012400070,CLE,Cleveland Cavaliers,CHI,Chicago Bulls
+2024-25,2024-10-18,0012400071,MIA,Miami Heat,MEM,Memphis Grizzlies
+2024-25,2024-10-18,0012400073,UTA,Utah Jazz,POR,Portland Trail Blazers
+2024-25,2024-10-18,0012400074,LAL,Los Angeles Lakers,GSW,Golden State Warriors
+2024-25,2024-10-22,0022400061,NYK,New York Knicks,BOS,Boston Celtics
+2024-25,2024-10-22,0022400062,MIN,Minnesota Timberwolves,LAL,Los Angeles Lakers
+2024-25,2024-10-23,0022400063,IND,Indiana Pacers,DET,Detroit Pistons
+2024-25,2024-10-23,0022400064,BKN,Brooklyn Nets,ATL,Atlanta Hawks
+2024-25,2024-10-23,0022400065,ORL,Orlando Magic,MIA,Miami Heat
+2024-25,2024-10-23,0022400066,MIL,Milwaukee Bucks,PHI,Philadelphia 76ers
+2024-25,2024-10-23,0022400067,CLE,Cleveland Cavaliers,TOR,Toronto Raptors
+2024-25,2024-10-23,0022400068,CHA,Charlotte Hornets,HOU,Houston Rockets
+2024-25,2024-10-23,0022400069,CHI,Chicago Bulls,NOP,New Orleans Pelicans
+2024-25,2024-10-23,0022400070,MEM,Memphis Grizzlies,UTA,Utah Jazz
+2024-25,2024-10-23,0022400071,PHX,Phoenix Suns,LAC,LA Clippers
+2024-25,2024-10-23,0022400072,GSW,Golden State Warriors,POR,Portland Trail Blazers
+2024-25,2024-10-24,0022400073,BOS,Boston Celtics,WAS,Washington Wizards
+2024-25,2024-10-24,0022400074,SAS,San Antonio Spurs,DAL,Dallas Mavericks
+2024-25,2024-10-24,0022400075,OKC,Oklahoma City Thunder,DEN,Denver Nuggets
+2024-25,2024-10-24,0022400076,MIN,Minnesota Timberwolves,SAC,Sacramento Kings
+2024-25,2024-10-25,0022400077,BKN,Brooklyn Nets,ORL,Orlando Magic
+2024-25,2024-10-25,0022400078,PHI,Philadelphia 76ers,TOR,Toronto Raptors
+2024-25,2024-10-25,0022400079,CHA,Charlotte Hornets,ATL,Atlanta Hawks
+2024-25,2024-10-25,0022400080,DET,Detroit Pistons,CLE,Cleveland Cavaliers
+2024-25,2024-10-25,0022400081,IND,Indiana Pacers,NYK,New York Knicks
+2024-25,2024-10-25,0022400082,MEM,Memphis Grizzlies,HOU,Houston Rockets
+2024-25,2024-10-25,0022400083,CHI,Chicago Bulls,MIL,Milwaukee Bucks
+2024-25,2024-10-25,0022400084,GSW,Golden State Warriors,UTA,Utah Jazz
+2024-25,2024-10-25,0022400085,PHX,Phoenix Suns,LAL,Los Angeles Lakers
+2024-25,2024-10-25,0022400086,NOP,New Orleans Pelicans,POR,Portland Trail Blazers
+2024-25,2024-10-26,0022400087,LAC,LA Clippers,DEN,Denver Nuggets
+2024-25,2024-10-26,0022400088,MIA,Miami Heat,CHA,Charlotte Hornets
+2024-25,2024-10-26,0022400089,BOS,Boston Celtics,DET,Detroit Pistons
+2024-25,2024-10-26,0022400090,CLE,Cleveland Cavaliers,WAS,Washington Wizards
+2024-25,2024-10-26,0022400091,OKC,Oklahoma City Thunder,CHI,Chicago Bulls
+2024-25,2024-10-26,0022400092,ORL,Orlando Magic,MEM,Memphis Grizzlies
+2024-25,2024-10-26,0022400093,TOR,Toronto Raptors,MIN,Minnesota Timberwolves
+2024-25,2024-10-26,0022400094,HOU,Houston Rockets,SAS,San Antonio Spurs
+2024-25,2024-10-26,0022400095,DAL,Dallas Mavericks,PHX,Phoenix Suns
+2024-25,2024-10-26,0022400096,SAC,Sacramento Kings,LAL,Los Angeles Lakers
+2024-25,2024-10-27,0022400097,PHI,Philadelphia 76ers,IND,Indiana Pacers
+2024-25,2024-10-27,0022400098,MIL,Milwaukee Bucks,BKN,Brooklyn Nets
+2024-25,2024-10-27,0022400099,NOP,New Orleans Pelicans,POR,Portland Trail Blazers
+2024-25,2024-10-27,0022400100,ATL,Atlanta Hawks,OKC,Oklahoma City Thunder
+2024-25,2024-10-27,0022400101,LAC,LA Clippers,GSW,Golden State Warriors
+2024-25,2024-10-28,0022400102,IND,Indiana Pacers,ORL,Orlando Magic
+2024-25,2024-10-28,0022400103,WAS,Washington Wizards,ATL,Atlanta Hawks
+2024-25,2024-10-28,0022400104,MIL,Milwaukee Bucks,BOS,Boston Celtics
+2024-25,2024-10-28,0022400105,DET,Detroit Pistons,MIA,Miami Heat
+2024-25,2024-10-28,0022400106,CLE,Cleveland Cavaliers,NYK,New York Knicks
+2024-25,2024-10-28,0022400107,DEN,Denver Nuggets,TOR,Toronto Raptors
+2024-25,2024-10-28,0022400108,CHI,Chicago Bulls,MEM,Memphis Grizzlies
+2024-25,2024-10-28,0022400109,HOU,Houston Rockets,SAS,San Antonio Spurs
+2024-25,2024-10-28,0022400110,UTA,Utah Jazz,DAL,Dallas Mavericks
+2024-25,2024-10-28,0022400111,LAL,Los Angeles Lakers,PHX,Phoenix Suns
+2024-25,2024-10-28,0022400112,POR,Portland Trail Blazers,SAC,Sacramento Kings
+2024-25,2024-10-29,0022400113,DEN,Denver Nuggets,BKN,Brooklyn Nets
+2024-25,2024-10-29,0022400114,DAL,Dallas Mavericks,MIN,Minnesota Timberwolves
+2024-25,2024-10-29,0022400115,SAC,Sacramento Kings,UTA,Utah Jazz
+2024-25,2024-10-29,0022400116,NOP,New Orleans Pelicans,GSW,Golden State Warriors
+2024-25,2024-10-30,0022400117,TOR,Toronto Raptors,CHA,Charlotte Hornets
+2024-25,2024-10-30,0022400118,LAL,Los Angeles Lakers,CLE,Cleveland Cavaliers
+2024-25,2024-10-30,0022400119,BOS,Boston Celtics,IND,Indiana Pacers
+2024-25,2024-10-30,0022400120,DET,Detroit Pistons,PHI,Philadelphia 76ers
+2024-25,2024-10-30,0022400121,ATL,Atlanta Hawks,WAS,Washington Wizards
+2024-25,2024-10-30,0022400122,NYK,New York Knicks,MIA,Miami Heat
+2024-25,2024-10-30,0022400123,ORL,Orlando Magic,CHI,Chicago Bulls
+2024-25,2024-10-30,0022400124,BKN,Brooklyn Nets,MEM,Memphis Grizzlies
+2024-25,2024-10-30,0022400125,SAS,San Antonio Spurs,OKC,Oklahoma City Thunder
+2024-25,2024-10-30,0022400126,NOP,New Orleans Pelicans,GSW,Golden State Warriors
+2024-25,2024-10-30,0022400127,POR,Portland Trail Blazers,LAC,LA Clippers
+2024-25,2024-10-31,0022400128,MIL,Milwaukee Bucks,MEM,Memphis Grizzlies
+2024-25,2024-10-31,0022400129,HOU,Houston Rockets,DAL,Dallas Mavericks
+2024-25,2024-10-31,0022400130,SAS,San Antonio Spurs,UTA,Utah Jazz
+2024-25,2024-10-31,0022400131,PHX,Phoenix Suns,LAC,LA Clippers
+2024-25,2024-11-01,0022400132,BOS,Boston Celtics,CHA,Charlotte Hornets
+2024-25,2024-11-01,0022400133,ORL,Orlando Magic,CLE,Cleveland Cavaliers
+2024-25,2024-11-01,0022400134,NYK,New York Knicks,DET,Detroit Pistons
+2024-25,2024-11-01,0022400135,SAC,Sacramento Kings,ATL,Atlanta Hawks
+2024-25,2024-11-01,0022400136,CHI,Chicago Bulls,BKN,Brooklyn Nets
+2024-25,2024-11-01,0022400137,LAL,Los Angeles Lakers,TOR,Toronto Raptors
+2024-25,2024-11-01,0022400138,IND,Indiana Pacers,NOP,New Orleans Pelicans
+2024-25,2024-11-01,0022400139,DEN,Denver Nuggets,MIN,Minnesota Timberwolves
+2024-25,2024-11-01,0022400140,OKC,Oklahoma City Thunder,POR,Portland Trail Blazers
+2024-25,2024-11-02,0022400141,BOS,Boston Celtics,CHA,Charlotte Hornets
+2024-25,2024-11-02,0022400142,MEM,Memphis Grizzlies,PHI,Philadelphia 76ers
+2024-25,2024-11-02,0022400143,SAC,Sacramento Kings,TOR,Toronto Raptors
+2024-25,2024-11-02,0022400144,GSW,Golden State Warriors,HOU,Houston Rockets
+2024-25,2024-11-02,0022400145,CLE,Cleveland Cavaliers,MIL,Milwaukee Bucks
+2024-25,2024-11-02,0022400146,MIN,Minnesota Timberwolves,SAS,San Antonio Spurs
+2024-25,2024-11-02,0022400147,WAS,Washington Wizards,,
+2024-25,2024-11-02,0022400148,UTA,Utah Jazz,DEN,Denver Nuggets
+2024-25,2024-11-02,0022400149,POR,Portland Trail Blazers,PHX,Phoenix Suns
+2024-25,2024-11-02,0022400150,OKC,Oklahoma City Thunder,LAC,LA Clippers
+2024-25,2024-11-03,0022400151,DET,Detroit Pistons,BKN,Brooklyn Nets
+2024-25,2024-11-03,0022400152,ATL,Atlanta Hawks,NOP,New Orleans Pelicans
+2024-25,2024-11-03,0022400153,ORL,Orlando Magic,DAL,Dallas Mavericks
+2024-25,2024-11-04,0022400154,MIL,Milwaukee Bucks,CLE,Cleveland Cavaliers
+2024-25,2024-11-04,0022400155,GSW,Golden State Warriors,WAS,Washington Wizards
+2024-25,2024-11-04,0022400156,LAL,Los Angeles Lakers,DET,Detroit Pistons
+2024-25,2024-11-04,0022400157,BOS,Boston Celtics,ATL,Atlanta Hawks
+2024-25,2024-11-04,0022400158,MEM,Memphis Grizzlies,BKN,Brooklyn Nets
+2024-25,2024-11-04,0022400159,SAC,Sacramento Kings,MIA,Miami Heat
+2024-25,2024-11-04,0022400160,UTA,Utah Jazz,CHI,Chicago Bulls
+2024-25,2024-11-04,0022400161,NYK,New York Knicks,HOU,Houston Rockets
+2024-25,2024-11-04,0022400162,CHA,Charlotte Hornets,MIN,Minnesota Timberwolves
+2024-25,2024-11-04,0022400163,ORL,Orlando Magic,OKC,Oklahoma City Thunder
+2024-25,2024-11-04,0022400164,POR,Portland Trail Blazers,NOP,New Orleans Pelicans
+2024-25,2024-11-04,0022400165,IND,Indiana Pacers,DAL,Dallas Mavericks
+2024-25,2024-11-04,0022400166,TOR,Toronto Raptors,DEN,Denver Nuggets
+2024-25,2024-11-04,0022400167,PHI,Philadelphia 76ers,PHX,Phoenix Suns
+2024-25,2024-11-04,0022400168,SAS,San Antonio Spurs,LAC,LA Clippers
+2024-25,2024-11-06,0022400169,DET,Detroit Pistons,CHA,Charlotte Hornets
+2024-25,2024-11-06,0022400170,ORL,Orlando Magic,IND,Indiana Pacers
+2024-25,2024-11-06,0022400171,NYK,New York Knicks,ATL,Atlanta Hawks
+2024-25,2024-11-06,0022400172,GSW,Golden State Warriors,BOS,Boston Celtics
+2024-25,2024-11-06,0022400173,SAS,San Antonio Spurs,HOU,Houston Rockets
+2024-25,2024-11-06,0022400174,LAL,Los Angeles Lakers,MEM,Memphis Grizzlies
+2024-25,2024-11-06,0022400175,CLE,Cleveland Cavaliers,NOP,New Orleans Pelicans
+2024-25,2024-11-06,0022400176,CHI,Chicago Bulls,DAL,Dallas Mavericks
+2024-25,2024-11-06,0022400177,OKC,Oklahoma City Thunder,DEN,Denver Nuggets
+2024-25,2024-11-06,0022400178,MIA,Miami Heat,PHX,Phoenix Suns
+2024-25,2024-11-06,0022400179,PHI,Philadelphia 76ers,LAC,LA Clippers
+2024-25,2024-11-06,0022400180,TOR,Toronto Raptors,SAC,Sacramento Kings
+2024-25,2024-11-07,0022400181,MIN,Minnesota Timberwolves,CHI,Chicago Bulls
+2024-25,2024-11-07,0022400182,UTA,Utah Jazz,MIL,Milwaukee Bucks
+2024-25,2024-11-07,0022400183,POR,Portland Trail Blazers,SAS,San Antonio Spurs
+2024-25,2024-11-08,0022400184,IND,Indiana Pacers,CHA,Charlotte Hornets
+2024-25,2024-11-08,0022400185,ATL,Atlanta Hawks,DET,Detroit Pistons
+2024-25,2024-11-08,0022400186,NOP,New Orleans Pelicans,ORL,Orlando Magic
+2024-25,2024-11-08,0022400187,BKN,Brooklyn Nets,BOS,Boston Celtics
+2024-25,2024-11-08,0022400188,GSW,Golden State Warriors,CLE,Cleveland Cavaliers
+2024-25,2024-11-08,0022400189,MIL,Milwaukee Bucks,NYK,New York Knicks
+2024-25,2024-11-08,0022400190,PHX,Phoenix Suns,DAL,Dallas Mavericks
+2024-25,2024-11-08,0022400191,WAS,Washington Wizards,MEM,Memphis Grizzlies
+2024-25,2024-11-08,0022400192,HOU,Houston Rockets,OKC,Oklahoma City Thunder
+2024-25,2024-11-08,0022400193,POR,Portland Trail Blazers,MIN,Minnesota Timberwolves
+2024-25,2024-11-08,0022400194,MIA,Miami Heat,DEN,Denver Nuggets
+2024-25,2024-11-08,0022400195,PHI,Philadelphia 76ers,LAL,Los Angeles Lakers
+2024-25,2024-11-08,0022400196,LAC,LA Clippers,SAC,Sacramento Kings
+2024-25,2024-11-09,0022400197,UTA,Utah Jazz,SAS,San Antonio Spurs
+2024-25,2024-11-09,0022400198,CHI,Chicago Bulls,ATL,Atlanta Hawks
+2024-25,2024-11-09,0022400199,BKN,Brooklyn Nets,CLE,Cleveland Cavaliers
+2024-25,2024-11-09,0022400200,TOR,Toronto Raptors,LAC,LA Clippers
+2024-25,2024-11-10,0022400201,HOU,Houston Rockets,DET,Detroit Pistons
+2024-25,2024-11-10,0022400202,BOS,Boston Celtics,MIL,Milwaukee Bucks
+2024-25,2024-11-10,0022400203,NYK,New York Knicks,IND,Indiana Pacers
+2024-25,2024-11-10,0022400204,WAS,Washington Wizards,ORL,Orlando Magic
+2024-25,2024-11-10,0022400205,CHA,Charlotte Hornets,PHI,Philadelphia 76ers
+2024-25,2024-11-10,0022400206,MIA,Miami Heat,MIN,Minnesota Timberwolves
+2024-25,2024-11-10,0022400207,GSW,Golden State Warriors,OKC,Oklahoma City Thunder
+2024-25,2024-11-10,0022400208,DAL,Dallas Mavericks,DEN,Denver Nuggets
+2024-25,2024-11-10,0022400209,SAC,Sacramento Kings,PHX,Phoenix Suns
+2024-25,2024-11-10,0022400210,MEM,Memphis Grizzlies,POR,Portland Trail Blazers
+2024-25,2024-11-10,0022400211,TOR,Toronto Raptors,LAL,Los Angeles Lakers
+2024-25,2024-11-11,0022400212,CLE,Cleveland Cavaliers,CHI,Chicago Bulls
+2024-25,2024-11-11,0022400213,WAS,Washington Wizards,HOU,Houston Rockets
+2024-25,2024-11-11,0022400214,BKN,Brooklyn Nets,NOP,New Orleans Pelicans
+2024-25,2024-11-11,0022400215,LAC,LA Clippers,OKC,Oklahoma City Thunder
+2024-25,2024-11-11,0022400216,SAC,Sacramento Kings,SAS,San Antonio Spurs
+2024-25,2024-11-12,0022400001,ATL,Atlanta Hawks,BOS,Boston Celtics
+2024-25,2024-11-12,0022400002,MIA,Miami Heat,DET,Detroit Pistons
+2024-25,2024-11-12,0022400003,CHA,Charlotte Hornets,ORL,Orlando Magic
+2024-25,2024-11-12,0022400004,NYK,New York Knicks,PHI,Philadelphia 76ers
+2024-25,2024-11-12,0022400005,TOR,Toronto Raptors,MIL,Milwaukee Bucks
+2024-25,2024-11-12,0022400006,PHX,Phoenix Suns,UTA,Utah Jazz
+2024-25,2024-11-12,0022400007,DAL,Dallas Mavericks,GSW,Golden State Warriors
+2024-25,2024-11-12,0022400008,MIN,Minnesota Timberwolves,POR,Portland Trail Blazers
+2024-25,2024-11-13,0022400217,IND,Indiana Pacers,ORL,Orlando Magic
+2024-25,2024-11-13,0022400218,BOS,Boston Celtics,BKN,Brooklyn Nets
+2024-25,2024-11-13,0022400219,CHI,Chicago Bulls,NYK,New York Knicks
+2024-25,2024-11-13,0022400220,CLE,Cleveland Cavaliers,PHI,Philadelphia 76ers
+2024-25,2024-11-13,0022400221,NOP,New Orleans Pelicans,OKC,Oklahoma City Thunder
+2024-25,2024-11-13,0022400222,LAC,LA Clippers,HOU,Houston Rockets
+2024-25,2024-11-13,0022400223,DET,Detroit Pistons,MIL,Milwaukee Bucks
+2024-25,2024-11-13,0022400224,WAS,Washington Wizards,SAS,San Antonio Spurs
+2024-25,2024-11-13,0022400225,MEM,Memphis Grizzlies,LAL,Los Angeles Lakers
+2024-25,2024-11-13,0022400226,MIN,Minnesota Timberwolves,POR,Portland Trail Blazers
+2024-25,2024-11-13,0022400227,PHX,Phoenix Suns,SAC,Sacramento Kings
+2024-25,2024-11-14,0022400228,DAL,Dallas Mavericks,UTA,Utah Jazz
+2024-25,2024-11-15,0022400009,MIA,Miami Heat,IND,Indiana Pacers
+2024-25,2024-11-15,0022400010,PHI,Philadelphia 76ers,ORL,Orlando Magic
+2024-25,2024-11-15,0022400011,DET,Detroit Pistons,TOR,Toronto Raptors
+2024-25,2024-11-15,0022400012,WAS,Washington Wizards,ATL,Atlanta Hawks
+2024-25,2024-11-15,0022400013,CHI,Chicago Bulls,CLE,Cleveland Cavaliers
+2024-25,2024-11-15,0022400014,BKN,Brooklyn Nets,NYK,New York Knicks
+2024-25,2024-11-15,0022400015,LAL,Los Angeles Lakers,SAS,San Antonio Spurs
+2024-25,2024-11-15,0022400016,LAC,LA Clippers,HOU,Houston Rockets
+2024-25,2024-11-15,0022400017,DEN,Denver Nuggets,NOP,New Orleans Pelicans
+2024-25,2024-11-15,0022400018,PHX,Phoenix Suns,OKC,Oklahoma City Thunder
+2024-25,2024-11-15,0022400019,MEM,Memphis Grizzlies,GSW,Golden State Warriors
+2024-25,2024-11-15,0022400020,MIN,Minnesota Timberwolves,SAC,Sacramento Kings
+2024-25,2024-11-16,0022400229,MIL,Milwaukee Bucks,CHA,Charlotte Hornets
+2024-25,2024-11-16,0022400230,TOR,Toronto Raptors,BOS,Boston Celtics
+2024-25,2024-11-16,0022400231,LAL,Los Angeles Lakers,NOP,New Orleans Pelicans
+2024-25,2024-11-16,0022400232,SAS,San Antonio Spurs,DAL,Dallas Mavericks
+2024-25,2024-11-16,0022400233,UTA,Utah Jazz,SAC,Sacramento Kings
+2024-25,2024-11-17,0022400234,PHX,Phoenix Suns,MIN,Minnesota Timberwolves
+2024-25,2024-11-17,0022400235,MIA,Miami Heat,IND,Indiana Pacers
+2024-25,2024-11-17,0022400236,CHA,Charlotte Hornets,CLE,Cleveland Cavaliers
+2024-25,2024-11-17,0022400237,DET,Detroit Pistons,WAS,Washington Wizards
+2024-25,2024-11-17,0022400238,DEN,Denver Nuggets,MEM,Memphis Grizzlies
+2024-25,2024-11-17,0022400239,ATL,Atlanta Hawks,POR,Portland Trail Blazers
+2024-25,2024-11-17,0022400240,BKN,Brooklyn Nets,NYK,New York Knicks
+2024-25,2024-11-17,0022400241,HOU,Houston Rockets,CHI,Chicago Bulls
+2024-25,2024-11-17,0022400242,DAL,Dallas Mavericks,OKC,Oklahoma City Thunder
+2024-25,2024-11-17,0022400243,UTA,Utah Jazz,LAC,LA Clippers
+2024-25,2024-11-18,0022400244,CHI,Chicago Bulls,DET,Detroit Pistons
+2024-25,2024-11-18,0022400245,PHI,Philadelphia 76ers,MIA,Miami Heat
+2024-25,2024-11-18,0022400246,WAS,Washington Wizards,NYK,New York Knicks
+2024-25,2024-11-18,0022400247,IND,Indiana Pacers,TOR,Toronto Raptors
+2024-25,2024-11-18,0022400248,HOU,Houston Rockets,MIL,Milwaukee Bucks
+2024-25,2024-11-18,0022400249,ORL,Orlando Magic,PHX,Phoenix Suns
+2024-25,2024-11-18,0022400250,ATL,Atlanta Hawks,SAC,Sacramento Kings
+2024-25,2024-11-18,0022400251,GSW,Golden State Warriors,LAC,LA Clippers
+2024-25,2024-11-19,0022400021,CLE,Cleveland Cavaliers,BOS,Boston Celtics
+2024-25,2024-11-19,0022400022,CHA,Charlotte Hornets,BKN,Brooklyn Nets
+2024-25,2024-11-19,0022400023,DEN,Denver Nuggets,MEM,Memphis Grizzlies
+2024-25,2024-11-19,0022400024,NOP,New Orleans Pelicans,DAL,Dallas Mavericks
+2024-25,2024-11-19,0022400025,OKC,Oklahoma City Thunder,SAS,San Antonio Spurs
+2024-25,2024-11-19,0022400026,UTA,Utah Jazz,LAL,Los Angeles Lakers
+2024-25,2024-11-20,0022400252,NOP,New Orleans Pelicans,CLE,Cleveland Cavaliers
+2024-25,2024-11-20,0022400253,CHI,Chicago Bulls,MIL,Milwaukee Bucks
+2024-25,2024-11-20,0022400254,IND,Indiana Pacers,HOU,Houston Rockets
+2024-25,2024-11-20,0022400255,PHI,Philadelphia 76ers,MEM,Memphis Grizzlies
+2024-25,2024-11-20,0022400256,POR,Portland Trail Blazers,OKC,Oklahoma City Thunder
+2024-25,2024-11-20,0022400257,NYK,New York Knicks,PHX,Phoenix Suns
+2024-25,2024-11-20,0022400258,ATL,Atlanta Hawks,GSW,Golden State Warriors
+2024-25,2024-11-20,0022400259,ORL,Orlando Magic,LAC,LA Clippers
+2024-25,2024-11-21,0022400260,DET,Detroit Pistons,CHA,Charlotte Hornets
+2024-25,2024-11-21,0022400261,MIN,Minnesota Timberwolves,TOR,Toronto Raptors
+2024-25,2024-11-21,0022400262,UTA,Utah Jazz,SAS,San Antonio Spurs
+2024-25,2024-11-21,0022400263,ORL,Orlando Magic,LAL,Los Angeles Lakers
+2024-25,2024-11-22,0022400027,BKN,Brooklyn Nets,PHI,Philadelphia 76ers
+2024-25,2024-11-22,0022400028,BOS,Boston Celtics,WAS,Washington Wizards
+2024-25,2024-11-22,0022400029,IND,Indiana Pacers,MIL,Milwaukee Bucks
+2024-25,2024-11-22,0022400030,ATL,Atlanta Hawks,CHI,Chicago Bulls
+2024-25,2024-11-22,0022400031,POR,Portland Trail Blazers,HOU,Houston Rockets
+2024-25,2024-11-22,0022400032,GSW,Golden State Warriors,NOP,New Orleans Pelicans
+2024-25,2024-11-22,0022400033,DAL,Dallas Mavericks,DEN,Denver Nuggets
+2024-25,2024-11-22,0022400034,SAC,Sacramento Kings,LAC,LA Clippers
+2024-25,2024-11-23,0022400264,NYK,New York Knicks,UTA,Utah Jazz
+2024-25,2024-11-23,0022400265,DET,Detroit Pistons,ORL,Orlando Magic
+2024-25,2024-11-23,0022400266,MEM,Memphis Grizzlies,CHI,Chicago Bulls
+2024-25,2024-11-23,0022400267,POR,Portland Trail Blazers,HOU,Houston Rockets
+2024-25,2024-11-23,0022400268,CHA,Charlotte Hornets,MIL,Milwaukee Bucks
+2024-25,2024-11-23,0022400269,GSW,Golden State Warriors,SAS,San Antonio Spurs
+2024-25,2024-11-23,0022400270,DEN,Denver Nuggets,LAL,Los Angeles Lakers
+2024-25,2024-11-24,0022400271,MIN,Minnesota Timberwolves,BOS,Boston Celtics
+2024-25,2024-11-24,0022400272,WAS,Washington Wizards,IND,Indiana Pacers
+2024-25,2024-11-24,0022400273,DAL,Dallas Mavericks,MIA,Miami Heat
+2024-25,2024-11-24,0022400274,LAC,LA Clippers,PHI,Philadelphia 76ers
+2024-25,2024-11-24,0022400275,TOR,Toronto Raptors,CLE,Cleveland Cavaliers
+2024-25,2024-11-24,0022400276,BKN,Brooklyn Nets,SAC,Sacramento Kings
+2024-25,2024-11-25,0022400277,ORL,Orlando Magic,CHA,Charlotte Hornets
+2024-25,2024-11-25,0022400278,TOR,Toronto Raptors,DET,Detroit Pistons
+2024-25,2024-11-25,0022400279,NOP,New Orleans Pelicans,IND,Indiana Pacers
+2024-25,2024-11-25,0022400280,DAL,Dallas Mavericks,ATL,Atlanta Hawks
+2024-25,2024-11-25,0022400281,LAC,LA Clippers,BOS,Boston Celtics
+2024-25,2024-11-25,0022400282,POR,Portland Trail Blazers,MEM,Memphis Grizzlies
+2024-25,2024-11-25,0022400283,NYK,New York Knicks,DEN,Denver Nuggets
+2024-25,2024-11-25,0022400284,BKN,Brooklyn Nets,GSW,Golden State Warriors
+2024-25,2024-11-25,0022400285,OKC,Oklahoma City Thunder,SAC,Sacramento Kings
+2024-25,2024-11-26,0022400035,CHI,Chicago Bulls,WAS,Washington Wizards
+2024-25,2024-11-26,0022400036,MIL,Milwaukee Bucks,MIA,Miami Heat
+2024-25,2024-11-26,0022400037,HOU,Houston Rockets,MIN,Minnesota Timberwolves
+2024-25,2024-11-26,0022400038,SAS,San Antonio Spurs,UTA,Utah Jazz
+2024-25,2024-11-26,0022400039,LAL,Los Angeles Lakers,PHX,Phoenix Suns
+2024-25,2024-11-27,0022400286,MIA,Miami Heat,CHA,Charlotte Hornets
+2024-25,2024-11-27,0022400287,ATL,Atlanta Hawks,CLE,Cleveland Cavaliers
+2024-25,2024-11-27,0022400288,POR,Portland Trail Blazers,IND,Indiana Pacers
+2024-25,2024-11-27,0022400289,CHI,Chicago Bulls,ORL,Orlando Magic
+2024-25,2024-11-27,0022400290,HOU,Houston Rockets,PHI,Philadelphia 76ers
+2024-25,2024-11-27,0022400291,LAC,LA Clippers,WAS,Washington Wizards
+2024-25,2024-11-27,0022400292,NYK,New York Knicks,DAL,Dallas Mavericks
+2024-25,2024-11-27,0022400293,DET,Detroit Pistons,MEM,Memphis Grizzlies
+2024-25,2024-11-27,0022400294,SAC,Sacramento Kings,MIN,Minnesota Timberwolves
+2024-25,2024-11-27,0022400295,TOR,Toronto Raptors,NOP,New Orleans Pelicans
+2024-25,2024-11-27,0022400296,LAL,Los Angeles Lakers,SAS,San Antonio Spurs
+2024-25,2024-11-27,0022400297,BKN,Brooklyn Nets,PHX,Phoenix Suns
+2024-25,2024-11-27,0022400298,DEN,Denver Nuggets,UTA,Utah Jazz
+2024-25,2024-11-27,0022400299,OKC,Oklahoma City Thunder,GSW,Golden State Warriors
+2024-25,2024-11-29,0022400040,NYK,New York Knicks,CHA,Charlotte Hornets
+2024-25,2024-11-29,0022400041,CLE,Cleveland Cavaliers,ATL,Atlanta Hawks
+2024-25,2024-11-29,0022400042,NOP,New Orleans Pelicans,MEM,Memphis Grizzlies
+2024-25,2024-11-29,0022400043,ORL,Orlando Magic,BKN,Brooklyn Nets
+2024-25,2024-11-29,0022400044,LAC,LA Clippers,MIN,Minnesota Timberwolves
+2024-25,2024-11-29,0022400045,DET,Detroit Pistons,IND,Indiana Pacers
+2024-25,2024-11-29,0022400046,TOR,Toronto Raptors,MIA,Miami Heat
+2024-25,2024-11-29,0022400047,BOS,Boston Celtics,CHI,Chicago Bulls
+2024-25,2024-11-29,0022400048,OKC,Oklahoma City Thunder,LAL,Los Angeles Lakers
+2024-25,2024-11-29,0022400049,SAC,Sacramento Kings,POR,Portland Trail Blazers
+2024-25,2024-11-30,0022400300,ATL,Atlanta Hawks,CHA,Charlotte Hornets
+2024-25,2024-11-30,0022400301,PHI,Philadelphia 76ers,DET,Detroit Pistons
+2024-25,2024-11-30,0022400302,WAS,Washington Wizards,MIL,Milwaukee Bucks
+2024-25,2024-11-30,0022400303,GSW,Golden State Warriors,PHX,Phoenix Suns
+2024-25,2024-11-30,0022400304,DAL,Dallas Mavericks,UTA,Utah Jazz
+2024-25,2024-12-01,0022400305,ORL,Orlando Magic,BKN,Brooklyn Nets
+2024-25,2024-12-01,0022400306,IND,Indiana Pacers,MEM,Memphis Grizzlies
+2024-25,2024-12-01,0022400307,BOS,Boston Celtics,CLE,Cleveland Cavaliers
+2024-25,2024-12-01,0022400308,NOP,New Orleans Pelicans,NYK,New York Knicks
+2024-25,2024-12-01,0022400309,MIA,Miami Heat,TOR,Toronto Raptors
+2024-25,2024-12-01,0022400310,OKC,Oklahoma City Thunder,HOU,Houston Rockets
+2024-25,2024-12-01,0022400311,LAL,Los Angeles Lakers,UTA,Utah Jazz
+2024-25,2024-12-01,0022400312,DAL,Dallas Mavericks,POR,Portland Trail Blazers
+2024-25,2024-12-01,0022400313,SAS,San Antonio Spurs,SAC,Sacramento Kings
+2024-25,2024-12-01,0022400314,DEN,Denver Nuggets,LAC,LA Clippers
+2024-25,2024-12-02,0022400315,NOP,New Orleans Pelicans,ATL,Atlanta Hawks
+2024-25,2024-12-02,0022400316,MIA,Miami Heat,BOS,Boston Celtics
+2024-25,2024-12-02,0022400317,BKN,Brooklyn Nets,CHI,Chicago Bulls
+2024-25,2024-12-02,0022400318,LAL,Los Angeles Lakers,MIN,Minnesota Timberwolves
+2024-25,2024-12-03,0022400050,PHI,Philadelphia 76ers,CHA,Charlotte Hornets
+2024-25,2024-12-03,0022400051,WAS,Washington Wizards,CLE,Cleveland Cavaliers
+2024-25,2024-12-03,0022400052,MIL,Milwaukee Bucks,DET,Detroit Pistons
+2024-25,2024-12-03,0022400053,ORL,Orlando Magic,NYK,New York Knicks
+2024-25,2024-12-03,0022400054,IND,Indiana Pacers,TOR,Toronto Raptors
+2024-25,2024-12-03,0022400055,UTA,Utah Jazz,OKC,Oklahoma City Thunder
+2024-25,2024-12-03,0022400056,MEM,Memphis Grizzlies,DAL,Dallas Mavericks
+2024-25,2024-12-03,0022400057,SAS,San Antonio Spurs,PHX,Phoenix Suns
+2024-25,2024-12-03,0022400058,GSW,Golden State Warriors,DEN,Denver Nuggets
+2024-25,2024-12-03,0022400059,HOU,Houston Rockets,SAC,Sacramento Kings
+2024-25,2024-12-03,0022400060,POR,Portland Trail Blazers,LAC,LA Clippers
+2024-25,2024-12-04,0022400319,DET,Detroit Pistons,BOS,Boston Celtics
+2024-25,2024-12-04,0022400320,IND,Indiana Pacers,BKN,Brooklyn Nets
+2024-25,2024-12-04,0022400321,LAL,Los Angeles Lakers,MIA,Miami Heat
+2024-25,2024-12-04,0022400322,ORL,Orlando Magic,PHI,Philadelphia 76ers
+2024-25,2024-12-04,0022400323,ATL,Atlanta Hawks,MIL,Milwaukee Bucks
+2024-25,2024-12-04,0022400324,MIN,Minnesota Timberwolves,LAC,LA Clippers
+2024-25,2024-12-05,0022400325,DEN,Denver Nuggets,CLE,Cleveland Cavaliers
+2024-25,2024-12-05,0022400326,DAL,Dallas Mavericks,WAS,Washington Wizards
+2024-25,2024-12-05,0022400327,CHA,Charlotte Hornets,NYK,New York Knicks
+2024-25,2024-12-05,0022400328,OKC,Oklahoma City Thunder,TOR,Toronto Raptors
+2024-25,2024-12-05,0022400329,SAC,Sacramento Kings,MEM,Memphis Grizzlies
+2024-25,2024-12-05,0022400330,PHX,Phoenix Suns,NOP,New Orleans Pelicans
+2024-25,2024-12-05,0022400331,CHI,Chicago Bulls,SAS,San Antonio Spurs
+2024-25,2024-12-05,0022400332,HOU,Houston Rockets,GSW,Golden State Warriors
+2024-25,2024-12-06,0022400333,ORL,Orlando Magic,PHI,Philadelphia 76ers
+2024-25,2024-12-06,0022400334,LAL,Los Angeles Lakers,ATL,Atlanta Hawks
+2024-25,2024-12-06,0022400335,MIL,Milwaukee Bucks,BOS,Boston Celtics
+2024-25,2024-12-06,0022400336,IND,Indiana Pacers,CHI,Chicago Bulls
+2024-25,2024-12-06,0022400337,SAC,Sacramento Kings,SAS,San Antonio Spurs
+2024-25,2024-12-06,0022400338,MIN,Minnesota Timberwolves,GSW,Golden State Warriors
+2024-25,2024-12-06,0022400339,UTA,Utah Jazz,POR,Portland Trail Blazers
+2024-25,2024-12-07,0022400340,CLE,Cleveland Cavaliers,CHA,Charlotte Hornets
+2024-25,2024-12-07,0022400341,DEN,Denver Nuggets,WAS,Washington Wizards
+2024-25,2024-12-07,0022400342,OKC,Oklahoma City Thunder,NOP,New Orleans Pelicans
+2024-25,2024-12-07,0022400343,DET,Detroit Pistons,NYK,New York Knicks
+2024-25,2024-12-07,0022400344,DAL,Dallas Mavericks,TOR,Toronto Raptors
+2024-25,2024-12-07,0022400345,MEM,Memphis Grizzlies,BOS,Boston Celtics
+2024-25,2024-12-07,0022400346,PHX,Phoenix Suns,MIA,Miami Heat
+2024-25,2024-12-08,0022400347,PHI,Philadelphia 76ers,CHI,Chicago Bulls
+2024-25,2024-12-08,0022400348,MIL,Milwaukee Bucks,BKN,Brooklyn Nets
+2024-25,2024-12-08,0022400349,CHA,Charlotte Hornets,IND,Indiana Pacers
+2024-25,2024-12-08,0022400350,DEN,Denver Nuggets,ATL,Atlanta Hawks
+2024-25,2024-12-08,0022400351,CLE,Cleveland Cavaliers,MIA,Miami Heat
+2024-25,2024-12-08,0022400352,PHX,Phoenix Suns,ORL,Orlando Magic
+2024-25,2024-12-08,0022400353,MEM,Memphis Grizzlies,WAS,Washington Wizards
+2024-25,2024-12-08,0022400354,NOP,New Orleans Pelicans,SAS,San Antonio Spurs
+2024-25,2024-12-08,0022400355,MIN,Minnesota Timberwolves,GSW,Golden State Warriors
+2024-25,2024-12-08,0022400356,HOU,Houston Rockets,LAC,LA Clippers
+2024-25,2024-12-08,0022400357,UTA,Utah Jazz,SAC,Sacramento Kings
+2024-25,2024-12-08,0022400358,POR,Portland Trail Blazers,LAL,Los Angeles Lakers
+2024-25,2024-12-09,0022400359,NYK,New York Knicks,TOR,Toronto Raptors
+2024-25,2024-12-10,0022401201,ORL,Orlando Magic,MIL,Milwaukee Bucks
+2024-25,2024-12-10,0022401203,DAL,Dallas Mavericks,OKC,Oklahoma City Thunder
+2024-25,2024-12-11,0022401202,ATL,Atlanta Hawks,NYK,New York Knicks
+2024-25,2024-12-11,0022401204,GSW,Golden State Warriors,HOU,Houston Rockets
+2024-25,2024-12-12,0022401205,DET,Detroit Pistons,BOS,Boston Celtics
+2024-25,2024-12-12,0022401206,TOR,Toronto Raptors,MIA,Miami Heat
+2024-25,2024-12-12,0022401207,SAC,Sacramento Kings,NOP,New Orleans Pelicans
+2024-25,2024-12-13,0022401208,WAS,Washington Wizards,CLE,Cleveland Cavaliers
+2024-25,2024-12-13,0022401209,IND,Indiana Pacers,PHI,Philadelphia 76ers
+2024-25,2024-12-13,0022401210,LAL,Los Angeles Lakers,MIN,Minnesota Timberwolves
+2024-25,2024-12-13,0022401211,BKN,Brooklyn Nets,MEM,Memphis Grizzlies
+2024-25,2024-12-13,0022401212,CHA,Charlotte Hornets,CHI,Chicago Bulls
+2024-25,2024-12-13,0022401213,LAC,LA Clippers,DEN,Denver Nuggets
+2024-25,2024-12-13,0022401214,PHX,Phoenix Suns,UTA,Utah Jazz
+2024-25,2024-12-13,0022401215,SAS,San Antonio Spurs,POR,Portland Trail Blazers
+2024-25,2024-12-14,0022401229,ATL,Atlanta Hawks,,
+2024-25,2024-12-14,0022401230,OKC,Oklahoma City Thunder,,
+2024-25,2024-12-15,0022401216,NOP,New Orleans Pelicans,IND,Indiana Pacers
+2024-25,2024-12-15,0022401217,BOS,Boston Celtics,WAS,Washington Wizards
+2024-25,2024-12-15,0022401218,MIN,Minnesota Timberwolves,SAS,San Antonio Spurs
+2024-25,2024-12-15,0022401219,POR,Portland Trail Blazers,PHX,Phoenix Suns
+2024-25,2024-12-15,0022401220,MEM,Memphis Grizzlies,LAL,Los Angeles Lakers
+2024-25,2024-12-15,0022401227,NYK,New York Knicks,ORL,Orlando Magic
+2024-25,2024-12-15,0022401228,DAL,Dallas Mavericks,GSW,Golden State Warriors
+2024-25,2024-12-16,0022401221,MIA,Miami Heat,DET,Detroit Pistons
+2024-25,2024-12-16,0022401222,PHI,Philadelphia 76ers,CHA,Charlotte Hornets
+2024-25,2024-12-16,0022401223,CHI,Chicago Bulls,TOR,Toronto Raptors
+2024-25,2024-12-16,0022401224,CLE,Cleveland Cavaliers,BKN,Brooklyn Nets
+2024-25,2024-12-16,0022401225,DEN,Denver Nuggets,SAC,Sacramento Kings
+2024-25,2024-12-16,0022401226,UTA,Utah Jazz,LAC,LA Clippers
+2024-25,2024-12-17,0062400001,OKC,Oklahoma City Thunder,,
+2024-25,2024-12-19,0022400360,UTA,Utah Jazz,DET,Detroit Pistons
+2024-25,2024-12-19,0022400361,OKC,Oklahoma City Thunder,ORL,Orlando Magic
+2024-25,2024-12-19,0022400362,CHA,Charlotte Hornets,WAS,Washington Wizards
+2024-25,2024-12-19,0022400363,CHI,Chicago Bulls,BOS,Boston Celtics
+2024-25,2024-12-19,0022400364,BKN,Brooklyn Nets,TOR,Toronto Raptors
+2024-25,2024-12-19,0022400365,NOP,New Orleans Pelicans,HOU,Houston Rockets
+2024-25,2024-12-19,0022400366,GSW,Golden State Warriors,MEM,Memphis Grizzlies
+2024-25,2024-12-19,0022400367,NYK,New York Knicks,MIN,Minnesota Timberwolves
+2024-25,2024-12-19,0022400368,LAC,LA Clippers,DAL,Dallas Mavericks
+2024-25,2024-12-19,0022400369,IND,Indiana Pacers,PHX,Phoenix Suns
+2024-25,2024-12-19,0022400370,ATL,Atlanta Hawks,SAS,San Antonio Spurs
+2024-25,2024-12-19,0022400371,DEN,Denver Nuggets,POR,Portland Trail Blazers
+2024-25,2024-12-19,0022400372,LAL,Los Angeles Lakers,SAC,Sacramento Kings
+2024-25,2024-12-20,0022400373,CHA,Charlotte Hornets,PHI,Philadelphia 76ers
+2024-25,2024-12-20,0022400374,MIL,Milwaukee Bucks,CLE,Cleveland Cavaliers
+2024-25,2024-12-20,0022400375,OKC,Oklahoma City Thunder,MIA,Miami Heat
+2024-25,2024-12-21,0022400376,LAL,Los Angeles Lakers,SAC,Sacramento Kings
+2024-25,2024-12-21,0022400377,MIA,Miami Heat,ORL,Orlando Magic
+2024-25,2024-12-21,0022400378,MEM,Memphis Grizzlies,ATL,Atlanta Hawks
+2024-25,2024-12-21,0022400379,UTA,Utah Jazz,BKN,Brooklyn Nets
+2024-25,2024-12-21,0022400380,PHI,Philadelphia 76ers,CLE,Cleveland Cavaliers
+2024-25,2024-12-21,0022400381,BOS,Boston Celtics,CHI,Chicago Bulls
+2024-25,2024-12-21,0022400382,WAS,Washington Wizards,MIL,Milwaukee Bucks
+2024-25,2024-12-21,0022400383,GSW,Golden State Warriors,MIN,Minnesota Timberwolves
+2024-25,2024-12-21,0022400384,NYK,New York Knicks,NOP,New Orleans Pelicans
+2024-25,2024-12-21,0022400385,LAC,LA Clippers,DAL,Dallas Mavericks
+2024-25,2024-12-21,0022400386,POR,Portland Trail Blazers,SAS,San Antonio Spurs
+2024-25,2024-12-21,0022400387,DET,Detroit Pistons,PHX,Phoenix Suns
+2024-25,2024-12-22,0022400388,HOU,Houston Rockets,TOR,Toronto Raptors
+2024-25,2024-12-22,0022400389,IND,Indiana Pacers,SAC,Sacramento Kings
+2024-25,2024-12-22,0022400390,DEN,Denver Nuggets,NOP,New Orleans Pelicans
+2024-25,2024-12-23,0022400391,HOU,Houston Rockets,CHA,Charlotte Hornets
+2024-25,2024-12-23,0022400392,UTA,Utah Jazz,CLE,Cleveland Cavaliers
+2024-25,2024-12-23,0022400393,BOS,Boston Celtics,ORL,Orlando Magic
+2024-25,2024-12-23,0022400394,SAS,San Antonio Spurs,PHI,Philadelphia 76ers
+2024-25,2024-12-23,0022400395,MIN,Minnesota Timberwolves,ATL,Atlanta Hawks
+2024-25,2024-12-23,0022400396,BKN,Brooklyn Nets,MIA,Miami Heat
+2024-25,2024-12-23,0022400397,TOR,Toronto Raptors,NYK,New York Knicks
+2024-25,2024-12-23,0022400398,MIL,Milwaukee Bucks,CHI,Chicago Bulls
+2024-25,2024-12-23,0022400399,LAC,LA Clippers,MEM,Memphis Grizzlies
+2024-25,2024-12-23,0022400400,WAS,Washington Wizards,OKC,Oklahoma City Thunder
+2024-25,2024-12-23,0022400401,POR,Portland Trail Blazers,DAL,Dallas Mavericks
+2024-25,2024-12-23,0022400402,PHX,Phoenix Suns,DEN,Denver Nuggets
+2024-25,2024-12-23,0022400403,IND,Indiana Pacers,GSW,Golden State Warriors
+2024-25,2024-12-23,0022400404,DET,Detroit Pistons,LAL,Los Angeles Lakers
+2024-25,2024-12-25,0022400405,SAS,San Antonio Spurs,NYK,New York Knicks
+2024-25,2024-12-25,0022400406,MIN,Minnesota Timberwolves,DAL,Dallas Mavericks
+2024-25,2024-12-25,0022400407,PHI,Philadelphia 76ers,BOS,Boston Celtics
+2024-25,2024-12-25,0022400408,LAL,Los Angeles Lakers,GSW,Golden State Warriors
+2024-25,2024-12-25,0022400409,DEN,Denver Nuggets,PHX,Phoenix Suns
+2024-25,2024-12-26,0022400410,OKC,Oklahoma City Thunder,IND,Indiana Pacers
+2024-25,2024-12-26,0022400411,MIA,Miami Heat,ORL,Orlando Magic
+2024-25,2024-12-26,0022400412,CHA,Charlotte Hornets,WAS,Washington Wizards
+2024-25,2024-12-26,0022400413,CHI,Chicago Bulls,ATL,Atlanta Hawks
+2024-25,2024-12-26,0022400414,TOR,Toronto Raptors,MEM,Memphis Grizzlies
+2024-25,2024-12-26,0022400415,BKN,Brooklyn Nets,MIL,Milwaukee Bucks
+2024-25,2024-12-26,0022400416,HOU,Houston Rockets,NOP,New Orleans Pelicans
+2024-25,2024-12-26,0022400417,UTA,Utah Jazz,POR,Portland Trail Blazers
+2024-25,2024-12-26,0022400418,DET,Detroit Pistons,SAC,Sacramento Kings
+2024-25,2024-12-27,0022400419,NYK,New York Knicks,ORL,Orlando Magic
+2024-25,2024-12-27,0022400420,IND,Indiana Pacers,BOS,Boston Celtics
+2024-25,2024-12-27,0022400421,SAS,San Antonio Spurs,BKN,Brooklyn Nets
+2024-25,2024-12-27,0022400422,MIN,Minnesota Timberwolves,HOU,Houston Rockets
+2024-25,2024-12-27,0022400423,MEM,Memphis Grizzlies,NOP,New Orleans Pelicans
+2024-25,2024-12-27,0022400424,CLE,Cleveland Cavaliers,DEN,Denver Nuggets
+2024-25,2024-12-27,0022400425,DAL,Dallas Mavericks,PHX,Phoenix Suns
+2024-25,2024-12-27,0022400426,GSW,Golden State Warriors,LAC,LA Clippers
+2024-25,2024-12-28,0022400427,MIA,Miami Heat,ATL,Atlanta Hawks
+2024-25,2024-12-28,0022400428,OKC,Oklahoma City Thunder,CHA,Charlotte Hornets
+2024-25,2024-12-28,0022400429,NYK,New York Knicks,WAS,Washington Wizards
+2024-25,2024-12-28,0022400430,MIL,Milwaukee Bucks,CHI,Chicago Bulls
+2024-25,2024-12-28,0022400431,PHX,Phoenix Suns,GSW,Golden State Warriors
+2024-25,2024-12-28,0022400432,DET,Detroit Pistons,DEN,Denver Nuggets
+2024-25,2024-12-28,0022400433,PHI,Philadelphia 76ers,UTA,Utah Jazz
+2024-25,2024-12-28,0022400434,DAL,Dallas Mavericks,POR,Portland Trail Blazers
+2024-25,2024-12-28,0022400435,SAC,Sacramento Kings,LAL,Los Angeles Lakers
+2024-25,2024-12-29,0022400436,BKN,Brooklyn Nets,ORL,Orlando Magic
+2024-25,2024-12-29,0022400437,IND,Indiana Pacers,BOS,Boston Celtics
+2024-25,2024-12-29,0022400438,ATL,Atlanta Hawks,TOR,Toronto Raptors
+2024-25,2024-12-29,0022400439,MIA,Miami Heat,HOU,Houston Rockets
+2024-25,2024-12-29,0022400440,MEM,Memphis Grizzlies,OKC,Oklahoma City Thunder
+2024-25,2024-12-29,0022400441,SAS,San Antonio Spurs,MIN,Minnesota Timberwolves
+2024-25,2024-12-30,0022400442,CHI,Chicago Bulls,CHA,Charlotte Hornets
+2024-25,2024-12-30,0022400443,NYK,New York Knicks,WAS,Washington Wizards
+2024-25,2024-12-30,0022400444,LAC,LA Clippers,NOP,New Orleans Pelicans
+2024-25,2024-12-30,0022400445,DEN,Denver Nuggets,UTA,Utah Jazz
+2024-25,2024-12-30,0022400446,CLE,Cleveland Cavaliers,GSW,Golden State Warriors
+2024-25,2024-12-30,0022400447,PHI,Philadelphia 76ers,POR,Portland Trail Blazers
+2024-25,2024-12-30,0022400448,DAL,Dallas Mavericks,SAC,Sacramento Kings
+2024-25,2024-12-31,0022400449,TOR,Toronto Raptors,BOS,Boston Celtics
+2024-25,2024-12-31,0022400450,MIL,Milwaukee Bucks,IND,Indiana Pacers
+2024-25,2024-12-31,0022400451,LAC,LA Clippers,SAS,San Antonio Spurs
+2024-25,2024-12-31,0022400452,MIN,Minnesota Timberwolves,OKC,Oklahoma City Thunder
+2024-25,2024-12-31,0022400453,MEM,Memphis Grizzlies,PHX,Phoenix Suns
+2024-25,2024-12-31,0022400454,CLE,Cleveland Cavaliers,LAL,Los Angeles Lakers
+2024-25,2025-01-01,0022400455,ORL,Orlando Magic,DET,Detroit Pistons
+2024-25,2025-01-01,0022400456,CHI,Chicago Bulls,WAS,Washington Wizards
+2024-25,2025-01-01,0022400457,NOP,New Orleans Pelicans,MIA,Miami Heat
+2024-25,2025-01-01,0022400458,UTA,Utah Jazz,NYK,New York Knicks
+2024-25,2025-01-01,0022400459,BKN,Brooklyn Nets,TOR,Toronto Raptors
+2024-25,2025-01-01,0022400460,DAL,Dallas Mavericks,HOU,Houston Rockets
+2024-25,2025-01-01,0022400461,ATL,Atlanta Hawks,DEN,Denver Nuggets
+2024-25,2025-01-01,0022400462,PHI,Philadelphia 76ers,SAC,Sacramento Kings
+2024-25,2025-01-02,0022400463,IND,Indiana Pacers,MIA,Miami Heat
+2024-25,2025-01-02,0022400464,BOS,Boston Celtics,MIN,Minnesota Timberwolves
+2024-25,2025-01-02,0022400465,BKN,Brooklyn Nets,MIL,Milwaukee Bucks
+2024-25,2025-01-02,0022400466,LAC,LA Clippers,OKC,Oklahoma City Thunder
+2024-25,2025-01-02,0022400467,PHI,Philadelphia 76ers,GSW,Golden State Warriors
+2024-25,2025-01-02,0022400468,POR,Portland Trail Blazers,LAL,Los Angeles Lakers
+2024-25,2025-01-03,0022400469,CHA,Charlotte Hornets,DET,Detroit Pistons
+2024-25,2025-01-03,0022400470,ORL,Orlando Magic,TOR,Toronto Raptors
+2024-25,2025-01-03,0022400471,BOS,Boston Celtics,HOU,Houston Rockets
+2024-25,2025-01-03,0022400472,WAS,Washington Wizards,NOP,New Orleans Pelicans
+2024-25,2025-01-03,0022400473,NYK,New York Knicks,OKC,Oklahoma City Thunder
+2024-25,2025-01-03,0022400474,CLE,Cleveland Cavaliers,DAL,Dallas Mavericks
+2024-25,2025-01-03,0022400475,SAS,San Antonio Spurs,DEN,Denver Nuggets
+2024-25,2025-01-03,0022400476,MEM,Memphis Grizzlies,SAC,Sacramento Kings
+2024-25,2025-01-03,0022400477,ATL,Atlanta Hawks,LAL,Los Angeles Lakers
+2024-25,2025-01-04,0022400478,PHI,Philadelphia 76ers,BKN,Brooklyn Nets
+2024-25,2025-01-04,0022400479,MIN,Minnesota Timberwolves,DET,Detroit Pistons
+2024-25,2025-01-04,0022400480,PHX,Phoenix Suns,IND,Indiana Pacers
+2024-25,2025-01-04,0022400481,UTA,Utah Jazz,MIA,Miami Heat
+2024-25,2025-01-04,0022400482,NYK,New York Knicks,CHI,Chicago Bulls
+2024-25,2025-01-04,0022400483,POR,Portland Trail Blazers,MIL,Milwaukee Bucks
+2024-25,2025-01-04,0022400484,DEN,Denver Nuggets,SAS,San Antonio Spurs
+2024-25,2025-01-04,0022400485,MEM,Memphis Grizzlies,GSW,Golden State Warriors
+2024-25,2025-01-04,0022400486,ATL,Atlanta Hawks,LAC,LA Clippers
+2024-25,2025-01-05,0022400487,BOS,Boston Celtics,OKC,Oklahoma City Thunder
+2024-25,2025-01-05,0022400488,CHA,Charlotte Hornets,CLE,Cleveland Cavaliers
+2024-25,2025-01-05,0022400489,NOP,New Orleans Pelicans,WAS,Washington Wizards
+2024-25,2025-01-05,0022400490,UTA,Utah Jazz,ORL,Orlando Magic
+2024-25,2025-01-05,0022400491,LAL,Los Angeles Lakers,HOU,Houston Rockets
+2024-25,2025-01-05,0022400492,SAC,Sacramento Kings,GSW,Golden State Warriors
+2024-25,2025-01-06,0022400493,POR,Portland Trail Blazers,DET,Detroit Pistons
+2024-25,2025-01-06,0022400494,PHX,Phoenix Suns,PHI,Philadelphia 76ers
+2024-25,2025-01-06,0022400495,IND,Indiana Pacers,BKN,Brooklyn Nets
+2024-25,2025-01-06,0022400496,ORL,Orlando Magic,NYK,New York Knicks
+2024-25,2025-01-06,0022400497,MIL,Milwaukee Bucks,TOR,Toronto Raptors
+2024-25,2025-01-06,0022400498,SAS,San Antonio Spurs,CHI,Chicago Bulls
+2024-25,2025-01-06,0022400499,DAL,Dallas Mavericks,MEM,Memphis Grizzlies
+2024-25,2025-01-06,0022400500,LAC,LA Clippers,MIN,Minnesota Timberwolves
+2024-25,2025-01-06,0022400501,MIA,Miami Heat,SAC,Sacramento Kings
+2024-25,2025-01-07,0022400502,PHX,Phoenix Suns,CHA,Charlotte Hornets
+2024-25,2025-01-07,0022400503,HOU,Houston Rockets,WAS,Washington Wizards
+2024-25,2025-01-07,0022400504,LAL,Los Angeles Lakers,DAL,Dallas Mavericks
+2024-25,2025-01-07,0022400505,MIN,Minnesota Timberwolves,NOP,New Orleans Pelicans
+2024-25,2025-01-07,0022400506,ATL,Atlanta Hawks,UTA,Utah Jazz
+2024-25,2025-01-07,0022400507,BOS,Boston Celtics,DEN,Denver Nuggets
+2024-25,2025-01-07,0022400508,MIA,Miami Heat,GSW,Golden State Warriors
+2024-25,2025-01-08,0022400509,OKC,Oklahoma City Thunder,CLE,Cleveland Cavaliers
+2024-25,2025-01-08,0022400510,CHI,Chicago Bulls,IND,Indiana Pacers
+2024-25,2025-01-08,0022400511,TOR,Toronto Raptors,NYK,New York Knicks
+2024-25,2025-01-08,0022400512,WAS,Washington Wizards,PHI,Philadelphia 76ers
+2024-25,2025-01-08,0022400513,DET,Detroit Pistons,BKN,Brooklyn Nets
+2024-25,2025-01-08,0022400514,POR,Portland Trail Blazers,NOP,New Orleans Pelicans
+2024-25,2025-01-08,0022400515,LAC,LA Clippers,DEN,Denver Nuggets
+2024-25,2025-01-08,0022400516,SAS,San Antonio Spurs,MIL,Milwaukee Bucks
+2024-25,2025-01-09,0022400517,TOR,Toronto Raptors,CLE,Cleveland Cavaliers
+2024-25,2025-01-09,0022400518,GSW,Golden State Warriors,DET,Detroit Pistons
+2024-25,2025-01-09,0022400519,MIN,Minnesota Timberwolves,ORL,Orlando Magic
+2024-25,2025-01-09,0022400520,HOU,Houston Rockets,MEM,Memphis Grizzlies
+2024-25,2025-01-09,0022400521,POR,Portland Trail Blazers,DAL,Dallas Mavericks
+2024-25,2025-01-09,0022400522,ATL,Atlanta Hawks,PHX,Phoenix Suns
+2024-25,2025-01-09,0022400523,MIA,Miami Heat,UTA,Utah Jazz
+2024-25,2025-01-10,0022400525,GSW,Golden State Warriors,IND,Indiana Pacers
+2024-25,2025-01-10,0022400526,MIL,Milwaukee Bucks,ORL,Orlando Magic
+2024-25,2025-01-10,0022400527,NOP,New Orleans Pelicans,PHI,Philadelphia 76ers
+2024-25,2025-01-10,0022400528,SAC,Sacramento Kings,BOS,Boston Celtics
+2024-25,2025-01-10,0022400529,OKC,Oklahoma City Thunder,NYK,New York Knicks
+2024-25,2025-01-10,0022400530,WAS,Washington Wizards,CHI,Chicago Bulls
+2024-25,2025-01-10,0022400531,BKN,Brooklyn Nets,DEN,Denver Nuggets
+2024-25,2025-01-11,0022400533,UTA,Utah Jazz,PHX,Phoenix Suns
+2024-25,2025-01-11,0022400534,TOR,Toronto Raptors,DET,Detroit Pistons
+2024-25,2025-01-11,0022400535,MEM,Memphis Grizzlies,MIN,Minnesota Timberwolves
+2024-25,2025-01-11,0022400536,MIA,Miami Heat,POR,Portland Trail Blazers
+2024-25,2025-01-12,0022400539,MIL,Milwaukee Bucks,NYK,New York Knicks
+2024-25,2025-01-12,0022400540,DEN,Denver Nuggets,DAL,Dallas Mavericks
+2024-25,2025-01-12,0022400541,SAC,Sacramento Kings,CHI,Chicago Bulls
+2024-25,2025-01-12,0022400542,NOP,New Orleans Pelicans,BOS,Boston Celtics
+2024-25,2025-01-12,0022400543,IND,Indiana Pacers,CLE,Cleveland Cavaliers
+2024-25,2025-01-12,0022400544,PHI,Philadelphia 76ers,ORL,Orlando Magic
+2024-25,2025-01-12,0022400545,OKC,Oklahoma City Thunder,WAS,Washington Wizards
+2024-25,2025-01-12,0022400546,BKN,Brooklyn Nets,UTA,Utah Jazz
+2024-25,2025-01-12,0022400547,CHA,Charlotte Hornets,PHX,Phoenix Suns
+2024-25,2025-01-13,0022400548,MIN,Minnesota Timberwolves,WAS,Washington Wizards
+2024-25,2025-01-13,0022400549,DET,Detroit Pistons,NYK,New York Knicks
+2024-25,2025-01-13,0022400550,GSW,Golden State Warriors,TOR,Toronto Raptors
+2024-25,2025-01-13,0022400551,MEM,Memphis Grizzlies,HOU,Houston Rockets
+2024-25,2025-01-13,0022400552,SAS,San Antonio Spurs,LAL,Los Angeles Lakers
+2024-25,2025-01-13,0022400553,MIA,Miami Heat,LAC,LA Clippers
+2024-25,2025-01-14,0022400554,CLE,Cleveland Cavaliers,IND,Indiana Pacers
+2024-25,2025-01-14,0022400555,OKC,Oklahoma City Thunder,PHI,Philadelphia 76ers
+2024-25,2025-01-14,0022400556,PHX,Phoenix Suns,ATL,Atlanta Hawks
+2024-25,2025-01-14,0022400557,NOP,New Orleans Pelicans,CHI,Chicago Bulls
+2024-25,2025-01-14,0022400558,SAC,Sacramento Kings,MIL,Milwaukee Bucks
+2024-25,2025-01-14,0022400559,DEN,Denver Nuggets,DAL,Dallas Mavericks
+2024-25,2025-01-14,0022400560,BKN,Brooklyn Nets,POR,Portland Trail Blazers
+2024-25,2025-01-15,0022400561,NYK,New York Knicks,PHI,Philadelphia 76ers
+2024-25,2025-01-15,0022400562,BOS,Boston Celtics,TOR,Toronto Raptors
+2024-25,2025-01-15,0022400563,ATL,Atlanta Hawks,CHI,Chicago Bulls
+2024-25,2025-01-15,0022400564,ORL,Orlando Magic,MIL,Milwaukee Bucks
+2024-25,2025-01-15,0022400565,GSW,Golden State Warriors,MIN,Minnesota Timberwolves
+2024-25,2025-01-15,0022400566,DAL,Dallas Mavericks,NOP,New Orleans Pelicans
+2024-25,2025-01-15,0022400567,MEM,Memphis Grizzlies,SAS,San Antonio Spurs
+2024-25,2025-01-15,0022400568,HOU,Houston Rockets,DEN,Denver Nuggets
+2024-25,2025-01-15,0022400569,CHA,Charlotte Hornets,UTA,Utah Jazz
+2024-25,2025-01-15,0022400570,MIA,Miami Heat,LAL,Los Angeles Lakers
+2024-25,2025-01-15,0022400571,BKN,Brooklyn Nets,LAC,LA Clippers
+2024-25,2025-01-16,0022400572,IND,Indiana Pacers,DET,Detroit Pistons
+2024-25,2025-01-16,0022400573,PHX,Phoenix Suns,WAS,Washington Wizards
+2024-25,2025-01-16,0022400574,CLE,Cleveland Cavaliers,OKC,Oklahoma City Thunder
+2024-25,2025-01-16,0022400575,LAC,LA Clippers,POR,Portland Trail Blazers
+2024-25,2025-01-16,0022400576,HOU,Houston Rockets,SAC,Sacramento Kings
+2024-25,2025-01-17,0022400577,ORL,Orlando Magic,BOS,Boston Celtics
+2024-25,2025-01-17,0022400578,MIN,Minnesota Timberwolves,NYK,New York Knicks
+2024-25,2025-01-17,0022400579,DEN,Denver Nuggets,MIA,Miami Heat
+2024-25,2025-01-17,0022400580,TOR,Toronto Raptors,MIL,Milwaukee Bucks
+2024-25,2025-01-17,0022400581,UTA,Utah Jazz,NOP,New Orleans Pelicans
+2024-25,2025-01-17,0022400582,MEM,Memphis Grizzlies,SAS,San Antonio Spurs
+2024-25,2025-01-17,0022400583,OKC,Oklahoma City Thunder,DAL,Dallas Mavericks
+2024-25,2025-01-17,0022400584,CHA,Charlotte Hornets,CHI,Chicago Bulls
+2024-25,2025-01-17,0022400585,BKN,Brooklyn Nets,LAL,Los Angeles Lakers
+2024-25,2025-01-18,0022400586,PHX,Phoenix Suns,DET,Detroit Pistons
+2024-25,2025-01-18,0022400587,ATL,Atlanta Hawks,BOS,Boston Celtics
+2024-25,2025-01-18,0022400588,PHI,Philadelphia 76ers,IND,Indiana Pacers
+2024-25,2025-01-18,0022400589,WAS,Washington Wizards,GSW,Golden State Warriors
+2024-25,2025-01-18,0022400590,CLE,Cleveland Cavaliers,MIN,Minnesota Timberwolves
+2024-25,2025-01-18,0022400591,HOU,Houston Rockets,POR,Portland Trail Blazers
+2024-25,2025-01-19,0022400592,SAS,San Antonio Spurs,MIA,Miami Heat
+2024-25,2025-01-19,0022400593,DEN,Denver Nuggets,ORL,Orlando Magic
+2024-25,2025-01-19,0022400594,PHI,Philadelphia 76ers,MIL,Milwaukee Bucks
+2024-25,2025-01-19,0022400595,BKN,Brooklyn Nets,OKC,Oklahoma City Thunder
+2024-25,2025-01-19,0022400596,LAL,Los Angeles Lakers,LAC,LA Clippers
+2024-25,2025-01-19,0022400597,CHI,Chicago Bulls,POR,Portland Trail Blazers
+2024-25,2025-01-19,0022400598,WAS,Washington Wizards,SAC,Sacramento Kings
+2024-25,2025-01-20,0022400599,DAL,Dallas Mavericks,CHA,Charlotte Hornets
+2024-25,2025-01-20,0022400600,DET,Detroit Pistons,HOU,Houston Rockets
+2024-25,2025-01-20,0022400601,MIN,Minnesota Timberwolves,MEM,Memphis Grizzlies
+2024-25,2025-01-20,0022400602,ATL,Atlanta Hawks,NYK,New York Knicks
+2024-25,2025-01-20,0022400603,PHX,Phoenix Suns,CLE,Cleveland Cavaliers
+2024-25,2025-01-20,0022400604,BOS,Boston Celtics,GSW,Golden State Warriors
+2024-25,2025-01-20,0022400605,UTA,Utah Jazz,NOP,New Orleans Pelicans
+2024-25,2025-01-20,0022400611,CHI,Chicago Bulls,LAC,LA Clippers
+2024-25,2025-01-21,0022400606,NYK,New York Knicks,BKN,Brooklyn Nets
+2024-25,2025-01-21,0022400607,POR,Portland Trail Blazers,MIA,Miami Heat
+2024-25,2025-01-21,0022400608,ORL,Orlando Magic,TOR,Toronto Raptors
+2024-25,2025-01-21,0022400609,PHI,Philadelphia 76ers,DEN,Denver Nuggets
+2024-25,2025-01-21,0022400610,WAS,Washington Wizards,LAL,Los Angeles Lakers
+2024-25,2025-01-22,0022400612,DET,Detroit Pistons,ATL,Atlanta Hawks
+2024-25,2025-01-22,0022400613,PHX,Phoenix Suns,BKN,Brooklyn Nets
+2024-25,2025-01-22,0022400614,MIN,Minnesota Timberwolves,DAL,Dallas Mavericks
+2024-25,2025-01-22,0022400615,CLE,Cleveland Cavaliers,HOU,Houston Rockets
+2024-25,2025-01-22,0022400616,CHA,Charlotte Hornets,MEM,Memphis Grizzlies
+2024-25,2025-01-22,0022400618,UTA,Utah Jazz,OKC,Oklahoma City Thunder
+2024-25,2025-01-22,0022400619,GSW,Golden State Warriors,SAC,Sacramento Kings
+2024-25,2025-01-22,0022400620,BOS,Boston Celtics,LAC,LA Clippers
+2024-25,2025-01-23,0022400621,SAS,San Antonio Spurs,,
+2024-25,2025-01-23,0022400622,POR,Portland Trail Blazers,ORL,Orlando Magic
+2024-25,2025-01-23,0022400623,TOR,Toronto Raptors,ATL,Atlanta Hawks
+2024-25,2025-01-23,0022400624,MIA,Miami Heat,MIL,Milwaukee Bucks
+2024-25,2025-01-23,0022400625,DAL,Dallas Mavericks,OKC,Oklahoma City Thunder
+2024-25,2025-01-23,0022400626,SAC,Sacramento Kings,DEN,Denver Nuggets
+2024-25,2025-01-23,0022400628,CHI,Chicago Bulls,GSW,Golden State Warriors
+2024-25,2025-01-23,0022400629,BOS,Boston Celtics,LAL,Los Angeles Lakers
+2024-25,2025-01-23,0022400983,WAS,Washington Wizards,LAC,LA Clippers
+2024-25,2025-01-24,0022400630,POR,Portland Trail Blazers,CHA,Charlotte Hornets
+2024-25,2025-01-24,0022400631,CLE,Cleveland Cavaliers,PHI,Philadelphia 76ers
+2024-25,2025-01-24,0022400632,NOP,New Orleans Pelicans,MEM,Memphis Grizzlies
+2024-25,2025-01-25,0022400633,SAS,San Antonio Spurs,,
+2024-25,2025-01-25,0022400634,DEN,Denver Nuggets,MIN,Minnesota Timberwolves
+2024-25,2025-01-25,0022400635,BOS,Boston Celtics,DAL,Dallas Mavericks
+2024-25,2025-01-25,0022400636,MIA,Miami Heat,BKN,Brooklyn Nets
+2024-25,2025-01-25,0022400637,NOP,New Orleans Pelicans,CHA,Charlotte Hornets
+2024-25,2025-01-25,0022400638,DET,Detroit Pistons,ORL,Orlando Magic
+2024-25,2025-01-25,0022400639,TOR,Toronto Raptors,ATL,Atlanta Hawks
+2024-25,2025-01-25,0022400640,HOU,Houston Rockets,CLE,Cleveland Cavaliers
+2024-25,2025-01-25,0022400641,SAC,Sacramento Kings,NYK,New York Knicks
+2024-25,2025-01-25,0022400642,PHI,Philadelphia 76ers,CHI,Chicago Bulls
+2024-25,2025-01-25,0022400643,UTA,Utah Jazz,MEM,Memphis Grizzlies
+2024-25,2025-01-25,0022400644,LAL,Los Angeles Lakers,GSW,Golden State Warriors
+2024-25,2025-01-25,0022400645,WAS,Washington Wizards,PHX,Phoenix Suns
+2024-25,2025-01-25,0022400646,MIL,Milwaukee Bucks,LAC,LA Clippers
+2024-25,2025-01-26,0022400647,OKC,Oklahoma City Thunder,POR,Portland Trail Blazers
+2024-25,2025-01-27,0022400648,LAL,Los Angeles Lakers,CHA,Charlotte Hornets
+2024-25,2025-01-27,0022400649,DET,Detroit Pistons,CLE,Cleveland Cavaliers
+2024-25,2025-01-27,0022400650,HOU,Houston Rockets,BOS,Boston Celtics
+2024-25,2025-01-27,0022400651,SAC,Sacramento Kings,BKN,Brooklyn Nets
+2024-25,2025-01-27,0022400652,ORL,Orlando Magic,MIA,Miami Heat
+2024-25,2025-01-27,0022400653,MEM,Memphis Grizzlies,NYK,New York Knicks
+2024-25,2025-01-27,0022400654,NOP,New Orleans Pelicans,TOR,Toronto Raptors
+2024-25,2025-01-27,0022400655,DEN,Denver Nuggets,CHI,Chicago Bulls
+2024-25,2025-01-27,0022400656,ATL,Atlanta Hawks,MIN,Minnesota Timberwolves
+2024-25,2025-01-27,0022400657,WAS,Washington Wizards,DAL,Dallas Mavericks
+2024-25,2025-01-27,0022400658,MIL,Milwaukee Bucks,UTA,Utah Jazz
+2024-25,2025-01-27,0022400659,LAC,LA Clippers,PHX,Phoenix Suns
+2024-25,2025-01-28,0022400532,HOU,Houston Rockets,ATL,Atlanta Hawks
+2024-25,2025-01-28,0022400660,LAL,Los Angeles Lakers,PHI,Philadelphia 76ers
+2024-25,2025-01-28,0022400661,UTA,Utah Jazz,GSW,Golden State Warriors
+2024-25,2025-01-28,0022400662,MIL,Milwaukee Bucks,POR,Portland Trail Blazers
+2024-25,2025-01-29,0022400663,BKN,Brooklyn Nets,CHA,Charlotte Hornets
+2024-25,2025-01-29,0022400664,DET,Detroit Pistons,IND,Indiana Pacers
+2024-25,2025-01-29,0022400665,TOR,Toronto Raptors,WAS,Washington Wizards
+2024-25,2025-01-29,0022400666,CHI,Chicago Bulls,BOS,Boston Celtics
+2024-25,2025-01-29,0022400667,CLE,Cleveland Cavaliers,MIA,Miami Heat
+2024-25,2025-01-29,0022400668,DEN,Denver Nuggets,NYK,New York Knicks
+2024-25,2025-01-29,0022400669,SAC,Sacramento Kings,PHI,Philadelphia 76ers
+2024-25,2025-01-29,0022400670,DAL,Dallas Mavericks,NOP,New Orleans Pelicans
+2024-25,2025-01-29,0022400671,LAC,LA Clippers,SAS,San Antonio Spurs
+2024-25,2025-01-29,0022400672,MIN,Minnesota Timberwolves,PHX,Phoenix Suns
+2024-25,2025-01-29,0022400673,OKC,Oklahoma City Thunder,GSW,Golden State Warriors
+2024-25,2025-01-30,0022400674,LAL,Los Angeles Lakers,WAS,Washington Wizards
+2024-25,2025-01-30,0022400675,ATL,Atlanta Hawks,CLE,Cleveland Cavaliers
+2024-25,2025-01-30,0022400676,HOU,Houston Rockets,MEM,Memphis Grizzlies
+2024-25,2025-01-30,0022400677,MIN,Minnesota Timberwolves,UTA,Utah Jazz
+2024-25,2025-01-30,0022400678,ORL,Orlando Magic,POR,Portland Trail Blazers
+2024-25,2025-01-31,0022400679,LAC,LA Clippers,CHA,Charlotte Hornets
+2024-25,2025-01-31,0022400680,DAL,Dallas Mavericks,DET,Detroit Pistons
+2024-25,2025-01-31,0022400681,DEN,Denver Nuggets,PHI,Philadelphia 76ers
+2024-25,2025-01-31,0022400682,CHI,Chicago Bulls,TOR,Toronto Raptors
+2024-25,2025-01-31,0022400683,BOS,Boston Celtics,NOP,New Orleans Pelicans
+2024-25,2025-01-31,0022400684,MIL,Milwaukee Bucks,SAS,San Antonio Spurs
+2024-25,2025-01-31,0022400685,PHX,Phoenix Suns,GSW,Golden State Warriors
+2024-25,2025-02-01,0022400686,ATL,Atlanta Hawks,IND,Indiana Pacers
+2024-25,2025-02-01,0022400687,ORL,Orlando Magic,UTA,Utah Jazz
+2024-25,2025-02-01,0022400688,DEN,Denver Nuggets,CHA,Charlotte Hornets
+2024-25,2025-02-01,0022400689,BKN,Brooklyn Nets,HOU,Houston Rockets
+2024-25,2025-02-01,0022400690,WAS,Washington Wizards,MIN,Minnesota Timberwolves
+2024-25,2025-02-01,0022400691,SAC,Sacramento Kings,OKC,Oklahoma City Thunder
+2024-25,2025-02-01,0022400692,LAL,Los Angeles Lakers,NYK,New York Knicks
+2024-25,2025-02-01,0022400693,MIA,Miami Heat,SAS,San Antonio Spurs
+2024-25,2025-02-01,0022400694,PHX,Phoenix Suns,POR,Portland Trail Blazers
+2024-25,2025-02-02,0022400695,CHI,Chicago Bulls,DET,Detroit Pistons
+2024-25,2025-02-02,0022400696,DAL,Dallas Mavericks,CLE,Cleveland Cavaliers
+2024-25,2025-02-02,0022400697,LAC,LA Clippers,TOR,Toronto Raptors
+2024-25,2025-02-02,0022400698,BOS,Boston Celtics,PHI,Philadelphia 76ers
+2024-25,2025-02-02,0022400699,MEM,Memphis Grizzlies,MIL,Milwaukee Bucks
+2024-25,2025-02-03,0022400700,WAS,Washington Wizards,CHA,Charlotte Hornets
+2024-25,2025-02-03,0022400701,ATL,Atlanta Hawks,DET,Detroit Pistons
+2024-25,2025-02-03,0022400702,HOU,Houston Rockets,NYK,New York Knicks
+2024-25,2025-02-03,0022400703,SAS,San Antonio Spurs,MEM,Memphis Grizzlies
+2024-25,2025-02-03,0022400704,SAC,Sacramento Kings,MIN,Minnesota Timberwolves
+2024-25,2025-02-03,0022400705,MIL,Milwaukee Bucks,OKC,Oklahoma City Thunder
+2024-25,2025-02-03,0022400706,NOP,New Orleans Pelicans,DEN,Denver Nuggets
+2024-25,2025-02-03,0022400707,IND,Indiana Pacers,UTA,Utah Jazz
+2024-25,2025-02-03,0022400708,ORL,Orlando Magic,GSW,Golden State Warriors
+2024-25,2025-02-03,0022400709,PHX,Phoenix Suns,POR,Portland Trail Blazers
+2024-25,2025-02-04,0022400710,BOS,Boston Celtics,CLE,Cleveland Cavaliers
+2024-25,2025-02-04,0022400711,HOU,Houston Rockets,BKN,Brooklyn Nets
+2024-25,2025-02-04,0022400712,DAL,Dallas Mavericks,PHI,Philadelphia 76ers
+2024-25,2025-02-04,0022400713,NYK,New York Knicks,TOR,Toronto Raptors
+2024-25,2025-02-04,0022400714,MIA,Miami Heat,CHI,Chicago Bulls
+2024-25,2025-02-04,0022400715,LAL,Los Angeles Lakers,LAC,LA Clippers
+2024-25,2025-02-04,0022400716,IND,Indiana Pacers,POR,Portland Trail Blazers
+2024-25,2025-02-05,0022400717,MIL,Milwaukee Bucks,CHA,Charlotte Hornets
+2024-25,2025-02-05,0022400718,CLE,Cleveland Cavaliers,DET,Detroit Pistons
+2024-25,2025-02-05,0022400719,SAS,San Antonio Spurs,ATL,Atlanta Hawks
+2024-25,2025-02-05,0022400720,WAS,Washington Wizards,BKN,Brooklyn Nets
+2024-25,2025-02-05,0022400721,MIA,Miami Heat,PHI,Philadelphia 76ers
+2024-25,2025-02-05,0022400722,MEM,Memphis Grizzlies,TOR,Toronto Raptors
+2024-25,2025-02-05,0022400723,CHI,Chicago Bulls,MIN,Minnesota Timberwolves
+2024-25,2025-02-05,0022400724,PHX,Phoenix Suns,OKC,Oklahoma City Thunder
+2024-25,2025-02-05,0022400725,GSW,Golden State Warriors,UTA,Utah Jazz
+2024-25,2025-02-05,0022400726,NOP,New Orleans Pelicans,DEN,Denver Nuggets
+2024-25,2025-02-05,0022400727,ORL,Orlando Magic,SAC,Sacramento Kings
+2024-25,2025-02-06,0022400728,DAL,Dallas Mavericks,BOS,Boston Celtics
+2024-25,2025-02-06,0022400729,HOU,Houston Rockets,MIN,Minnesota Timberwolves
+2024-25,2025-02-06,0022400730,ORL,Orlando Magic,DEN,Denver Nuggets
+2024-25,2025-02-06,0022400731,GSW,Golden State Warriors,LAL,Los Angeles Lakers
+2024-25,2025-02-06,0022400732,SAC,Sacramento Kings,POR,Portland Trail Blazers
+2024-25,2025-02-06,0022400733,IND,Indiana Pacers,LAC,LA Clippers
+2024-25,2025-02-07,0022400734,SAS,San Antonio Spurs,CHA,Charlotte Hornets
+2024-25,2025-02-07,0022400735,CLE,Cleveland Cavaliers,WAS,Washington Wizards
+2024-25,2025-02-07,0022400736,MIL,Milwaukee Bucks,ATL,Atlanta Hawks
+2024-25,2025-02-07,0022400737,MIA,Miami Heat,BKN,Brooklyn Nets
+2024-25,2025-02-07,0022400738,PHI,Philadelphia 76ers,DET,Detroit Pistons
+2024-25,2025-02-07,0022400739,TOR,Toronto Raptors,OKC,Oklahoma City Thunder
+2024-25,2025-02-07,0022400740,UTA,Utah Jazz,PHX,Phoenix Suns
+2024-25,2025-02-08,0022400741,HOU,Houston Rockets,DAL,Dallas Mavericks
+2024-25,2025-02-08,0022400742,IND,Indiana Pacers,LAL,Los Angeles Lakers
+2024-25,2025-02-08,0022400743,SAS,San Antonio Spurs,ORL,Orlando Magic
+2024-25,2025-02-08,0022400744,ATL,Atlanta Hawks,WAS,Washington Wizards
+2024-25,2025-02-08,0022400745,GSW,Golden State Warriors,CHI,Chicago Bulls
+2024-25,2025-02-08,0022400746,OKC,Oklahoma City Thunder,MEM,Memphis Grizzlies
+2024-25,2025-02-08,0022400747,POR,Portland Trail Blazers,MIN,Minnesota Timberwolves
+2024-25,2025-02-08,0022400748,BOS,Boston Celtics,NYK,New York Knicks
+2024-25,2025-02-08,0022400749,DEN,Denver Nuggets,PHX,Phoenix Suns
+2024-25,2025-02-08,0022400750,NOP,New Orleans Pelicans,SAC,Sacramento Kings
+2024-25,2025-02-08,0022400751,UTA,Utah Jazz,LAC,LA Clippers
+2024-25,2025-02-09,0022400752,CHA,Charlotte Hornets,DET,Detroit Pistons
+2024-25,2025-02-09,0022400753,TOR,Toronto Raptors,HOU,Houston Rockets
+2024-25,2025-02-09,0022400754,PHI,Philadelphia 76ers,MIL,Milwaukee Bucks
+2024-25,2025-02-10,0022400755,MIN,Minnesota Timberwolves,CLE,Cleveland Cavaliers
+2024-25,2025-02-10,0022400756,ATL,Atlanta Hawks,ORL,Orlando Magic
+2024-25,2025-02-10,0022400757,SAS,San Antonio Spurs,WAS,Washington Wizards
+2024-25,2025-02-10,0022400758,CHA,Charlotte Hornets,BKN,Brooklyn Nets
+2024-25,2025-02-10,0022400759,BOS,Boston Celtics,MIA,Miami Heat
+2024-25,2025-02-10,0022400760,GSW,Golden State Warriors,MIL,Milwaukee Bucks
+2024-25,2025-02-10,0022400761,NOP,New Orleans Pelicans,OKC,Oklahoma City Thunder
+2024-25,2025-02-10,0022400762,SAC,Sacramento Kings,DAL,Dallas Mavericks
+2024-25,2025-02-10,0022400763,POR,Portland Trail Blazers,DEN,Denver Nuggets
+2024-25,2025-02-10,0022400768,UTA,Utah Jazz,LAL,Los Angeles Lakers
+2024-25,2025-02-11,0022400764,TOR,Toronto Raptors,PHI,Philadelphia 76ers
+2024-25,2025-02-11,0022400765,NYK,New York Knicks,IND,Indiana Pacers
+2024-25,2025-02-11,0022400766,DET,Detroit Pistons,CHI,Chicago Bulls
+2024-25,2025-02-11,0022400767,MEM,Memphis Grizzlies,PHX,Phoenix Suns
+2024-25,2025-02-12,0022400769,SAS,San Antonio Spurs,BOS,Boston Celtics
+2024-25,2025-02-12,0022400770,CHA,Charlotte Hornets,ORL,Orlando Magic
+2024-25,2025-02-12,0022400771,IND,Indiana Pacers,WAS,Washington Wizards
+2024-25,2025-02-12,0022400772,PHI,Philadelphia 76ers,BKN,Brooklyn Nets
+2024-25,2025-02-12,0022400773,ATL,Atlanta Hawks,NYK,New York Knicks
+2024-25,2025-02-12,0022400774,CLE,Cleveland Cavaliers,TOR,Toronto Raptors
+2024-25,2025-02-12,0022400775,DET,Detroit Pistons,CHI,Chicago Bulls
+2024-25,2025-02-12,0022400776,MIL,Milwaukee Bucks,MIN,Minnesota Timberwolves
+2024-25,2025-02-12,0022400777,SAC,Sacramento Kings,NOP,New Orleans Pelicans
+2024-25,2025-02-12,0022400778,MIA,Miami Heat,OKC,Oklahoma City Thunder
+2024-25,2025-02-12,0022400779,PHX,Phoenix Suns,HOU,Houston Rockets
+2024-25,2025-02-12,0022400780,POR,Portland Trail Blazers,DEN,Denver Nuggets
+2024-25,2025-02-12,0022400781,LAL,Los Angeles Lakers,UTA,Utah Jazz
+2024-25,2025-02-12,0022400782,GSW,Golden State Warriors,DAL,Dallas Mavericks
+2024-25,2025-02-12,0022400783,MEM,Memphis Grizzlies,LAC,LA Clippers
+2024-25,2025-02-13,0022400784,GSW,Golden State Warriors,HOU,Houston Rockets
+2024-25,2025-02-13,0022400785,SAC,Sacramento Kings,NOP,New Orleans Pelicans
+2024-25,2025-02-13,0022400786,MIA,Miami Heat,DAL,Dallas Mavericks
+2024-25,2025-02-13,0022400787,OKC,Oklahoma City Thunder,MIN,Minnesota Timberwolves
+2024-25,2025-02-13,0022401004,LAC,LA Clippers,UTA,Utah Jazz
+2024-25,2025-02-14,0032400003,BND,Team Bonds,RCE,Team Rice
+2024-25,2025-02-14,0032400004,TMT, Team T,TMC, Team C
+2024-25,2025-02-14,0032400005,TMG, Team G League,TMM, Team M
+2024-25,2025-02-14,0032400006,TMG, Team G League,TMC, Team C
+2024-25,2025-02-16,0032400011,KEN, Young Stars,CHK, Global Stars
+2024-25,2025-02-16,0032400021,CAN, Rising Stars,SHQ, OGs
+2024-25,2025-02-16,0032400031,SHQ, OGs,CHK, Global Stars
+2024-25,2025-02-19,0022400524,CHA,Charlotte Hornets,LAL,Los Angeles Lakers
+2024-25,2025-02-20,0022400788,MEM,Memphis Grizzlies,IND,Indiana Pacers
+2024-25,2025-02-20,0022400789,BOS,Boston Celtics,PHI,Philadelphia 76ers
+2024-25,2025-02-20,0022400790,ORL,Orlando Magic,ATL,Atlanta Hawks
+2024-25,2025-02-20,0022400791,CLE,Cleveland Cavaliers,BKN,Brooklyn Nets
+2024-25,2025-02-20,0022400792,CHI,Chicago Bulls,NYK,New York Knicks
+2024-25,2025-02-20,0022400793,LAC,LA Clippers,MIL,Milwaukee Bucks
+2024-25,2025-02-20,0022400794,CHA,Charlotte Hornets,DEN,Denver Nuggets
+2024-25,2025-02-20,0022400795,PHX,Phoenix Suns,SAS,San Antonio Spurs
+2024-25,2025-02-20,0022400796,LAL,Los Angeles Lakers,POR,Portland Trail Blazers
+2024-25,2025-02-21,0022400797,NYK,New York Knicks,CLE,Cleveland Cavaliers
+2024-25,2025-02-21,0022400798,MEM,Memphis Grizzlies,ORL,Orlando Magic
+2024-25,2025-02-21,0022400799,MIL,Milwaukee Bucks,WAS,Washington Wizards
+2024-25,2025-02-21,0022400800,MIA,Miami Heat,TOR,Toronto Raptors
+2024-25,2025-02-21,0022400801,MIN,Minnesota Timberwolves,HOU,Houston Rockets
+2024-25,2025-02-21,0022400802,DET,Detroit Pistons,SAS,San Antonio Spurs
+2024-25,2025-02-21,0022400803,NOP,New Orleans Pelicans,DAL,Dallas Mavericks
+2024-25,2025-02-21,0022400804,OKC,Oklahoma City Thunder,UTA,Utah Jazz
+2024-25,2025-02-21,0022400805,GSW,Golden State Warriors,SAC,Sacramento Kings
+2024-25,2025-02-22,0022400806,PHX,Phoenix Suns,CHI,Chicago Bulls
+2024-25,2025-02-22,0022400807,BKN,Brooklyn Nets,PHI,Philadelphia 76ers
+2024-25,2025-02-22,0022400808,LAL,Los Angeles Lakers,DEN,Denver Nuggets
+2024-25,2025-02-22,0022400809,HOU,Houston Rockets,UTA,Utah Jazz
+2024-25,2025-02-22,0022400810,CHA,Charlotte Hornets,POR,Portland Trail Blazers
+2024-25,2025-02-23,0022400811,NYK,New York Knicks,BOS,Boston Celtics
+2024-25,2025-02-23,0022400812,DAL,Dallas Mavericks,GSW,Golden State Warriors
+2024-25,2025-02-23,0022400813,LAC,LA Clippers,IND,Indiana Pacers
+2024-25,2025-02-23,0022400814,DET,Detroit Pistons,ATL,Atlanta Hawks
+2024-25,2025-02-23,0022400815,WAS,Washington Wizards,ORL,Orlando Magic
+2024-25,2025-02-23,0022400816,PHX,Phoenix Suns,TOR,Toronto Raptors
+2024-25,2025-02-23,0022400817,MIA,Miami Heat,MIL,Milwaukee Bucks
+2024-25,2025-02-23,0022400818,SAS,San Antonio Spurs,NOP,New Orleans Pelicans
+2024-25,2025-02-23,0022400819,MEM,Memphis Grizzlies,CLE,Cleveland Cavaliers
+2024-25,2025-02-23,0022400820,OKC,Oklahoma City Thunder,MIN,Minnesota Timberwolves
+2024-25,2025-02-24,0022400821,LAC,LA Clippers,DET,Detroit Pistons
+2024-25,2025-02-24,0022400822,DEN,Denver Nuggets,IND,Indiana Pacers
+2024-25,2025-02-24,0022400823,CHI,Chicago Bulls,PHI,Philadelphia 76ers
+2024-25,2025-02-24,0022400824,BKN,Brooklyn Nets,WAS,Washington Wizards
+2024-25,2025-02-24,0022400825,MIA,Miami Heat,ATL,Atlanta Hawks
+2024-25,2025-02-24,0022400826,MIN,Minnesota Timberwolves,OKC,Oklahoma City Thunder
+2024-25,2025-02-24,0022400827,POR,Portland Trail Blazers,UTA,Utah Jazz
+2024-25,2025-02-24,0022400828,CHA,Charlotte Hornets,SAC,Sacramento Kings
+2024-25,2025-02-25,0022400829,BOS,Boston Celtics,TOR,Toronto Raptors
+2024-25,2025-02-25,0022400830,CLE,Cleveland Cavaliers,ORL,Orlando Magic
+2024-25,2025-02-25,0022400831,MIL,Milwaukee Bucks,HOU,Houston Rockets
+2024-25,2025-02-25,0022400832,PHX,Phoenix Suns,MEM,Memphis Grizzlies
+2024-25,2025-02-25,0022400833,SAS,San Antonio Spurs,NOP,New Orleans Pelicans
+2024-25,2025-02-25,0022400834,CHA,Charlotte Hornets,GSW,Golden State Warriors
+2024-25,2025-02-25,0022400835,DAL,Dallas Mavericks,LAL,Los Angeles Lakers
+2024-25,2025-02-26,0022400836,BOS,Boston Celtics,DET,Detroit Pistons
+2024-25,2025-02-26,0022400837,TOR,Toronto Raptors,IND,Indiana Pacers
+2024-25,2025-02-26,0022400838,PHI,Philadelphia 76ers,NYK,New York Knicks
+2024-25,2025-02-26,0022400839,POR,Portland Trail Blazers,WAS,Washington Wizards
+2024-25,2025-02-26,0022400840,OKC,Oklahoma City Thunder,BKN,Brooklyn Nets
+2024-25,2025-02-26,0022400841,ATL,Atlanta Hawks,MIA,Miami Heat
+2024-25,2025-02-26,0022400842,LAC,LA Clippers,CHI,Chicago Bulls
+2024-25,2025-02-26,0022400843,SAC,Sacramento Kings,UTA,Utah Jazz
+2024-25,2025-02-26,0022400844,SAS,San Antonio Spurs,HOU,Houston Rockets
+2024-25,2025-02-27,0022400845,GSW,Golden State Warriors,ORL,Orlando Magic
+2024-25,2025-02-27,0022400846,DEN,Denver Nuggets,MIL,Milwaukee Bucks
+2024-25,2025-02-27,0022400847,CHA,Charlotte Hornets,DAL,Dallas Mavericks
+2024-25,2025-02-27,0022400848,NOP,New Orleans Pelicans,PHX,Phoenix Suns
+2024-25,2025-02-27,0022400849,MIN,Minnesota Timberwolves,LAL,Los Angeles Lakers
+2024-25,2025-02-28,0022400850,DEN,Denver Nuggets,DET,Detroit Pistons
+2024-25,2025-02-28,0022400851,OKC,Oklahoma City Thunder,ATL,Atlanta Hawks
+2024-25,2025-02-28,0022400852,CLE,Cleveland Cavaliers,BOS,Boston Celtics
+2024-25,2025-02-28,0022400853,POR,Portland Trail Blazers,BKN,Brooklyn Nets
+2024-25,2025-02-28,0022400854,IND,Indiana Pacers,MIA,Miami Heat
+2024-25,2025-02-28,0022400855,TOR,Toronto Raptors,CHI,Chicago Bulls
+2024-25,2025-02-28,0022400856,NYK,New York Knicks,MEM,Memphis Grizzlies
+2024-25,2025-02-28,0022400857,NOP,New Orleans Pelicans,PHX,Phoenix Suns
+2024-25,2025-02-28,0022400858,MIN,Minnesota Timberwolves,UTA,Utah Jazz
+2024-25,2025-02-28,0022400859,LAC,LA Clippers,LAL,Los Angeles Lakers
+2024-25,2025-03-01,0022400860,WAS,Washington Wizards,CHA,Charlotte Hornets
+2024-25,2025-03-01,0022400861,BKN,Brooklyn Nets,DET,Detroit Pistons
+2024-25,2025-03-01,0022400862,SAC,Sacramento Kings,HOU,Houston Rockets
+2024-25,2025-03-01,0022400863,SAS,San Antonio Spurs,MEM,Memphis Grizzlies
+2024-25,2025-03-01,0022400864,GSW,Golden State Warriors,PHI,Philadelphia 76ers
+2024-25,2025-03-01,0022400865,MIL,Milwaukee Bucks,DAL,Dallas Mavericks
+2024-25,2025-03-02,0022400866,DEN,Denver Nuggets,BOS,Boston Celtics
+2024-25,2025-03-02,0022400867,POR,Portland Trail Blazers,CLE,Cleveland Cavaliers
+2024-25,2025-03-02,0022400868,CHI,Chicago Bulls,IND,Indiana Pacers
+2024-25,2025-03-02,0022400869,NYK,New York Knicks,MIA,Miami Heat
+2024-25,2025-03-02,0022400870,TOR,Toronto Raptors,ORL,Orlando Magic
+2024-25,2025-03-02,0022400871,OKC,Oklahoma City Thunder,SAS,San Antonio Spurs
+2024-25,2025-03-02,0022400872,NOP,New Orleans Pelicans,UTA,Utah Jazz
+2024-25,2025-03-02,0022400873,MIN,Minnesota Timberwolves,PHX,Phoenix Suns
+2024-25,2025-03-02,0022400874,LAC,LA Clippers,LAL,Los Angeles Lakers
+2024-25,2025-03-03,0022400875,GSW,Golden State Warriors,CHA,Charlotte Hornets
+2024-25,2025-03-03,0022400876,POR,Portland Trail Blazers,PHI,Philadelphia 76ers
+2024-25,2025-03-03,0022400877,WAS,Washington Wizards,MIA,Miami Heat
+2024-25,2025-03-03,0022400878,ATL,Atlanta Hawks,MEM,Memphis Grizzlies
+2024-25,2025-03-03,0022400879,HOU,Houston Rockets,OKC,Oklahoma City Thunder
+2024-25,2025-03-03,0022400880,SAC,Sacramento Kings,DAL,Dallas Mavericks
+2024-25,2025-03-03,0022400881,DET,Detroit Pistons,UTA,Utah Jazz
+2024-25,2025-03-04,0022400882,HOU,Houston Rockets,IND,Indiana Pacers
+2024-25,2025-03-04,0022400883,TOR,Toronto Raptors,ORL,Orlando Magic
+2024-25,2025-03-04,0022400884,MIL,Milwaukee Bucks,ATL,Atlanta Hawks
+2024-25,2025-03-04,0022400885,GSW,Golden State Warriors,NYK,New York Knicks
+2024-25,2025-03-04,0022400886,CLE,Cleveland Cavaliers,CHI,Chicago Bulls
+2024-25,2025-03-04,0022400887,PHI,Philadelphia 76ers,MIN,Minnesota Timberwolves
+2024-25,2025-03-04,0022400888,BKN,Brooklyn Nets,SAS,San Antonio Spurs
+2024-25,2025-03-04,0022400889,LAC,LA Clippers,PHX,Phoenix Suns
+2024-25,2025-03-04,0022400890,NOP,New Orleans Pelicans,LAL,Los Angeles Lakers
+2024-25,2025-03-05,0022400891,POR,Portland Trail Blazers,BOS,Boston Celtics
+2024-25,2025-03-05,0022400892,MIN,Minnesota Timberwolves,CHA,Charlotte Hornets
+2024-25,2025-03-05,0022400893,MIA,Miami Heat,CLE,Cleveland Cavaliers
+2024-25,2025-03-05,0022400894,UTA,Utah Jazz,WAS,Washington Wizards
+2024-25,2025-03-05,0022400895,OKC,Oklahoma City Thunder,MEM,Memphis Grizzlies
+2024-25,2025-03-05,0022400896,SAC,Sacramento Kings,DEN,Denver Nuggets
+2024-25,2025-03-05,0022400897,DAL,Dallas Mavericks,MIL,Milwaukee Bucks
+2024-25,2025-03-05,0022400898,DET,Detroit Pistons,LAC,LA Clippers
+2024-25,2025-03-06,0022400899,IND,Indiana Pacers,ATL,Atlanta Hawks
+2024-25,2025-03-06,0022400900,PHI,Philadelphia 76ers,BOS,Boston Celtics
+2024-25,2025-03-06,0022400901,GSW,Golden State Warriors,BKN,Brooklyn Nets
+2024-25,2025-03-06,0022400902,HOU,Houston Rockets,NOP,New Orleans Pelicans
+2024-25,2025-03-06,0022400903,NYK,New York Knicks,LAL,Los Angeles Lakers
+2024-25,2025-03-06,0022400944,CHI,Chicago Bulls,ORL,Orlando Magic
+2024-25,2025-03-07,0022400904,CLE,Cleveland Cavaliers,CHA,Charlotte Hornets
+2024-25,2025-03-07,0022400905,UTA,Utah Jazz,TOR,Toronto Raptors
+2024-25,2025-03-07,0022400906,MEM,Memphis Grizzlies,DAL,Dallas Mavericks
+2024-25,2025-03-07,0022400907,MIN,Minnesota Timberwolves,MIA,Miami Heat
+2024-25,2025-03-07,0022400908,POR,Portland Trail Blazers,OKC,Oklahoma City Thunder
+2024-25,2025-03-07,0022400909,PHX,Phoenix Suns,DEN,Denver Nuggets
+2024-25,2025-03-07,0022400910,SAS,San Antonio Spurs,SAC,Sacramento Kings
+2024-25,2025-03-07,0022400911,NYK,New York Knicks,LAC,LA Clippers
+2024-25,2025-03-08,0022400912,BKN,Brooklyn Nets,CHA,Charlotte Hornets
+2024-25,2025-03-08,0022400913,NOP,New Orleans Pelicans,HOU,Houston Rockets
+2024-25,2025-03-08,0022400914,IND,Indiana Pacers,ATL,Atlanta Hawks
+2024-25,2025-03-08,0022400915,WAS,Washington Wizards,TOR,Toronto Raptors
+2024-25,2025-03-08,0022400916,CHI,Chicago Bulls,MIA,Miami Heat
+2024-25,2025-03-08,0022400917,ORL,Orlando Magic,MIL,Milwaukee Bucks
+2024-25,2025-03-08,0022400918,LAL,Los Angeles Lakers,BOS,Boston Celtics
+2024-25,2025-03-08,0022400919,DET,Detroit Pistons,GSW,Golden State Warriors
+2024-25,2025-03-09,0022400920,DEN,Denver Nuggets,OKC,Oklahoma City Thunder
+2024-25,2025-03-09,0022400921,PHX,Phoenix Suns,DAL,Dallas Mavericks
+2024-25,2025-03-09,0022400922,CLE,Cleveland Cavaliers,MIL,Milwaukee Bucks
+2024-25,2025-03-09,0022400923,MEM,Memphis Grizzlies,NOP,New Orleans Pelicans
+2024-25,2025-03-09,0022400924,UTA,Utah Jazz,PHI,Philadelphia 76ers
+2024-25,2025-03-09,0022400925,SAS,San Antonio Spurs,MIN,Minnesota Timberwolves
+2024-25,2025-03-09,0022400926,DET,Detroit Pistons,POR,Portland Trail Blazers
+2024-25,2025-03-09,0022400927,SAC,Sacramento Kings,LAC,LA Clippers
+2024-25,2025-03-10,0022400928,PHI,Philadelphia 76ers,ATL,Atlanta Hawks
+2024-25,2025-03-10,0022400929,UTA,Utah Jazz,BOS,Boston Celtics
+2024-25,2025-03-10,0022400930,LAL,Los Angeles Lakers,BKN,Brooklyn Nets
+2024-25,2025-03-10,0022400931,CHA,Charlotte Hornets,MIA,Miami Heat
+2024-25,2025-03-10,0022400932,WAS,Washington Wizards,TOR,Toronto Raptors
+2024-25,2025-03-10,0022400933,IND,Indiana Pacers,CHI,Chicago Bulls
+2024-25,2025-03-10,0022400934,ORL,Orlando Magic,HOU,Houston Rockets
+2024-25,2025-03-10,0022400935,PHX,Phoenix Suns,MEM,Memphis Grizzlies
+2024-25,2025-03-10,0022400936,DEN,Denver Nuggets,OKC,Oklahoma City Thunder
+2024-25,2025-03-10,0022400937,DAL,Dallas Mavericks,SAS,San Antonio Spurs
+2024-25,2025-03-10,0022400938,POR,Portland Trail Blazers,GSW,Golden State Warriors
+2024-25,2025-03-10,0022400939,NYK,New York Knicks,SAC,Sacramento Kings
+2024-25,2025-03-11,0022400940,BKN,Brooklyn Nets,CLE,Cleveland Cavaliers
+2024-25,2025-03-11,0022400941,WAS,Washington Wizards,DET,Detroit Pistons
+2024-25,2025-03-11,0022400942,MIL,Milwaukee Bucks,IND,Indiana Pacers
+2024-25,2025-03-11,0022400943,LAC,LA Clippers,NOP,New Orleans Pelicans
+2024-25,2025-03-12,0022400945,CHA,Charlotte Hornets,ATL,Atlanta Hawks
+2024-25,2025-03-12,0022400946,OKC,Oklahoma City Thunder,BOS,Boston Celtics
+2024-25,2025-03-12,0022400947,PHI,Philadelphia 76ers,TOR,Toronto Raptors
+2024-25,2025-03-12,0022400948,LAC,LA Clippers,MIA,Miami Heat
+2024-25,2025-03-12,0022400949,PHX,Phoenix Suns,HOU,Houston Rockets
+2024-25,2025-03-12,0022400950,UTA,Utah Jazz,MEM,Memphis Grizzlies
+2024-25,2025-03-12,0022400951,DAL,Dallas Mavericks,SAS,San Antonio Spurs
+2024-25,2025-03-12,0022400952,MIN,Minnesota Timberwolves,DEN,Denver Nuggets
+2024-25,2025-03-12,0022400953,NYK,New York Knicks,POR,Portland Trail Blazers
+2024-25,2025-03-13,0022400954,WAS,Washington Wizards,DET,Detroit Pistons
+2024-25,2025-03-13,0022400955,LAL,Los Angeles Lakers,MIL,Milwaukee Bucks
+2024-25,2025-03-13,0022400956,BKN,Brooklyn Nets,CHI,Chicago Bulls
+2024-25,2025-03-13,0022400957,SAC,Sacramento Kings,GSW,Golden State Warriors
+2024-25,2025-03-13,0022401141,ORL,Orlando Magic,NOP,New Orleans Pelicans
+2024-25,2025-03-14,0022400958,BOS,Boston Celtics,MIA,Miami Heat
+2024-25,2025-03-14,0022400959,IND,Indiana Pacers,PHI,Philadelphia 76ers
+2024-25,2025-03-14,0022400960,LAC,LA Clippers,ATL,Atlanta Hawks
+2024-25,2025-03-14,0022400961,DAL,Dallas Mavericks,HOU,Houston Rockets
+2024-25,2025-03-14,0022400962,CLE,Cleveland Cavaliers,MEM,Memphis Grizzlies
+2024-25,2025-03-14,0022400963,ORL,Orlando Magic,MIN,Minnesota Timberwolves
+2024-25,2025-03-14,0022400964,CHA,Charlotte Hornets,SAS,San Antonio Spurs
+2024-25,2025-03-14,0022400965,LAL,Los Angeles Lakers,DEN,Denver Nuggets
+2024-25,2025-03-14,0022400966,TOR,Toronto Raptors,UTA,Utah Jazz
+2024-25,2025-03-14,0022400967,SAC,Sacramento Kings,PHX,Phoenix Suns
+2024-25,2025-03-15,0022400968,BOS,Boston Celtics,BKN,Brooklyn Nets
+2024-25,2025-03-15,0022400969,OKC,Oklahoma City Thunder,DET,Detroit Pistons
+2024-25,2025-03-15,0022400970,CHI,Chicago Bulls,HOU,Houston Rockets
+2024-25,2025-03-15,0022400971,MIA,Miami Heat,MEM,Memphis Grizzlies
+2024-25,2025-03-15,0022400972,IND,Indiana Pacers,MIL,Milwaukee Bucks
+2024-25,2025-03-15,0022400973,NOP,New Orleans Pelicans,SAS,San Antonio Spurs
+2024-25,2025-03-15,0022400974,NYK,New York Knicks,GSW,Golden State Warriors
+2024-25,2025-03-15,0022400975,WAS,Washington Wizards,DEN,Denver Nuggets
+2024-25,2025-03-16,0022400538,CHA,Charlotte Hornets,LAC,LA Clippers
+2024-25,2025-03-16,0022400976,PHI,Philadelphia 76ers,DAL,Dallas Mavericks
+2024-25,2025-03-16,0022400977,PHX,Phoenix Suns,LAL,Los Angeles Lakers
+2024-25,2025-03-16,0022400978,ATL,Atlanta Hawks,BKN,Brooklyn Nets
+2024-25,2025-03-16,0022400979,ORL,Orlando Magic,CLE,Cleveland Cavaliers
+2024-25,2025-03-16,0022400980,TOR,Toronto Raptors,POR,Portland Trail Blazers
+2024-25,2025-03-16,0022400981,UTA,Utah Jazz,MIN,Minnesota Timberwolves
+2024-25,2025-03-16,0022400982,OKC,Oklahoma City Thunder,MIL,Milwaukee Bucks
+2024-25,2025-03-17,0022400537,SAS,San Antonio Spurs,LAL,Los Angeles Lakers
+2024-25,2025-03-17,0022400984,MIA,Miami Heat,NYK,New York Knicks
+2024-25,2025-03-17,0022400985,PHI,Philadelphia 76ers,HOU,Houston Rockets
+2024-25,2025-03-17,0022400986,IND,Indiana Pacers,MIN,Minnesota Timberwolves
+2024-25,2025-03-17,0022400987,DET,Detroit Pistons,NOP,New Orleans Pelicans
+2024-25,2025-03-17,0022400989,CHI,Chicago Bulls,UTA,Utah Jazz
+2024-25,2025-03-17,0022400990,DEN,Denver Nuggets,GSW,Golden State Warriors
+2024-25,2025-03-17,0022400991,TOR,Toronto Raptors,PHX,Phoenix Suns
+2024-25,2025-03-17,0022400992,MEM,Memphis Grizzlies,SAC,Sacramento Kings
+2024-25,2025-03-17,0022400995,WAS,Washington Wizards,POR,Portland Trail Blazers
+2024-25,2025-03-18,0022400993,ATL,Atlanta Hawks,CHA,Charlotte Hornets
+2024-25,2025-03-18,0022400994,BKN,Brooklyn Nets,BOS,Boston Celtics
+2024-25,2025-03-18,0022400997,CLE,Cleveland Cavaliers,LAC,LA Clippers
+2024-25,2025-03-18,0022401012,MIL,Milwaukee Bucks,GSW,Golden State Warriors
+2024-25,2025-03-19,0022400627,WAS,Washington Wizards,UTA,Utah Jazz
+2024-25,2025-03-19,0022400998,DAL,Dallas Mavericks,IND,Indiana Pacers
+2024-25,2025-03-19,0022400999,HOU,Houston Rockets,ORL,Orlando Magic
+2024-25,2025-03-19,0022401000,DET,Detroit Pistons,MIA,Miami Heat
+2024-25,2025-03-19,0022401001,NOP,New Orleans Pelicans,MIN,Minnesota Timberwolves
+2024-25,2025-03-19,0022401002,PHI,Philadelphia 76ers,OKC,Oklahoma City Thunder
+2024-25,2025-03-19,0022401003,NYK,New York Knicks,SAS,San Antonio Spurs
+2024-25,2025-03-19,0022401006,DEN,Denver Nuggets,LAL,Los Angeles Lakers
+2024-25,2025-03-19,0022401007,CHI,Chicago Bulls,PHX,Phoenix Suns
+2024-25,2025-03-19,0022401008,MEM,Memphis Grizzlies,POR,Portland Trail Blazers
+2024-25,2025-03-19,0022401009,CLE,Cleveland Cavaliers,SAC,Sacramento Kings
+2024-25,2025-03-20,0022400996,MIL,Milwaukee Bucks,LAL,Los Angeles Lakers
+2024-25,2025-03-20,0022401005,TOR,Toronto Raptors,GSW,Golden State Warriors
+2024-25,2025-03-20,0022401010,NYK,New York Knicks,CHA,Charlotte Hornets
+2024-25,2025-03-20,0022401011,BKN,Brooklyn Nets,IND,Indiana Pacers
+2024-25,2025-03-20,0022401013,CHI,Chicago Bulls,SAC,Sacramento Kings
+2024-25,2025-03-21,0022401014,ORL,Orlando Magic,WAS,Washington Wizards
+2024-25,2025-03-21,0022401015,HOU,Houston Rockets,MIA,Miami Heat
+2024-25,2025-03-21,0022401016,NOP,New Orleans Pelicans,MIN,Minnesota Timberwolves
+2024-25,2025-03-21,0022401017,CHA,Charlotte Hornets,OKC,Oklahoma City Thunder
+2024-25,2025-03-21,0022401018,PHI,Philadelphia 76ers,SAS,San Antonio Spurs
+2024-25,2025-03-21,0022401019,DET,Detroit Pistons,DAL,Dallas Mavericks
+2024-25,2025-03-21,0022401020,BOS,Boston Celtics,UTA,Utah Jazz
+2024-25,2025-03-21,0022401021,CLE,Cleveland Cavaliers,PHX,Phoenix Suns
+2024-25,2025-03-21,0022401022,DEN,Denver Nuggets,POR,Portland Trail Blazers
+2024-25,2025-03-21,0022401023,MEM,Memphis Grizzlies,LAC,LA Clippers
+2024-25,2025-03-22,0022401024,BKN,Brooklyn Nets,IND,Indiana Pacers
+2024-25,2025-03-22,0022401025,GSW,Golden State Warriors,ATL,Atlanta Hawks
+2024-25,2025-03-22,0022401026,WAS,Washington Wizards,NYK,New York Knicks
+2024-25,2025-03-22,0022401027,MIL,Milwaukee Bucks,SAC,Sacramento Kings
+2024-25,2025-03-22,0022401028,CHI,Chicago Bulls,LAL,Los Angeles Lakers
+2024-25,2025-03-23,0022401029,NOP,New Orleans Pelicans,DET,Detroit Pistons
+2024-25,2025-03-23,0022401030,CLE,Cleveland Cavaliers,UTA,Utah Jazz
+2024-25,2025-03-23,0022401031,PHI,Philadelphia 76ers,ATL,Atlanta Hawks
+2024-25,2025-03-23,0022401032,CHA,Charlotte Hornets,MIA,Miami Heat
+2024-25,2025-03-23,0022401033,SAS,San Antonio Spurs,TOR,Toronto Raptors
+2024-25,2025-03-23,0022401034,BOS,Boston Celtics,POR,Portland Trail Blazers
+2024-25,2025-03-23,0022401035,DEN,Denver Nuggets,HOU,Houston Rockets
+2024-25,2025-03-23,0022401036,OKC,Oklahoma City Thunder,LAC,LA Clippers
+2024-25,2025-03-24,0022401037,MIN,Minnesota Timberwolves,IND,Indiana Pacers
+2024-25,2025-03-24,0022401038,LAL,Los Angeles Lakers,ORL,Orlando Magic
+2024-25,2025-03-24,0022401039,TOR,Toronto Raptors,WAS,Washington Wizards
+2024-25,2025-03-24,0022401040,DAL,Dallas Mavericks,BKN,Brooklyn Nets
+2024-25,2025-03-24,0022401041,PHI,Philadelphia 76ers,NOP,New Orleans Pelicans
+2024-25,2025-03-24,0022401042,CHI,Chicago Bulls,DEN,Denver Nuggets
+2024-25,2025-03-24,0022401043,MIL,Milwaukee Bucks,PHX,Phoenix Suns
+2024-25,2025-03-24,0022401044,BOS,Boston Celtics,SAC,Sacramento Kings
+2024-25,2025-03-25,0022401045,ORL,Orlando Magic,CHA,Charlotte Hornets
+2024-25,2025-03-25,0022401046,SAS,San Antonio Spurs,DET,Detroit Pistons
+2024-25,2025-03-25,0022401047,GSW,Golden State Warriors,MIA,Miami Heat
+2024-25,2025-03-25,0022401048,DAL,Dallas Mavericks,NYK,New York Knicks
+2024-25,2025-03-25,0022401049,ATL,Atlanta Hawks,HOU,Houston Rockets
+2024-25,2025-03-25,0022401050,MEM,Memphis Grizzlies,UTA,Utah Jazz
+2024-25,2025-03-25,0022401051,CLE,Cleveland Cavaliers,POR,Portland Trail Blazers
+2024-25,2025-03-25,0022401052,OKC,Oklahoma City Thunder,SAC,Sacramento Kings
+2024-25,2025-03-26,0022401053,WAS,Washington Wizards,PHI,Philadelphia 76ers
+2024-25,2025-03-26,0022401054,TOR,Toronto Raptors,BKN,Brooklyn Nets
+2024-25,2025-03-26,0022401055,LAL,Los Angeles Lakers,IND,Indiana Pacers
+2024-25,2025-03-26,0022401056,LAC,LA Clippers,NYK,New York Knicks
+2024-25,2025-03-26,0022401057,MIL,Milwaukee Bucks,DEN,Denver Nuggets
+2024-25,2025-03-26,0022401058,BOS,Boston Celtics,PHX,Phoenix Suns
+2024-25,2025-03-27,0022401059,SAS,San Antonio Spurs,CLE,Cleveland Cavaliers
+2024-25,2025-03-27,0022401060,DAL,Dallas Mavericks,ORL,Orlando Magic
+2024-25,2025-03-27,0022401061,IND,Indiana Pacers,WAS,Washington Wizards
+2024-25,2025-03-27,0022401062,ATL,Atlanta Hawks,MIA,Miami Heat
+2024-25,2025-03-27,0022401063,LAL,Los Angeles Lakers,CHI,Chicago Bulls
+2024-25,2025-03-27,0022401064,MEM,Memphis Grizzlies,OKC,Oklahoma City Thunder
+2024-25,2025-03-27,0022401065,HOU,Houston Rockets,UTA,Utah Jazz
+2024-25,2025-03-27,0022401066,POR,Portland Trail Blazers,SAC,Sacramento Kings
+2024-25,2025-03-28,0022401067,CLE,Cleveland Cavaliers,DET,Detroit Pistons
+2024-25,2025-03-28,0022401068,LAC,LA Clippers,BKN,Brooklyn Nets
+2024-25,2025-03-28,0022401069,CHA,Charlotte Hornets,TOR,Toronto Raptors
+2024-25,2025-03-28,0022401070,NYK,New York Knicks,MIL,Milwaukee Bucks
+2024-25,2025-03-28,0022401071,PHX,Phoenix Suns,MIN,Minnesota Timberwolves
+2024-25,2025-03-28,0022401072,GSW,Golden State Warriors,NOP,New Orleans Pelicans
+2024-25,2025-03-28,0022401073,UTA,Utah Jazz,DEN,Denver Nuggets
+2024-25,2025-03-29,0022401074,SAC,Sacramento Kings,ORL,Orlando Magic
+2024-25,2025-03-29,0022401075,BKN,Brooklyn Nets,WAS,Washington Wizards
+2024-25,2025-03-29,0022401076,MIA,Miami Heat,PHI,Philadelphia 76ers
+2024-25,2025-03-29,0022401077,DAL,Dallas Mavericks,CHI,Chicago Bulls
+2024-25,2025-03-29,0022401078,LAL,Los Angeles Lakers,MEM,Memphis Grizzlies
+2024-25,2025-03-29,0022401079,IND,Indiana Pacers,OKC,Oklahoma City Thunder
+2024-25,2025-03-29,0022401080,BOS,Boston Celtics,SAS,San Antonio Spurs
+2024-25,2025-03-30,0022401081,LAC,LA Clippers,CLE,Cleveland Cavaliers
+2024-25,2025-03-30,0022401082,POR,Portland Trail Blazers,NYK,New York Knicks
+2024-25,2025-03-30,0022401083,ATL,Atlanta Hawks,MIL,Milwaukee Bucks
+2024-25,2025-03-30,0022401084,DET,Detroit Pistons,MIN,Minnesota Timberwolves
+2024-25,2025-03-30,0022401085,CHA,Charlotte Hornets,NOP,New Orleans Pelicans
+2024-25,2025-03-30,0022401086,GSW,Golden State Warriors,SAS,San Antonio Spurs
+2024-25,2025-03-30,0022401087,TOR,Toronto Raptors,PHI,Philadelphia 76ers
+2024-25,2025-03-30,0022401088,HOU,Houston Rockets,PHX,Phoenix Suns
+2024-25,2025-03-31,0022401089,UTA,Utah Jazz,CHA,Charlotte Hornets
+2024-25,2025-03-31,0022401090,SAC,Sacramento Kings,IND,Indiana Pacers
+2024-25,2025-03-31,0022401091,LAC,LA Clippers,ORL,Orlando Magic
+2024-25,2025-03-31,0022401092,MIA,Miami Heat,WAS,Washington Wizards
+2024-25,2025-03-31,0022401093,BOS,Boston Celtics,MEM,Memphis Grizzlies
+2024-25,2025-03-31,0022401094,CHI,Chicago Bulls,OKC,Oklahoma City Thunder
+2024-25,2025-03-31,0022401095,BKN,Brooklyn Nets,DAL,Dallas Mavericks
+2024-25,2025-03-31,0022401096,HOU,Houston Rockets,LAL,Los Angeles Lakers
+2024-25,2025-04-01,0022400988,ORL,Orlando Magic,SAS,San Antonio Spurs
+2024-25,2025-04-01,0022401097,POR,Portland Trail Blazers,ATL,Atlanta Hawks
+2024-25,2025-04-01,0022401098,PHI,Philadelphia 76ers,NYK,New York Knicks
+2024-25,2025-04-01,0022401099,TOR,Toronto Raptors,CHI,Chicago Bulls
+2024-25,2025-04-01,0022401100,GSW,Golden State Warriors,MEM,Memphis Grizzlies
+2024-25,2025-04-01,0022401101,PHX,Phoenix Suns,MIL,Milwaukee Bucks
+2024-25,2025-04-01,0022401102,MIN,Minnesota Timberwolves,DEN,Denver Nuggets
+2024-25,2025-04-02,0022401103,NYK,New York Knicks,CLE,Cleveland Cavaliers
+2024-25,2025-04-02,0022401104,CHA,Charlotte Hornets,IND,Indiana Pacers
+2024-25,2025-04-02,0022401105,SAC,Sacramento Kings,WAS,Washington Wizards
+2024-25,2025-04-02,0022401106,MIA,Miami Heat,BOS,Boston Celtics
+2024-25,2025-04-02,0022401107,UTA,Utah Jazz,HOU,Houston Rockets
+2024-25,2025-04-02,0022401108,DET,Detroit Pistons,OKC,Oklahoma City Thunder
+2024-25,2025-04-02,0022401109,ATL,Atlanta Hawks,DAL,Dallas Mavericks
+2024-25,2025-04-02,0022401110,SAS,San Antonio Spurs,DEN,Denver Nuggets
+2024-25,2025-04-02,0022401111,NOP,New Orleans Pelicans,LAC,LA Clippers
+2024-25,2025-04-03,0022401112,ORL,Orlando Magic,WAS,Washington Wizards
+2024-25,2025-04-03,0022401113,MIN,Minnesota Timberwolves,BKN,Brooklyn Nets
+2024-25,2025-04-03,0022401114,MEM,Memphis Grizzlies,MIA,Miami Heat
+2024-25,2025-04-03,0022401115,MIL,Milwaukee Bucks,PHI,Philadelphia 76ers
+2024-25,2025-04-03,0022401116,POR,Portland Trail Blazers,TOR,Toronto Raptors
+2024-25,2025-04-03,0022401117,GSW,Golden State Warriors,LAL,Los Angeles Lakers
+2024-25,2025-04-04,0022401118,SAC,Sacramento Kings,CHA,Charlotte Hornets
+2024-25,2025-04-04,0022401119,UTA,Utah Jazz,IND,Indiana Pacers
+2024-25,2025-04-04,0022401120,PHX,Phoenix Suns,BOS,Boston Celtics
+2024-25,2025-04-04,0022401121,DET,Detroit Pistons,TOR,Toronto Raptors
+2024-25,2025-04-04,0022401122,POR,Portland Trail Blazers,CHI,Chicago Bulls
+2024-25,2025-04-04,0022401123,OKC,Oklahoma City Thunder,HOU,Houston Rockets
+2024-25,2025-04-04,0022401124,CLE,Cleveland Cavaliers,SAS,San Antonio Spurs
+2024-25,2025-04-04,0022401125,DEN,Denver Nuggets,GSW,Golden State Warriors
+2024-25,2025-04-04,0022401126,NOP,New Orleans Pelicans,LAL,Los Angeles Lakers
+2024-25,2025-04-04,0022401127,DAL,Dallas Mavericks,LAC,LA Clippers
+2024-25,2025-04-05,0022401128,NYK,New York Knicks,ATL,Atlanta Hawks
+2024-25,2025-04-05,0022401129,MEM,Memphis Grizzlies,DET,Detroit Pistons
+2024-25,2025-04-05,0022401130,MIN,Minnesota Timberwolves,PHI,Philadelphia 76ers
+2024-25,2025-04-05,0022401131,MIL,Milwaukee Bucks,MIA,Miami Heat
+2024-25,2025-04-05,0022401132,DAL,Dallas Mavericks,LAC,LA Clippers
+2024-25,2025-04-06,0022400617,MIL,Milwaukee Bucks,NOP,New Orleans Pelicans
+2024-25,2025-04-06,0022401133,CHI,Chicago Bulls,CHA,Charlotte Hornets
+2024-25,2025-04-06,0022401134,TOR,Toronto Raptors,BKN,Brooklyn Nets
+2024-25,2025-04-06,0022401135,LAL,Los Angeles Lakers,OKC,Oklahoma City Thunder
+2024-25,2025-04-06,0022401136,UTA,Utah Jazz,ATL,Atlanta Hawks
+2024-25,2025-04-06,0022401137,WAS,Washington Wizards,BOS,Boston Celtics
+2024-25,2025-04-06,0022401138,SAC,Sacramento Kings,CLE,Cleveland Cavaliers
+2024-25,2025-04-06,0022401139,SAS,San Antonio Spurs,POR,Portland Trail Blazers
+2024-25,2025-04-06,0022401140,PHX,Phoenix Suns,NYK,New York Knicks
+2024-25,2025-04-06,0022401142,IND,Indiana Pacers,DEN,Denver Nuggets
+2024-25,2025-04-06,0022401143,HOU,Houston Rockets,GSW,Golden State Warriors
+2024-25,2025-04-07,0022401144,SAC,Sacramento Kings,DET,Detroit Pistons
+2024-25,2025-04-07,0022401145,PHI,Philadelphia 76ers,MIA,Miami Heat
+2024-25,2025-04-08,0022401146,MEM,Memphis Grizzlies,CHA,Charlotte Hornets
+2024-25,2025-04-08,0022401147,CHI,Chicago Bulls,CLE,Cleveland Cavaliers
+2024-25,2025-04-08,0022401148,WAS,Washington Wizards,IND,Indiana Pacers
+2024-25,2025-04-08,0022401149,ATL,Atlanta Hawks,ORL,Orlando Magic
+2024-25,2025-04-08,0022401150,NOP,New Orleans Pelicans,BKN,Brooklyn Nets
+2024-25,2025-04-08,0022401151,BOS,Boston Celtics,NYK,New York Knicks
+2024-25,2025-04-08,0022401152,MIN,Minnesota Timberwolves,MIL,Milwaukee Bucks
+2024-25,2025-04-08,0022401153,LAL,Los Angeles Lakers,OKC,Oklahoma City Thunder
+2024-25,2025-04-08,0022401154,GSW,Golden State Warriors,PHX,Phoenix Suns
+2024-25,2025-04-08,0022401155,SAS,San Antonio Spurs,LAC,LA Clippers
+2024-25,2025-04-09,0022401156,BOS,Boston Celtics,ORL,Orlando Magic
+2024-25,2025-04-09,0022401157,PHI,Philadelphia 76ers,WAS,Washington Wizards
+2024-25,2025-04-09,0022401158,CHA,Charlotte Hornets,TOR,Toronto Raptors
+2024-25,2025-04-09,0022401159,LAL,Los Angeles Lakers,DAL,Dallas Mavericks
+2024-25,2025-04-09,0022401160,MIA,Miami Heat,CHI,Chicago Bulls
+2024-25,2025-04-09,0022401162,POR,Portland Trail Blazers,UTA,Utah Jazz
+2024-25,2025-04-09,0022401163,SAS,San Antonio Spurs,GSW,Golden State Warriors
+2024-25,2025-04-09,0022401164,OKC,Oklahoma City Thunder,PHX,Phoenix Suns
+2024-25,2025-04-09,0022401165,DEN,Denver Nuggets,SAC,Sacramento Kings
+2024-25,2025-04-09,0022401166,HOU,Houston Rockets,LAC,LA Clippers
+2024-25,2025-04-10,0022401161,NOP,New Orleans Pelicans,MIL,Milwaukee Bucks
+2024-25,2025-04-10,0022401167,NYK,New York Knicks,DET,Detroit Pistons
+2024-25,2025-04-10,0022401168,CLE,Cleveland Cavaliers,IND,Indiana Pacers
+2024-25,2025-04-10,0022401169,ATL,Atlanta Hawks,BKN,Brooklyn Nets
+2024-25,2025-04-10,0022401170,MIN,Minnesota Timberwolves,MEM,Memphis Grizzlies
+2024-25,2025-04-11,0022401171,MIL,Milwaukee Bucks,DET,Detroit Pistons
+2024-25,2025-04-11,0022401172,ORL,Orlando Magic,IND,Indiana Pacers
+2024-25,2025-04-11,0022401173,ATL,Atlanta Hawks,PHI,Philadelphia 76ers
+2024-25,2025-04-11,0022401174,CHA,Charlotte Hornets,BOS,Boston Celtics
+2024-25,2025-04-11,0022401175,CLE,Cleveland Cavaliers,NYK,New York Knicks
+2024-25,2025-04-11,0022401176,WAS,Washington Wizards,CHI,Chicago Bulls
+2024-25,2025-04-11,0022401177,MIA,Miami Heat,NOP,New Orleans Pelicans
+2024-25,2025-04-11,0022401178,TOR,Toronto Raptors,DAL,Dallas Mavericks
+2024-25,2025-04-11,0022401179,BKN,Brooklyn Nets,MIN,Minnesota Timberwolves
+2024-25,2025-04-11,0022401180,MEM,Memphis Grizzlies,DEN,Denver Nuggets
+2024-25,2025-04-11,0022401181,OKC,Oklahoma City Thunder,UTA,Utah Jazz
+2024-25,2025-04-11,0022401182,SAS,San Antonio Spurs,PHX,Phoenix Suns
+2024-25,2025-04-11,0022401183,GSW,Golden State Warriors,POR,Portland Trail Blazers
+2024-25,2025-04-11,0022401184,LAC,LA Clippers,SAC,Sacramento Kings
+2024-25,2025-04-11,0022401185,HOU,Houston Rockets,LAL,Los Angeles Lakers
+2024-25,2025-04-13,0022401186,ORL,Orlando Magic,ATL,Atlanta Hawks
+2024-25,2025-04-13,0022401187,CHA,Charlotte Hornets,BOS,Boston Celtics
+2024-25,2025-04-13,0022401188,NYK,New York Knicks,BKN,Brooklyn Nets
+2024-25,2025-04-13,0022401189,IND,Indiana Pacers,CLE,Cleveland Cavaliers
+2024-25,2025-04-13,0022401190,WAS,Washington Wizards,MIA,Miami Heat
+2024-25,2025-04-13,0022401191,CHI,Chicago Bulls,PHI,Philadelphia 76ers
+2024-25,2025-04-13,0022401192,DET,Detroit Pistons,MIL,Milwaukee Bucks
+2024-25,2025-04-13,0022401193,DEN,Denver Nuggets,HOU,Houston Rockets
+2024-25,2025-04-13,0022401194,DAL,Dallas Mavericks,MEM,Memphis Grizzlies
+2024-25,2025-04-13,0022401195,UTA,Utah Jazz,MIN,Minnesota Timberwolves
+2024-25,2025-04-13,0022401196,OKC,Oklahoma City Thunder,NOP,New Orleans Pelicans
+2024-25,2025-04-13,0022401197,TOR,Toronto Raptors,SAS,San Antonio Spurs
+2024-25,2025-04-13,0022401198,LAC,LA Clippers,GSW,Golden State Warriors
+2024-25,2025-04-13,0022401199,LAL,Los Angeles Lakers,POR,Portland Trail Blazers
+2024-25,2025-04-13,0022401200,PHX,Phoenix Suns,SAC,Sacramento Kings
+2024-25,2025-04-15,0052400101,ATL,Atlanta Hawks,ORL,Orlando Magic
+2024-25,2025-04-15,0052400121,MEM,Memphis Grizzlies,GSW,Golden State Warriors
+2024-25,2025-04-16,0052400111,MIA,Miami Heat,CHI,Chicago Bulls
+2024-25,2025-04-16,0052400131,DAL,Dallas Mavericks,SAC,Sacramento Kings
+2024-25,2025-04-18,0052400201,MIA,Miami Heat,ATL,Atlanta Hawks
+2024-25,2025-04-18,0052400211,DAL,Dallas Mavericks,MEM,Memphis Grizzlies
+2024-25,2025-04-19,0042400121,DET,Detroit Pistons,NYK,New York Knicks
+2024-25,2025-04-19,0042400131,MIL,Milwaukee Bucks,IND,Indiana Pacers
+2024-25,2025-04-19,0042400161,MIN,Minnesota Timberwolves,LAL,Los Angeles Lakers
+2024-25,2025-04-19,0042400171,LAC,LA Clippers,DEN,Denver Nuggets
+2024-25,2025-04-20,0042400101,MIA,Miami Heat,CLE,Cleveland Cavaliers
+2024-25,2025-04-20,0042400111,ORL,Orlando Magic,BOS,Boston Celtics
+2024-25,2025-04-20,0042400141,MEM,Memphis Grizzlies,OKC,Oklahoma City Thunder
+2024-25,2025-04-20,0042400151,GSW,Golden State Warriors,HOU,Houston Rockets
+2024-25,2025-04-21,0042400122,DET,Detroit Pistons,NYK,New York Knicks
+2024-25,2025-04-21,0042400172,LAC,LA Clippers,DEN,Denver Nuggets
+2024-25,2025-04-22,0042400132,MIL,Milwaukee Bucks,IND,Indiana Pacers
+2024-25,2025-04-22,0042400142,MEM,Memphis Grizzlies,OKC,Oklahoma City Thunder
+2024-25,2025-04-22,0042400162,MIN,Minnesota Timberwolves,LAL,Los Angeles Lakers
+2024-25,2025-04-23,0042400102,MIA,Miami Heat,CLE,Cleveland Cavaliers
+2024-25,2025-04-23,0042400112,ORL,Orlando Magic,BOS,Boston Celtics
+2024-25,2025-04-23,0042400152,GSW,Golden State Warriors,HOU,Houston Rockets
+2024-25,2025-04-24,0042400123,NYK,New York Knicks,DET,Detroit Pistons
+2024-25,2025-04-24,0042400143,OKC,Oklahoma City Thunder,MEM,Memphis Grizzlies
+2024-25,2025-04-24,0042400173,DEN,Denver Nuggets,LAC,LA Clippers
+2024-25,2025-04-25,0042400113,BOS,Boston Celtics,ORL,Orlando Magic
+2024-25,2025-04-25,0042400133,IND,Indiana Pacers,MIL,Milwaukee Bucks
+2024-25,2025-04-25,0042400163,LAL,Los Angeles Lakers,MIN,Minnesota Timberwolves
+2024-25,2025-04-26,0042400103,CLE,Cleveland Cavaliers,MIA,Miami Heat
+2024-25,2025-04-26,0042400144,OKC,Oklahoma City Thunder,MEM,Memphis Grizzlies
+2024-25,2025-04-26,0042400153,HOU,Houston Rockets,GSW,Golden State Warriors
+2024-25,2025-04-26,0042400174,DEN,Denver Nuggets,LAC,LA Clippers
+2024-25,2025-04-27,0042400114,BOS,Boston Celtics,ORL,Orlando Magic
+2024-25,2025-04-27,0042400124,NYK,New York Knicks,DET,Detroit Pistons
+2024-25,2025-04-27,0042400134,IND,Indiana Pacers,MIL,Milwaukee Bucks
+2024-25,2025-04-27,0042400164,LAL,Los Angeles Lakers,MIN,Minnesota Timberwolves
+2024-25,2025-04-28,0042400104,CLE,Cleveland Cavaliers,MIA,Miami Heat
+2024-25,2025-04-28,0042400154,HOU,Houston Rockets,GSW,Golden State Warriors
+2024-25,2025-04-29,0042400115,ORL,Orlando Magic,BOS,Boston Celtics
+2024-25,2025-04-29,0042400125,DET,Detroit Pistons,NYK,New York Knicks
+2024-25,2025-04-29,0042400135,MIL,Milwaukee Bucks,IND,Indiana Pacers
+2024-25,2025-04-29,0042400175,LAC,LA Clippers,DEN,Denver Nuggets
+2024-25,2025-04-30,0042400155,GSW,Golden State Warriors,HOU,Houston Rockets
+2024-25,2025-04-30,0042400165,MIN,Minnesota Timberwolves,LAL,Los Angeles Lakers
+2024-25,2025-05-01,0042400126,NYK,New York Knicks,DET,Detroit Pistons
+2024-25,2025-05-01,0042400176,DEN,Denver Nuggets,LAC,LA Clippers
+2024-25,2025-05-02,0042400156,HOU,Houston Rockets,GSW,Golden State Warriors
+2024-25,2025-05-03,0042400177,LAC,LA Clippers,DEN,Denver Nuggets
+2024-25,2025-05-04,0042400157,GSW,Golden State Warriors,HOU,Houston Rockets
+2024-25,2025-05-04,0042400201,IND,Indiana Pacers,CLE,Cleveland Cavaliers
+2024-25,2025-05-05,0042400211,NYK,New York Knicks,BOS,Boston Celtics
+2024-25,2025-05-05,0042400221,DEN,Denver Nuggets,OKC,Oklahoma City Thunder
+2024-25,2025-05-06,0042400202,IND,Indiana Pacers,CLE,Cleveland Cavaliers
+2024-25,2025-05-06,0042400231,GSW,Golden State Warriors,MIN,Minnesota Timberwolves
+2024-25,2025-05-07,0042400212,NYK,New York Knicks,BOS,Boston Celtics
+2024-25,2025-05-07,0042400222,DEN,Denver Nuggets,OKC,Oklahoma City Thunder
+2024-25,2025-05-08,0042400232,GSW,Golden State Warriors,MIN,Minnesota Timberwolves
+2024-25,2025-05-09,0042400203,CLE,Cleveland Cavaliers,IND,Indiana Pacers
+2024-25,2025-05-09,0042400223,OKC,Oklahoma City Thunder,DEN,Denver Nuggets
+2024-25,2025-05-10,0042400213,BOS,Boston Celtics,NYK,New York Knicks
+2024-25,2025-05-10,0042400233,MIN,Minnesota Timberwolves,GSW,Golden State Warriors
+2024-25,2025-05-11,0042400204,CLE,Cleveland Cavaliers,IND,Indiana Pacers
+2024-25,2025-05-11,0042400224,OKC,Oklahoma City Thunder,DEN,Denver Nuggets
+2024-25,2025-05-12,0042400214,BOS,Boston Celtics,NYK,New York Knicks
+2024-25,2025-05-12,0042400234,MIN,Minnesota Timberwolves,GSW,Golden State Warriors
+2024-25,2025-05-13,0042400205,IND,Indiana Pacers,CLE,Cleveland Cavaliers
+2024-25,2025-05-13,0042400225,DEN,Denver Nuggets,OKC,Oklahoma City Thunder
+2024-25,2025-05-14,0042400215,NYK,New York Knicks,BOS,Boston Celtics
+2024-25,2025-05-14,0042400235,GSW,Golden State Warriors,MIN,Minnesota Timberwolves
+2024-25,2025-05-15,0042400226,OKC,Oklahoma City Thunder,DEN,Denver Nuggets
+2024-25,2025-05-16,0042400216,BOS,Boston Celtics,NYK,New York Knicks
+2024-25,2025-05-18,0042400227,DEN,Denver Nuggets,OKC,Oklahoma City Thunder
+2024-25,2025-05-20,0042400311,MIN,Minnesota Timberwolves,OKC,Oklahoma City Thunder
+2024-25,2025-05-21,0042400301,IND,Indiana Pacers,NYK,New York Knicks
+2024-25,2025-05-22,0042400312,MIN,Minnesota Timberwolves,OKC,Oklahoma City Thunder
+2024-25,2025-05-23,0042400302,IND,Indiana Pacers,NYK,New York Knicks
+2024-25,2025-05-24,0042400313,OKC,Oklahoma City Thunder,MIN,Minnesota Timberwolves
+2024-25,2025-05-25,0042400303,NYK,New York Knicks,IND,Indiana Pacers
+2024-25,2025-05-26,0042400314,OKC,Oklahoma City Thunder,MIN,Minnesota Timberwolves
+2024-25,2025-05-27,0042400304,NYK,New York Knicks,IND,Indiana Pacers
+2024-25,2025-05-28,0042400315,MIN,Minnesota Timberwolves,OKC,Oklahoma City Thunder
+2024-25,2025-05-29,0042400305,IND,Indiana Pacers,NYK,New York Knicks
+2024-25,2025-05-31,0042400306,NYK,New York Knicks,IND,Indiana Pacers
+2024-25,2025-06-05,0042400401,IND,Indiana Pacers,OKC,Oklahoma City Thunder
+2024-25,2025-06-08,0042400402,IND,Indiana Pacers,OKC,Oklahoma City Thunder
+2024-25,2025-06-11,0042400403,OKC,Oklahoma City Thunder,IND,Indiana Pacers
+2024-25,2025-06-13,0042400404,OKC,Oklahoma City Thunder,IND,Indiana Pacers
+2024-25,2025-06-16,0042400405,IND,Indiana Pacers,OKC,Oklahoma City Thunder
+2024-25,2025-06-19,0042400406,OKC,Oklahoma City Thunder,IND,Indiana Pacers
+2024-25,2025-06-22,0042400407,IND,Indiana Pacers,OKC,Oklahoma City Thunder
