@@ -11,7 +11,7 @@ import streamlit as st
 from google.oauth2.service_account import Credentials
 from nba_api.stats.endpoints import boxscoretraditionalv3
 
-SPREADSHEET_ID = "1IiJb0iJW4Vnqyh5CFs8jZOSSZqlmdBGbWJCPFoNO4ao"
+SPREADSHEET_ID = "1GK2Ju5XZU1OSsC-kpL0vAoGncYjTDQ3c7tHmSUnKask"
 SERVICE_ACCOUNT_FILE = Path(__file__).resolve().parent / "service_account.json"
 CACHE_FILE = Path(__file__).resolve().parent / "nba_boxscore_cache.json"
 
