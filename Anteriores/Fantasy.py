@@ -1,4 +1,3 @@
-import os
 import re
 import time
 from datetime import datetime
@@ -7,11 +6,10 @@ from pathlib import Path
 
 import gspread
 import pandas as pd
-import streamlit as st
 from google.oauth2.service_account import Credentials
 from nba_api.stats.endpoints import boxscoretraditionalv3
 
-SPREADSHEET_ID = "1IiJb0iJW4Vnqyh5CFs8jZOSSZqlmdBGbWJCPFoNO4ao"
+SPREADSHEET_ID = "1GK2Ju5XZU1OSsC-kpL0vAoGncYjTDQ3c7tHmSUnKask"
 SERVICE_ACCOUNT_FILE = Path(__file__).resolve().parent / "service_account.json"
 CACHE_FILE = Path(__file__).resolve().parent / "nba_boxscore_cache.json"
 
@@ -52,22 +50,11 @@ def cache_save(cache_dict):
 CACHE = cache_load()
 
 
-def obter_credenciais_google():
-    if SERVICE_ACCOUNT_FILE.exists():
-        return Credentials.from_service_account_file(str(SERVICE_ACCOUNT_FILE), scopes=SCOPES)
-
-    if "gcp_service_account" in st.secrets:
-        info = dict(st.secrets["gcp_service_account"])
-        return Credentials.from_service_account_info(info, scopes=SCOPES)
-
-    raise FileNotFoundError(
-        "Credenciais do Google não encontradas. Use service_account.json localmente ou st.secrets['gcp_service_account'] no Streamlit Cloud."
-    )
-
-
 def conectar_gsheets():
-    log("Conectando ao Google Sheets...")
-    creds = obter_credenciais_google()
+    log(f"Credencial: {SERVICE_ACCOUNT_FILE}")
+    if not SERVICE_ACCOUNT_FILE.exists():
+        raise FileNotFoundError(f"Credencial não encontrada: {SERVICE_ACCOUNT_FILE}")
+    creds = Credentials.from_service_account_file(str(SERVICE_ACCOUNT_FILE), scopes=SCOPES)
     client = gspread.authorize(creds)
     spreadsheet = client.open_by_key(SPREADSHEET_ID)
     log(f"Planilha: {spreadsheet.title}")

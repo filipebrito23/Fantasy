@@ -346,22 +346,24 @@ if executar:
         st.session_state.logs.append(f"ERRO: {exc}")
         atualizar_tela()
 
-# downloads no resumo
 with tab_resumo:
     df_resumo = resumo_df()
     with resumo_toolbar[0]:
         st.download_button(
             "⬇️ CSV",
-            data=resumo_csv_bytes(df_resumo),
+            data=df_resumo.to_csv(index=False, encoding="utf-8-sig").encode("utf-8-sig"),
             file_name="fantasy_resumo_execucao.csv",
             mime="text/csv",
             use_container_width=True,
             disabled=df_resumo.empty,
         )
     with resumo_toolbar[1]:
+        buffer = BytesIO()
+        with pd.ExcelWriter(buffer, engine="openpyxl") as writer:
+            df_resumo.to_excel(writer, sheet_name="resumo", index=False)
         st.download_button(
             "⬇️ Excel",
-            data=resumo_excel_bytes(df_resumo),
+            data=buffer.getvalue(),
             file_name="fantasy_resumo_execucao.xlsx",
             mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
             use_container_width=True,
