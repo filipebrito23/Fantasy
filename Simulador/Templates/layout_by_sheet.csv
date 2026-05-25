@@ -1,0 +1,6 @@
+sheet,layout,must_fill,notes
+teams,"team_id, team_name, pts_avg, trb_avg, ast_avg, stl_avg, blk_avg, three_p_avg, tov_avg, matchup_win_avg","team_id, team_name",player totals and scenario outputs
+players,"player_id, player_name, team_id, position, pts, trb, ast, stl, blk, three_p, tov","player_id, player_name, team_id, position, pts, trb, ast, stl, blk, three_p, tov",all player stat columns
+lineup_active,"slot_id, team_id, player_id, slot_type","slot_id, team_id, player_id, slot_type",only if using active lineup simulation
+bench,"bench_id, team_id, player_id, bench_order","bench_id, team_id, player_id, bench_order",only if using reserves
+scenarios,"scenario_id, scenario_name, team_id, out_player_id, in_player_id, delta_pts, delta_trb, delta_ast, delta_stl, delta_blk, delta_three_p, delta_tov, delta_matchup_win","scenario_id, scenario_name, team_id, out_player_id, in_player_id",deltas can be computed automatically

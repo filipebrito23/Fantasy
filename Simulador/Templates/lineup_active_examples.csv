@@ -1,0 +1,4 @@
+slot_id,team_id,player_id,slot_type
+1,1,101,starter
+2,1,102,starter
+3,2,103,starter

@@ -1,0 +1,4 @@
+scenario_id,scenario_name,team_id,out_player_id,in_player_id,delta_pts,delta_trb,delta_ast,delta_stl,delta_blk,delta_three_p,delta_tov,delta_matchup_win
+1,Ware to Sabonis,1,102,201,1.5,0.8,1.2,0.1,0.0,0.0,-0.2,0.28
+2,Barrett to Morant,1,101,202,0.9,0.2,1.4,0.2,0.0,0.3,0.1,0.47
+3,Both swap,1,101,202,0.9,0.2,1.4,0.2,0.0,0.3,0.1,0.47
