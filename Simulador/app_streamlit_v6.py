@@ -350,6 +350,20 @@ else:
         st.warning("Não foi possível gerar sugestões com os filtros atuais.")
         st.stop()
     st.dataframe(ranked, use_container_width=True)
-    fig = px.bar(ranked.head(10), x="jogador_entrando", y="delta", color="jogador_saindo", title="Top ganhos de matchup win", barmode="group")
-    fig.update_layout(height=500, xaxis_title="Alvo", yaxis_title="Delta")
+    top_ranked = ranked.head(10).copy()
+    fig = go.Figure()
+    for player_out in top_ranked["jogador_saindo"].dropna().astype(str).unique():
+        d = top_ranked[top_ranked["jogador_saindo"].astype(str) == player_out]
+        fig.add_trace(go.Bar(
+            name=player_out,
+            x=d["jogador_entrando"],
+            y=d["delta"]
+        ))
+    fig.update_layout(
+        title="Top ganhos de matchup win",
+        barmode="group",
+        height=500,
+        xaxis_title="Alvo",
+        yaxis_title="Delta"
+    )
     st.plotly_chart(fig, use_container_width=True)
