@@ -105,5 +105,11 @@ else:
     c1.metric('Antes', f'{old_m:.2f}' if pd.notna(old_m) else 'NA')
     c2.metric('Depois', f'{new_m:.2f}' if pd.notna(new_m) else 'NA')
     c3.metric('Delta', f'{(new_m-old_m):+.2f}' if pd.notna(old_m) and pd.notna(new_m) else 'NA')
-    comp = pd.DataFrame([{'cenario':'antes', **current}, {'cenario':'depois', **new}])
-    st.plotly_chart(px.bar(comp.melt(id_vars='cenario', var_name='categoria', value_name='valor'), x='categoria', y='valor', color='cenario', barmode='group', title='Antes vs Depois'), use_container_width=True)
+    comp = pd.DataFrame([{'cenario':'Antes', **current}, {'cenario':'Depois', **new}])
+    melted = comp.melt(id_vars='cenario', var_name='categoria', value_name='valor')
+    fig = go.Figure()
+    for s in melted['cenario'].dropna().unique():
+        d = melted[melted['cenario'] == s]
+        fig.add_trace(go.Bar(name=str(s), x=d['categoria'], y=d['valor']))
+    fig.update_layout(barmode='group', title='Antes vs Depois')
+    st.plotly_chart(fig, use_container_width=True)
