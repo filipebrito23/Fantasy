@@ -32,16 +32,7 @@ def load_sheet(xls, name):
 def load_data():
     xls = pd.ExcelFile(SOURCE_FILE)
     sheets = {s.lower(): s for s in xls.sheet_names}
-    return {
-        "players": load_sheet(xls, sheets.get("players", "")),
-        "teams": load_sheet(xls, sheets.get("teams", "")),
-        "lineup": load_sheet(xls, sheets.get("lineup_active", "")),
-        "bench": load_sheet(xls, sheets.get("bench", "")),
-        "scenarios": load_sheet(xls, sheets.get("scenarios", "")),
-        "scenario_lineup": load_sheet(xls, sheets.get("scenario_lineup_active", "")),
-        "scenario_bench": load_sheet(xls, sheets.get("scenario_bench", "")),
-        "scenario_moves": load_sheet(xls, sheets.get("scenario_moves", "")),
-    }
+    return {k: load_sheet(xls, sheets.get(k if k != 'lineup' else 'lineup_active', '')) for k in ['players','teams','lineup','bench','scenarios','scenario_lineup','scenario_bench','scenario_moves']}
 
 
 def compute_fantasy_value(df):
@@ -88,18 +79,6 @@ def calc_team_table(players, teams, lineup):
     return t
 
 
-def team_rankings(teams_calc):
-    valid = teams_calc[teams_calc["team_id"] != 15].dropna(subset=STAT_COLS)
-    rows = []
-    for c in STAT_COLS:
-        asc = c == "tov"
-        order = valid[["team_id", c]].sort_values(c, ascending=asc).reset_index(drop=True)
-        order["rank"] = np.arange(1, len(order) + 1)
-        order["stat"] = c
-        rows.append(order)
-    return pd.concat(rows, ignore_index=True) if rows else pd.DataFrame()
-
-
 def matchup_strengths(teams_calc):
     valid = teams_calc[teams_calc["team_id"] != 15].dropna(subset=STAT_COLS)
     out = []
@@ -114,6 +93,13 @@ def matchup_strengths(teams_calc):
     return pd.DataFrame(out)
 
 
+def team_correlation_matrix(team_players):
+    cols = [c for c in STAT_COLS if c in team_players.columns]
+    if len(cols) < 2:
+        return pd.DataFrame()
+    return team_players[cols].corr(method="pearson")
+
+
 def display_table(df, cols):
     return df[[c for c in cols if c in df.columns]].copy() if not df.empty else pd.DataFrame()
 
@@ -124,10 +110,6 @@ def player_pool(df, exclude_team=None):
     if "team_id" not in df.columns or exclude_team is None:
         return df
     return df[(df["team_id"].isna()) | (df["team_id"] != exclude_team)]
-
-
-def scenario_views(data):
-    return {k: v for k, v in data.items() if k in ["scenarios", "scenario_lineup", "scenario_bench", "scenario_moves"]}
 
 
 raw = load_data()
@@ -158,11 +140,35 @@ if view == "Resumo":
     for col, stat in zip(cols, STAT_COLS):
         col.metric(STAT_LABELS[stat], f"{sel_row[stat]:.2f}" if pd.notna(sel_row[stat]) else "NA")
     ms = matchup_strengths(teams_calc)
-    strength = ms.set_index("team_id").loc[sel_row["team_id"], "strength"] if not ms.empty and sel_row["team_id"] in ms.set_index("team_id").index else np.nan
-    st.metric("Força de confronto", f"{strength:.2f}" if pd.notna(strength) else "NA")
+    left, right = st.columns(2)
+    with left:
+        if not ms.empty and sel_row["team_id"] in ms.set_index("team_id").index:
+            ms_plot = ms.merge(teams_calc[["team_id", teamc["team_name"]]], on="team_id", how="left").rename(columns={teamc["team_name"]: "team"}).sort_values("strength", ascending=False)
+            st.plotly_chart(px.bar(ms_plot, x="team", y="strength", color="strength", title="Matchup win médio entre todos os times"), use_container_width=True)
+    with right:
+        lc, pc = team_cols(lineup), team_cols(players)
+        team_players = pd.DataFrame()
+        if not lineup.empty and lc["team_id"] and lc["player_id"]:
+            active = lineup.copy()
+            active[lc["team_id"]] = pd.to_numeric(active[lc["team_id"]], errors="coerce")
+            active[lc["player_id"]] = pd.to_numeric(active[lc["player_id"]], errors="coerce")
+            if lc["is_active"] and lc["is_active"] in active.columns:
+                active = active[pd.to_numeric(active[lc["is_active"]], errors="coerce").fillna(1).astype(int) == 1]
+            team_players = active[active[lc["team_id"]] == sel_row["team_id"]].merge(players, left_on=lc["player_id"], right_on=pc["player_id"], how="left")
+        corr = team_correlation_matrix(team_players)
+        if not corr.empty:
+            st.plotly_chart(px.imshow(corr.round(2), text_auto=True, color_continuous_scale="RdBu", zmin=-1, zmax=1, title=f"Correlação interna - {sel_team}"), use_container_width=True)
 
 elif view == "Ranking":
-    rk = team_rankings(teams_calc)
+    rk = []
+    valid = teams_calc[teams_calc["team_id"] != 15].dropna(subset=STAT_COLS)
+    for c in STAT_COLS:
+        asc = c == "tov"
+        order = valid[["team_id", c]].sort_values(c, ascending=asc).reset_index(drop=True)
+        order["rank"] = np.arange(1, len(order) + 1)
+        order["stat"] = c
+        rk.append(order)
+    rk = pd.concat(rk, ignore_index=True) if rk else pd.DataFrame()
     if rk.empty:
         st.info("Sem ranking disponível.")
     else:
@@ -170,7 +176,6 @@ elif view == "Ranking":
         stat_key = {v: k for k, v in STAT_LABELS.items()}[cat]
         subset = rk[rk["stat"] == stat_key].merge(teams_calc[["team_id", teamc["team_name"]]], on="team_id", how="left")
         subset = subset.rename(columns={teamc["team_name"]: "team"})
-        st.dataframe(subset[["rank", "team", stat_key]].sort_values("rank"), use_container_width=True)
         st.plotly_chart(px.bar(subset.sort_values("rank"), x="team", y=stat_key, color="rank", title=f"Ranking - {cat}"), use_container_width=True)
 
 elif view == "Elenco":
@@ -218,8 +223,6 @@ elif view == "Cenários":
 
 else:
     st.subheader("Sugestão de troca")
-    lv = display_table(lineup, [c for c in ["player_name", "position", "slot", "pts", "trb", "ast", "stl", "blk", "three_p", "tov", "fantasy_value"] if c in lineup.columns])
-    bv = display_table(bench, [c for c in ["player_name", "position", "bench_order", "pts", "trb", "ast", "stl", "blk", "three_p", "tov", "fantasy_value"] if c in bench.columns])
     pool = player_pool(players, sel_row["team_id"])
     st.info("A próxima etapa pode refinar a sugestão de troca sem mexer nas abas de cenário.")
     st.dataframe(display_table(pool, [c for c in ["player_name", "team_id", "position", "fantasy_value"] if c in pool.columns]).sort_values("fantasy_value", ascending=False).head(20), use_container_width=True)
