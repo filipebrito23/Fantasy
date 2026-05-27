@@ -112,32 +112,34 @@ def player_pool(df, exclude_team=None):
     return df[(df["team_id"].isna()) | (df["team_id"] != exclude_team)]
 
 
-def need_metrics(team_players):
+def need_metrics(team_players, teams_df):
     if team_players.empty:
         return pd.DataFrame()
-    cols = [c for c in STAT_COLS if c in team_players.columns]
+    cols = [c for c in STAT_COLS if c in team_players.columns and c in teams_df.columns]
     if len(cols) < 2:
         return pd.DataFrame()
-    team_vals = team_players[cols].astype(float)
-    league_vals = players[cols].astype(float) if all(c in players.columns for c in cols) else pd.DataFrame()
-    if league_vals.empty:
+    team_mean = team_players[cols].astype(float).mean()
+    league = teams_df[cols].astype(float).dropna()
+    if league.empty:
         return pd.DataFrame()
-    team_means = team_vals.mean()
-    league_means = league_vals.mean()
-    league_stds = league_vals.std(ddof=0).replace(0, np.nan)
-    z = (team_means - league_means) / league_stds
-    if "tov" in z.index:
-        z["tov"] = -z["tov"]
-    strength_pct = ((z - z.min()) / (z.max() - z.min()) * 100) if z.max() != z.min() else pd.Series(50, index=z.index)
-    strength_pct = strength_pct.replace([np.inf, -np.inf], np.nan).fillna(50)
-    need_pct = 100 - strength_pct
-    df = pd.DataFrame({
-        "stat": cols,
-        "value": [float(team_means[c]) for c in cols],
-        "relative_strength": [float(strength_pct[c]) for c in cols],
-        "need": [float(need_pct[c]) for c in cols],
-    })
-    return df.sort_values("need", ascending=False)
+    rows = []
+    for c in cols:
+        series = league[c].dropna()
+        if series.empty:
+            continue
+        if c == "tov":
+            wins = (team_mean[c] < series).sum()
+            losses = (team_mean[c] > series).sum()
+            total = len(series)
+            pct = (wins / total) * 100 if total else np.nan
+        else:
+            wins = (team_mean[c] > series).sum()
+            losses = (team_mean[c] < series).sum()
+            total = len(series)
+            pct = (wins / total) * 100 if total else np.nan
+        need = 100 - pct if pd.notna(pct) else np.nan
+        rows.append({"stat": c, "value": float(team_mean[c]), "relative_strength": float(pct), "need": float(need), "wins": int(wins), "losses": int(losses), "games": int(total)})
+    return pd.DataFrame(rows).sort_values("need", ascending=False)
 
 
 raw = load_data()
@@ -221,11 +223,11 @@ elif view == "Elenco":
     st.subheader("Elenco")
     st.dataframe(display_table(team_players, cols), use_container_width=True)
     st.subheader("Necessidades do elenco")
-    need_df = need_metrics(team_players)
+    need_df = need_metrics(team_players, teams_calc)
     if need_df.empty:
         st.info("Não foi possível calcular necessidades do elenco.")
     else:
-        st.dataframe(need_df[["stat", "value", "relative_strength", "need"]].rename(columns={"stat": "categoria"}), use_container_width=True)
+        st.dataframe(need_df[["stat", "value", "relative_strength", "need", "wins", "losses", "games"]].rename(columns={"stat": "categoria"}), use_container_width=True)
         st.plotly_chart(px.bar(need_df, x="stat", y="need", color="relative_strength", title=f"Necessidades do elenco - {sel_team}"), use_container_width=True)
 
 elif view == "Banco":
