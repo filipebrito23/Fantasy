@@ -112,6 +112,34 @@ def player_pool(df, exclude_team=None):
     return df[(df["team_id"].isna()) | (df["team_id"] != exclude_team)]
 
 
+def need_metrics(team_players):
+    if team_players.empty:
+        return pd.DataFrame()
+    cols = [c for c in STAT_COLS if c in team_players.columns]
+    if len(cols) < 2:
+        return pd.DataFrame()
+    team_vals = team_players[cols].astype(float)
+    league_vals = players[cols].astype(float) if all(c in players.columns for c in cols) else pd.DataFrame()
+    if league_vals.empty:
+        return pd.DataFrame()
+    team_means = team_vals.mean()
+    league_means = league_vals.mean()
+    league_stds = league_vals.std(ddof=0).replace(0, np.nan)
+    z = (team_means - league_means) / league_stds
+    if "tov" in z.index:
+        z["tov"] = -z["tov"]
+    strength_pct = ((z - z.min()) / (z.max() - z.min()) * 100) if z.max() != z.min() else pd.Series(50, index=z.index)
+    strength_pct = strength_pct.replace([np.inf, -np.inf], np.nan).fillna(50)
+    need_pct = 100 - strength_pct
+    df = pd.DataFrame({
+        "stat": cols,
+        "value": [float(team_means[c]) for c in cols],
+        "relative_strength": [float(strength_pct[c]) for c in cols],
+        "need": [float(need_pct[c]) for c in cols],
+    })
+    return df.sort_values("need", ascending=False)
+
+
 raw = load_data()
 players = compute_fantasy_value(norm_cols(raw["players"]))
 teams = norm_cols(raw["teams"])
@@ -190,7 +218,15 @@ elif view == "Elenco":
     else:
         team_players = pd.DataFrame()
     cols = [c for c in ["player_name", "position", "slot", "pts", "trb", "ast", "stl", "blk", "three_p", "tov", "fantasy_value"] if c in team_players.columns]
+    st.subheader("Elenco")
     st.dataframe(display_table(team_players, cols), use_container_width=True)
+    st.subheader("Necessidades do elenco")
+    need_df = need_metrics(team_players)
+    if need_df.empty:
+        st.info("Não foi possível calcular necessidades do elenco.")
+    else:
+        st.dataframe(need_df[["stat", "value", "relative_strength", "need"]].rename(columns={"stat": "categoria"}), use_container_width=True)
+        st.plotly_chart(px.bar(need_df, x="stat", y="need", color="relative_strength", title=f"Necessidades do elenco - {sel_team}"), use_container_width=True)
 
 elif view == "Banco":
     bc, pc = team_cols(bench), team_cols(players)
