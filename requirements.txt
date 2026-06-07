@@ -1,6 +1,7 @@
 streamlit
 pandas
-gspread
-google-auth
-nba_api
+plotly
+openpyxl
+numpy
+pathlib
 openpyxl
