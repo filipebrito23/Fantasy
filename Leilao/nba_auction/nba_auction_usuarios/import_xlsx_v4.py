@@ -4,7 +4,7 @@ from sqlalchemy import text
 from db_v4 import engine, init_db_v4
 from auth_v4 import create_user_v4
 
-POSITION_SHEETS = ["PG", "PGSG", "SG", "SGSF", "SF", "SFPF", "PF", "PFC", "C"]
+POSITION_SHEETS = ["PG", "PG_SG", "SG", "SG_SF", "SF", "SF_PF", "PF", "PF_C", "C"]
 
 
 def import_caps_v4(xlsx_path):

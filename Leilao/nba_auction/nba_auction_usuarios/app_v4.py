@@ -7,7 +7,7 @@ from db_v4 import engine, init_db_v4
 from auth_v4 import authenticate_user_v4, get_all_users_v4, create_user_v4, change_password_v4
 from auction_v4 import close_expired_bids_v4, submit_bid_v4, get_players_with_state_v4, get_bid_history_v4, get_team_rows_v4, get_audit_rows_v4, admin_add_player_v4, admin_delete_player_v4, admin_reopen_player_v4, admin_close_player_v4, admin_delete_bid_v4
 
-POSITIONS = ["Todas", "PG", "PGSG", "SG", "SGSF", "SF", "SFPF", "PF", "PFC", "C"]
+POSITIONS = ["Todas", "PG", "PG_SG", "SG", "SG_SF", "SF", "SF_PF", "PF", "PF_C", "C"]
 
 st.set_page_config(page_title="Leilão NBA Fantasy v4", layout="wide")
 init_db_v4()
