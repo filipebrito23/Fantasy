@@ -63,15 +63,13 @@ def format_roster_for_display(df: pd.DataFrame, visible_seasons: list[str]) -> p
         rename_map[f"salarie_{season}"] = SEASON_LABELS[season]
         rename_map[f"option_{season}"] = f"TO {SEASON_LABELS[season]}"
 
-    out = out.rename(columns=rename_map)
-    return out
+    return out.rename(columns=rename_map)
 
 
 def get_team_fines_row(fines_df: pd.DataFrame, team_id: int) -> dict:
     team_fines = fines_df.loc[fines_df["team_id"] == team_id]
     if team_fines.empty:
-        row = {"team_id": team_id, **{c: 0.0 for c in FINE_COLS}, "notes": ""}
-        return row
+        return {"team_id": team_id, **{c: 0.0 for c in FINE_COLS}, "notes": ""}
     row = team_fines.iloc[0].to_dict()
     for col in FINE_COLS:
         row[col] = 0.0 if pd.isna(row.get(col)) else float(row.get(col, 0.0))
@@ -87,12 +85,15 @@ def calculate_main_totals(main_roster_df: pd.DataFrame, fines_df: pd.DataFrame, 
         total_salary = float(main_roster_df[sal_col].fillna(0).sum()) if sal_col in main_roster_df.columns else 0.0
         total_fine = float(fines_row.get(fine_col, 0.0))
         cap_space = 110_000_000 - total_salary - total_fine
-        rows.append(
-            {
-                "Temporada": SEASON_LABELS[season],
-                "Salários": total_salary,
-                "Multas": total_fine,
-                "Cap restante": cap_space,
-            }
-        )
+        rows.append({"Temporada": SEASON_LABELS[season], "Salários": total_salary, "Multas": total_fine, "Cap restante": cap_space})
+    return pd.DataFrame(rows)
+
+
+def calculate_dev_totals(dev_roster_df: pd.DataFrame, visible_seasons: list[str]) -> pd.DataFrame:
+    rows = []
+    for season in visible_seasons:
+        sal_col = f"salarie_{season}"
+        total_salary = float(dev_roster_df[sal_col].fillna(0).sum()) if sal_col in dev_roster_df.columns else 0.0
+        cap_space = 14_000_000 - total_salary
+        rows.append({"Temporada": SEASON_LABELS[season], "Salários": total_salary, "Cap restante": cap_space})
     return pd.DataFrame(rows)

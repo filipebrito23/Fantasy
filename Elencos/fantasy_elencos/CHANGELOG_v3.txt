@@ -1,0 +1,1 @@
+v3 prepared as next iteration after v2; display fallback preserved for environments without pandas styler dependencies.

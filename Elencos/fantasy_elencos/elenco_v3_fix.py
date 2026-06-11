@@ -1,7 +1,6 @@
 from pathlib import Path
 import pandas as pd
 import streamlit as st
-import jinja2
 from data_loader import load_workbook_data, SEASONS
 from transforms import (
     SEASON_LABELS,
@@ -15,7 +14,7 @@ from transforms import (
 st.set_page_config(page_title="Elencos Fantasy NBA", layout="wide")
 
 st.title("Elencos Fantasy NBA")
-st.caption("Etapa 2: seletor de temporada, visão salarial do elenco principal e totalizadores.")
+st.caption("Etapa 2 v2: seletor de temporada, visão salarial do elenco principal e totalizadores.")
 
 DEFAULT_FILE = Path("roster.xlsx")
 
@@ -30,16 +29,11 @@ def currency(v: float) -> str:
     return f"US$ {v:,.2f}"
 
 
-def highlight_team_options(df: pd.DataFrame):
-    styles = pd.DataFrame("", index=df.index, columns=df.columns)
-    for col in df.columns:
-        if str(col).startswith("TO "):
-            salary_col = col.replace("TO ", "")
-            if salary_col in df.columns:
-                mask = df[col].astype(str).str.strip().str.lower().eq("sim")
-                styles.loc[mask, salary_col] = "color: red; font-weight: 700;"
-                styles.loc[mask, col] = "color: red; font-weight: 700;"
-    return styles
+def display_table(df: pd.DataFrame):
+    try:
+        st.dataframe(df.style, use_container_width=True, hide_index=True)
+    except Exception:
+        st.dataframe(df, use_container_width=True, hide_index=True)
 
 
 if not DEFAULT_FILE.exists():
@@ -80,25 +74,28 @@ with st.expander("Diagnóstico de carregamento", expanded=False):
     st.json(diag)
 
 st.subheader("Elenco principal")
-styled_main = main_roster.style.apply(highlight_team_options, axis=None)
+display_main = main_roster.copy()
 for season in visible_seasons:
     label = SEASON_LABELS[season]
-    if label in main_roster.columns:
-        styled_main = styled_main.format({label: currency})
+    if label in display_main.columns:
+        display_main[label] = display_main[label].apply(currency)
 
-st.dataframe(styled_main, use_container_width=True, hide_index=True)
+if any(str(c).startswith("TO ") for c in display_main.columns):
+    option_cols = [c for c in display_main.columns if str(c).startswith("TO ")]
+    for col in option_cols:
+        salary_col = col.replace("TO ", "")
+        if salary_col in display_main.columns:
+            mask = display_main[col].astype(str).str.strip().str.lower().eq("sim")
+            display_main.loc[mask, salary_col] = display_main.loc[mask, salary_col].map(lambda x: f"🔴 {x}")
+            display_main.loc[mask, col] = display_main.loc[mask, col].map(lambda x: f"🔴 {x}")
+
+display_table(display_main)
 
 st.subheader("Totalizadores do elenco principal")
-st.dataframe(
-    main_totals.style.format(
-        {
-            "Salários": currency,
-            "Multas": currency,
-            "Cap restante": currency,
-        }
-    ),
-    use_container_width=True,
-    hide_index=True,
-)
+main_totals_display = main_totals.copy()
+for col in ["Salários", "Multas", "Cap restante"]:
+    if col in main_totals_display.columns:
+        main_totals_display[col] = main_totals_display[col].apply(currency)
+st.dataframe(main_totals_display, use_container_width=True, hide_index=True)
 
 st.info("Na próxima etapa entraremos com a tabela da liga de desenvolvimento usando a mesma lógica de temporadas e totalizadores.")
