@@ -54,6 +54,9 @@ def logout_v5():
     st.session_state.user_v5 = None
     st.rerun()
 
+def formatar_br(valor):
+         """Formatar 1000000.0 -> 1.000.000,00"""
+         return f"{valor:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
 
 def format_remaining_v5(expires_at):
     if not expires_at:
@@ -243,7 +246,7 @@ with bid_tab:
 
             amount = st.number_input(
                 "Valor da proposta",
-                min_value=0.0,
+                min_value=1000000.0,
                 step=100000.0,
                 format="%.2f"
             )
