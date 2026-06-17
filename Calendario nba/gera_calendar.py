@@ -1,7 +1,7 @@
 from nba_api.stats.endpoints import leaguegamefinder
 import pandas as pd
 
-season = "2024-25"
+season = "2026-27"
 
 finder = leaguegamefinder.LeagueGameFinder(season_nullable=season)
 df = finder.get_data_frames()[0]
@@ -47,5 +47,5 @@ jogos = jogos[[
     "HOME_TEAM_NAME",
 ]]
 
-jogos.to_csv("nba_2025_26_jogos_gameid.csv", index=False, encoding="utf-8-sig")
+jogos.to_csv("nba_2026_27_jogos_gameid.csv", index=False, encoding="utf-8-sig")
 print(f"Arquivo gerado com {len(jogos)} jogos.")
