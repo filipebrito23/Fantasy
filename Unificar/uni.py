@@ -104,6 +104,7 @@ pg = st.navigation(
     [
         st.Page("pages/lei.py", title="Leilão"),
         st.Page("pages/teams.py", title="Elencos"),
+        st.Page("pages/classificacao.py", title="Classificação"),
     ]
 )
 

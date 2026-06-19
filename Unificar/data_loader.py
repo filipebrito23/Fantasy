@@ -54,4 +54,14 @@ def load_workbook_data(file_path: str | Path = "roster.xlsx") -> dict[str, pd.Da
     if "Jogador" in data["roster"].columns:
         data["roster"] = data["roster"].drop(columns=["Jogador"])
 
+    if "games" in data:
+        data["games"] = _to_numeric(
+            data["games"],
+            ["id_jogo", "id_time_1", "pontos_time_1", "pontos_time_2", "id_time_2"],
+        )
+        data["games"] = _to_string(
+            data["games"],
+            ["nome_time_1", "nome_time_2"],
+        )
+
     return data
