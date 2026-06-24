@@ -175,8 +175,21 @@ def processar_aba(nome_aba, somente_vazias=True, callback=None):
             "cache_misses": 0,
         }
 
-    header = all_values[0]
-    rows = all_values[1:]
+    header_row_idx = None
+    for idx, row in enumerate(all_values):
+        row_norm = [str(v).strip() for v in row]
+        if "Jogadores" in row_norm and "GameID" in row_norm:
+            header_row_idx = idx
+            break
+
+    if header_row_idx is None:
+        raise ValueError(f"[{nome_aba}] Não foi possível localizar a linha de cabeçalho com 'Jogadores' e 'GameID'.")
+
+    header = all_values[header_row_idx]
+    rows = all_values[header_row_idx + 1:]
+    if rows:
+        max_cols = len(header)
+        rows = [row[:max_cols] + [""] * max(0, max_cols - len(row[:max_cols])) for row in rows]
     df = pd.DataFrame(rows, columns=header)
 
     idx_stats = {}
@@ -187,8 +200,8 @@ def processar_aba(nome_aba, somente_vazias=True, callback=None):
             idx_stats[col] = None
 
     try:
-        header.index("Jogadores")
-        header.index("GameID")
+        idx_jogadores = header.index("Jogadores")
+        idx_gameid = header.index("GameID")
     except ValueError as exc:
         raise ValueError(f"[{nome_aba}] Cabeçalhos obrigatórios não encontrados: {exc}")
 
@@ -207,9 +220,23 @@ def processar_aba(nome_aba, somente_vazias=True, callback=None):
         })
 
     for i, row in df.iterrows():
-        linha_planilha = i + 2
+        linha_planilha = header_row_idx + 2 + i
         jogador = str(row.get("Jogadores", "")).strip()
         game_id_cell = str(row.get("GameID", "")).strip()
+
+        valores_linha = [str(v).strip() for v in all_values[linha_planilha - 1]] if linha_planilha - 1 < len(all_values) else []
+        linha_decorativa = bool(valores_linha) and not game_id_cell and sum(1 for v in valores_linha if v) <= 2
+
+        if linha_decorativa:
+            linhas_puladas += 1
+            if callback:
+                callback({
+                    "evento": "linha_pulada",
+                    "aba": nome_aba,
+                    "linha": linha_planilha,
+                    "motivo": "linha_decorativa_cabecalho_time"
+                })
+            continue
 
         if not jogador or not game_id_cell:
             linhas_puladas += 1
