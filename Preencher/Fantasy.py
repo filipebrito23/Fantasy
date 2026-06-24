@@ -99,6 +99,21 @@ def stats_ja_preenchidas(row):
     return str(row.get("Pontos", "")).strip() != ""
 
 
+def converter_valor_planilha(valor):
+    if valor is None:
+        return ""
+    if isinstance(valor, (int, float)):
+        return valor
+    valor_str = str(valor).strip()
+    if valor_str == "":
+        return ""
+    if re.fullmatch(r"-?\d+", valor_str):
+        return int(valor_str)
+    if re.fullmatch(r"-?\d+\.\d+", valor_str):
+        return float(valor_str)
+    return valor_str
+
+
 def buscar_stats_com_cache(game_id: str, player_name: str) -> tuple[dict, str]:
     if game_id in CACHE and "stats" in CACHE[game_id]:
         raw_stats = CACHE[game_id]["stats"]
@@ -200,8 +215,8 @@ def processar_aba(nome_aba, somente_vazias=True, callback=None):
             idx_stats[col] = None
 
     try:
-        idx_jogadores = header.index("Jogadores")
-        idx_gameid = header.index("GameID")
+        header.index("Jogadores")
+        header.index("GameID")
     except ValueError as exc:
         raise ValueError(f"[{nome_aba}] Cabeçalhos obrigatórios não encontrados: {exc}")
 
@@ -285,7 +300,7 @@ def processar_aba(nome_aba, somente_vazias=True, callback=None):
         for stat_col in COLUNAS_STATS:
             if idx_stats.get(stat_col) is None:
                 continue
-            val = str(stats.get(stat_col, ""))
+            val = converter_valor_planilha(stats.get(stat_col, ""))
             cell_a1 = f"{a1_col(idx_stats[stat_col])}{linha_planilha}"
             updates.append({"range": cell_a1, "values": [[val]]})
 
@@ -316,25 +331,6 @@ def processar_aba(nome_aba, somente_vazias=True, callback=None):
             })
 
         time.sleep(0.20)
-
-    resumo = {
-        "aba": nome_aba,
-        "linhas_total": linhas_total,
-        "linhas_processadas": linhas_processadas,
-        "linhas_preenchidas": linhas_preenchidas,
-        "linhas_puladas": linhas_puladas,
-        "cache_hits": cache_hits,
-        "cache_misses": cache_misses,
-    }
-
-    if callback:
-        callback({
-            "evento": "aba_fim",
-            "resumo": resumo
-        })
-
-    return resumo
-
 
 def processar_todas_as_abas(somente_vazias=True, callback=None):
     abas = listar_abas()
