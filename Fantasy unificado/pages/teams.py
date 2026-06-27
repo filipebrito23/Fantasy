@@ -13,6 +13,8 @@ from transforms import (
     format_roster_for_display,
     calculate_main_totals,
     calculate_dev_totals,
+    build_picks_view,
+    format_picks_for_display,
 )
 
 DEFAULT_FILE = Path("roster.xlsx")
@@ -35,7 +37,32 @@ def cached_load(file_path: str):
 def currency(v) -> str:
     if pd.isna(v):
         return "-"
-    return f"US$ {v:,.2f}"
+    s = f"{v:,.2f}"
+    s = s.replace(",", "X").replace(".", ",").replace("X", ".")
+    return f"US$ {s}"
+
+
+def format_salary_columns(df: pd.DataFrame, visible_seasons: list[str]) -> pd.DataFrame:
+    if df.empty:
+        return df
+
+    out = df.copy()
+    for season in visible_seasons:
+        label = SEASON_LABELS[season]
+        if label in out.columns:
+            out[label] = out[label].apply(currency)
+    return out
+
+
+def format_money_columns(df: pd.DataFrame, cols: list[str]) -> pd.DataFrame:
+    if df.empty:
+        return df
+
+    out = df.copy()
+    for col in cols:
+        if col in out.columns:
+            out[col] = out[col].apply(currency)
+    return out
 
 
 def display_table(df: pd.DataFrame):
@@ -237,7 +264,7 @@ def format_totals(df: pd.DataFrame, money_cols: list[str]) -> pd.DataFrame:
 user = require_login_v5()
 
 st.title("Elencos Fantasy NBA")
-st.caption("Transactions com domínio por time, seleção de players dos dois rosters e save robusto.")
+st.caption("Elencos 2026-27")
 
 if not DEFAULT_FILE.exists():
     st.error("Arquivo roster.xlsx não encontrado na pasta do projeto.")
@@ -310,22 +337,37 @@ dev_roster_raw = build_roster_view(
 dev_roster = format_roster_for_display(dev_roster_raw, visible_seasons)
 dev_totals = calculate_dev_totals(dev_team_df, visible_seasons)
 
+picks_team_df = build_picks_view(data["picks"], data["teams"], selected_team_id)
+picks_display = format_picks_for_display(picks_team_df)
 
 
 st.subheader("Elenco principal")
 display_main = build_red_flags(main_roster, visible_seasons)
+display_main = format_salary_columns(display_main, visible_seasons)
 display_table(display_main)
 
 st.subheader("Totalizadores do elenco principal")
-main_totals_display = format_totals(main_totals, ["Salários", "Multas", "Cap restante"])
-display_table(main_totals_display)
+main_totals_display = format_money_columns(
+    main_totals,
+    ["Salários", "Multas", "Cap restante"],
+)
+st.dataframe(main_totals_display, use_container_width=True, hide_index=True)
 
 st.subheader("Liga de desenvolvimento")
 display_dev = build_red_flags(dev_roster, visible_seasons)
+display_dev = format_salary_columns(display_dev, visible_seasons)
 display_table(display_dev)
 
 st.subheader("Totalizadores da development")
-dev_totals_display = format_totals(dev_totals, ["Salários", "Cap restante"])
-display_table(dev_totals_display)
+dev_totals_display = format_money_columns(
+    dev_totals,
+    ["Salários", "Cap restante"],
+)
+st.dataframe(dev_totals_display, use_container_width=True, hide_index=True)
 
-st.info("Próxima etapa: incluir formulário de transactions e persistência no roster.xlsx.")
+st.subheader("Picks")
+
+if picks_display.empty:
+    st.info("Esse time não possui picks cadastradas.")
+else:
+    st.dataframe(picks_display, use_container_width=True, hide_index=True)
