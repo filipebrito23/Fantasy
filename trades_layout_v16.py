@@ -375,29 +375,56 @@ def scenario_matchup_delta(team_id, current, scenario_totals, teams_calc):
     return old_m, new_m, new_m - old_m
 
 
-def build_trade_finder_results(team_id, team_name, teams_calc, lineup_df, bench_df, players, include_bench=False, same_position=True, level_similar=True, limit=10, pos_filter="Todas"):
+def build_trade_finder_results(
+    team_id,
+    team_name,
+    teams_calc,
+    lineup_df,
+    bench_df,
+    players,
+    include_bench=False,
+    same_position=True,
+    level_similar=True,
+    limit=10,
+    selected_out_player=None
+):
     roster_frames = [lineup_df]
     if include_bench and not bench_df.empty:
         roster_frames.append(bench_df)
+
     roster = pd.concat([df for df in roster_frames if not df.empty], ignore_index=True) if roster_frames else pd.DataFrame()
     if roster.empty:
         return pd.DataFrame(), pd.DataFrame()
 
     roster = roster.copy().drop_duplicates(subset=[c for c in ["player_id", "player_name"] if c in roster.columns])
-    if pos_filter != "Todas" and "position" in roster.columns:
-        roster = roster[roster["position"].astype(str) == str(pos_filter)]
+
+    if selected_out_player and "player_name" in roster.columns:
+        roster = roster[roster["player_name"].astype(str) == str(selected_out_player)]
+
     if roster.empty:
         return pd.DataFrame(), pd.DataFrame()
 
     pool = player_pool(players, team_id).copy()
     pool = pool[pool["team_id"] != 15] if "team_id" in pool.columns else pool
-    if pos_filter != "Todas" and "position" in pool.columns:
-        pool = pool[pool["position"].astype(str) == str(pos_filter)]
+
     if pool.empty:
         return pd.DataFrame(), pd.DataFrame()
 
-    current = {c: pd.to_numeric(pd.Series([teams_calc.loc[teams_calc["team_id"] == team_id, c].iloc[0] if not teams_calc.loc[teams_calc["team_id"] == team_id].empty else np.nan]), errors="coerce").iloc[0] for c in STAT_COLS}
-    opps = teams_calc[(teams_calc["team_id"] != team_id) & (teams_calc["team_id"] != 15)].dropna(subset=STAT_COLS).copy()
+    current = {
+        c: pd.to_numeric(
+            pd.Series([
+                teams_calc.loc[teams_calc["team_id"] == team_id, c].iloc[0]
+                if not teams_calc.loc[teams_calc["team_id"] == team_id].empty else np.nan
+            ]),
+            errors="coerce"
+        ).iloc[0]
+        for c in STAT_COLS
+    }
+
+    opps = teams_calc[
+        (teams_calc["team_id"] != team_id) & (teams_calc["team_id"] != 15)
+    ].dropna(subset=STAT_COLS).copy()
+
     old_m = float(np.mean([matchup_score(pd.Series(current), opp) for _, opp in opps.iterrows()])) if not opps.empty else np.nan
     need_df = roster_needs(get_team_lineup(team_id, lineup, players), teams_calc)
     top_needs = get_top_need_categories(need_df, top_k=3)
@@ -406,28 +433,45 @@ def build_trade_finder_results(team_id, team_name, teams_calc, lineup_df, bench_
     for _, out_row in roster.iterrows():
         out_name = out_row.get("player_name", "NA")
         out_pos = str(out_row.get("position", "NA"))
-        source = "Banco" if (not bench_df.empty and "player_id" in out_row.index and "player_id" in bench_df.columns and int(pd.to_numeric(pd.Series([out_row.get('player_id', np.nan)]), errors='coerce').fillna(-1).iloc[0]) in set(pd.to_numeric(bench_df['player_id'], errors='coerce').dropna().astype(int).tolist())) else "Lineup"
+
+        source = "Banco" if (
+            not bench_df.empty
+            and "player_id" in out_row.index
+            and "player_id" in bench_df.columns
+            and int(pd.to_numeric(pd.Series([out_row.get("player_id", np.nan)]), errors="coerce").fillna(-1).iloc[0])
+            in set(pd.to_numeric(bench_df["player_id"], errors="coerce").dropna().astype(int).tolist())
+        ) else "Lineup"
+
         for _, in_row in pool.iterrows():
             if same_position and "position" in out_row.index and "position" in in_row.index:
                 if str(out_row.get("position", "")) != str(in_row.get("position", "")):
                     continue
+
             if not level_similarity_ok(out_row, in_row, level_similar):
                 continue
+
             partner_team_id = in_row.get("team_id", np.nan)
             partner_team_name = "NA"
             if "team_id" in teams_calc.columns and "team_name" in teams_calc.columns and pd.notna(partner_team_id):
                 match = teams_calc[teams_calc["team_id"] == partner_team_id]
                 if not match.empty:
                     partner_team_name = match.iloc[0]["team_name"]
+
             out_rows = pd.DataFrame([out_row])
             in_rows = pd.DataFrame([in_row])
+
             new = apply_trade_totals(current, out_rows, in_rows)
             new_m = float(np.mean([matchup_score(pd.Series(new), opp) for _, opp in opps.iterrows()])) if not opps.empty else np.nan
+
             impact_df = compare_trade_teams(current, new)
             improved = impact_df.copy()
-            improved["Impacto_positivo"] = improved.apply(lambda r: (r["Delta"] < 0) if r["Categoria"] == "TOV" else (r["Delta"] > 0), axis=1)
+            improved["Impacto_positivo"] = improved.apply(
+                lambda r: (r["Delta"] < 0) if r["Categoria"] == "TOV" else (r["Delta"] > 0),
+                axis=1
+            )
             improved_cats = improved[improved["Impacto_positivo"]]["Categoria"].astype(str).tolist()
             need_gain = sum(1 for c in improved_cats if c in top_needs)
+
             rows.append({
                 "jogador_saindo": out_name,
                 "origem_saida": source,
@@ -451,10 +495,16 @@ def build_trade_finder_results(team_id, team_name, teams_calc, lineup_df, bench_
                 "delta_3pt": float(impact_df.loc[impact_df["Categoria"] == "3PT", "Delta"].iloc[0]) if not impact_df.loc[impact_df["Categoria"] == "3PT"].empty else np.nan,
                 "delta_tov": float(impact_df.loc[impact_df["Categoria"] == "TOV", "Delta"].iloc[0]) if not impact_df.loc[impact_df["Categoria"] == "TOV"].empty else np.nan,
             })
+
     ranked = pd.DataFrame(rows)
     if ranked.empty:
         return ranked, need_df
-    ranked = ranked.sort_values(["delta_matchup", "ganhos_need", "ganhos_categorias", "depois"], ascending=[False, False, False, False]).reset_index(drop=True)
+
+    ranked = ranked.sort_values(
+        ["delta_matchup", "ganhos_need", "ganhos_categorias", "depois"],
+        ascending=[False, False, False, False]
+    ).reset_index(drop=True)
+
     ranked = ranked.drop_duplicates(subset=["jogador_saindo", "jogador_entrando"]).head(limit)
     return ranked, need_df
 
@@ -735,6 +785,7 @@ elif view == "Simulador":
 
 else:
     st.subheader("Trade Finder")
+
     c1, c2, c3, c4 = st.columns(4)
     with c1:
         same_position = st.checkbox("Apenas mesma posição", value=True)
@@ -744,15 +795,49 @@ else:
         include_bench = st.checkbox("Incluir banco", value=False)
     with c4:
         limit = st.selectbox("Quantidade de sugestões", [5, 10, 15], index=1)
-    roster_for_pos = pd.concat([df for df in [team_lineup, team_bench] if not df.empty], ignore_index=True)
-    pos_options = ["Todas"] + (sorted(roster_for_pos["position"].dropna().astype(str).unique().tolist()) if (not roster_for_pos.empty and "position" in roster_for_pos.columns) else [])
-    pos_filter = st.selectbox("Filtro de posição", pos_options)
-    ranked, need_df = build_trade_finder_results(team_id, sel_team, teams_calc, team_lineup, team_bench, players, include_bench=include_bench, same_position=same_position, level_similar=level_similar, limit=limit, pos_filter=pos_filter)
+
+    roster_frames = [team_lineup]
+    if include_bench and not team_bench.empty:
+        roster_frames.append(team_bench)
+
+    roster_for_pick = pd.concat([df for df in roster_frames if not df.empty], ignore_index=True) if roster_frames else pd.DataFrame()
+    roster_for_pick = roster_for_pick.drop_duplicates(subset=[c for c in ["player_id", "player_name"] if c in roster_for_pick.columns])
+
+    if roster_for_pick.empty or "player_name" not in roster_for_pick.columns:
+        st.warning("Não há jogadores disponíveis para selecionar.")
+        st.stop()
+
+    player_options = sorted(roster_for_pick["player_name"].dropna().astype(str).unique().tolist())
+    selected_out_player = st.selectbox("Jogador para buscar troca", player_options)
+
+    ranked, need_df = build_trade_finder_results(
+        team_id,
+        sel_team,
+        teams_calc,
+        team_lineup,
+        team_bench,
+        players,
+        include_bench=include_bench,
+        same_position=same_position,
+        level_similar=level_similar,
+        limit=limit,
+        selected_out_player=selected_out_player
+    )
+
     if ranked.empty:
         st.warning("Não foi possível gerar sugestões com os filtros atuais.")
         st.stop()
-    st.markdown("### Top ganhos de matchup win")
-    st.dataframe(ranked[[c for c in ["jogador_saindo", "origem_saida", "jogador_entrando", "time_parceiro", "pos_out", "pos_in", "antes", "depois", "delta_matchup", "ganhos_categorias", "ganhos_need", "categorias_melhoradas"] if c in ranked.columns]], use_container_width=True)
+
+    st.markdown(f"### Melhores opções para substituir {selected_out_player}")
+    st.dataframe(
+        ranked[[c for c in [
+            "jogador_saindo", "origem_saida", "jogador_entrando", "time_parceiro",
+            "pos_out", "pos_in", "antes", "depois", "delta_matchup",
+            "ganhos_categorias", "ganhos_need", "categorias_melhoradas"
+        ] if c in ranked.columns]],
+        use_container_width=True
+    )
+
     fig = go.Figure()
     fig.add_trace(go.Bar(
         x=ranked["jogador_entrando"],
@@ -761,34 +846,58 @@ else:
         marker_color=np.where(ranked["delta_matchup"] >= 0, "#2E8B57", "#C44E52"),
         hovertemplate="Entrando: %{x}<br>Saindo: %{text}<br>Delta matchup: %{y:.2f}<extra></extra>",
     ))
-    fig.update_layout(title="Top ganhos de matchup win", xaxis_title="Jogador entrando", yaxis_title="Delta matchup", height=450)
+    fig.update_layout(
+        title=f"Top ganhos de matchup - {selected_out_player}",
+        xaxis_title="Jogador entrando",
+        yaxis_title="Delta matchup",
+        height=450
+    )
     st.plotly_chart(fig, use_container_width=True)
+
     st.markdown("### Leitura de needs do elenco")
     if not need_df.empty:
         st.dataframe(need_df, use_container_width=True)
-    detail_idx = st.selectbox("Abrir sugestão", ranked.index, format_func=lambda i: f"{ranked.loc[i, 'jogador_saindo']} → {ranked.loc[i, 'jogador_entrando']} ({ranked.loc[i, 'delta_matchup']:+.2f})")
+
+    detail_idx = st.selectbox(
+        "Abrir sugestão",
+        ranked.index,
+        format_func=lambda i: f"{ranked.loc[i, 'jogador_saindo']} → {ranked.loc[i, 'jogador_entrando']} ({ranked.loc[i, 'delta_matchup']:+.2f})"
+    )
+
     selected = ranked.loc[detail_idx]
-    roster_frames = [team_lineup]
-    if include_bench and not team_bench.empty:
-        roster_frames.append(team_bench)
-    eligible_out = pd.concat([df for df in roster_frames if not df.empty], ignore_index=True)
+
+    eligible_out = roster_for_pick.copy()
     out_rows = eligible_out[eligible_out["player_name"] == selected["jogador_saindo"]].head(1)
     in_rows = players[players["player_name"] == selected["jogador_entrando"]].head(1)
+
     current = {c: pd.to_numeric(sel_row[c], errors="coerce") if c in sel_row.index else np.nan for c in STAT_COLS}
     new = apply_trade_totals(current, out_rows, in_rows)
     impact_df = compare_trade_teams(current, new)
+
     st.plotly_chart(compare_players(out_rows, in_rows), use_container_width=True)
+
     m1, m2, m3 = st.columns(3)
-    m1.metric("Matchup médio antes", f"{selected['antes']:.2f}" if pd.notna(selected['antes']) else "NA")
-    m2.metric("Matchup médio depois", f"{selected['depois']:.2f}" if pd.notna(selected['depois']) else "NA")
-    m3.metric("Delta", f"{selected['delta_matchup']:+.2f}" if pd.notna(selected['delta_matchup']) else "NA")
+    m1.metric("Matchup médio antes", f"{selected['antes']:.2f}" if pd.notna(selected["antes"]) else "NA")
+    m2.metric("Matchup médio depois", f"{selected['depois']:.2f}" if pd.notna(selected["depois"]) else "NA")
+    m3.metric("Delta", f"{selected['delta_matchup']:+.2f}" if pd.notna(selected["delta_matchup"]) else "NA")
+
     st.markdown("### Impacto por categoria")
     st.dataframe(impact_df, use_container_width=True)
-    st.plotly_chart(px.bar(impact_df, x="Categoria", y="Delta", color="Delta", title="Impacto total da sugestão"), use_container_width=True)
+    st.plotly_chart(
+        px.bar(impact_df, x="Categoria", y="Delta", color="Delta", title="Impacto total da sugestão"),
+        use_container_width=True
+    )
+
     c_left, c_right = st.columns(2)
     with c_left:
         st.markdown("### Pacote saindo")
-        st.dataframe(out_rows[[c for c in ["player_name", "position", "fantasy_value", "tier_valor", "tiervalor"] + STAT_COLS if c in out_rows.columns]], use_container_width=True)
+        st.dataframe(
+            out_rows[[c for c in ["player_name", "position", "fantasy_value", "tier_valor", "tiervalor"] + STAT_COLS if c in out_rows.columns]],
+            use_container_width=True
+        )
     with c_right:
         st.markdown("### Pacote entrando")
-        st.dataframe(in_rows[[c for c in ["player_name", "position", "fantasy_value", "tier_valor", "tiervalor"] + STAT_COLS if c in in_rows.columns]], use_container_width=True)
+        st.dataframe(
+            in_rows[[c for c in ["player_name", "position", "fantasy_value", "tier_valor", "tiervalor"] + STAT_COLS if c in in_rows.columns]],
+            use_container_width=True
+        )

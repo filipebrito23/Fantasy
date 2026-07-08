@@ -1,8 +1,8 @@
 import streamlit as st
 
-from db_v5 import init_db_v5, healthcheck_db_v5, is_postgres_v5
-from auth_v5 import authenticate_user_v5, change_password_v5
-from auction_v5 import close_expired_bids_v5
+from app_lib.db_v5 import init_db_v5, healthcheck_db_v5, is_postgres_v5
+from app_lib.auth_v5 import authenticate_user_v5, change_password_v5
+from app_lib.auction_v5 import close_expired_bids_v5
 
 
 st.set_page_config(page_title="Fantasy NBA System", layout="wide")
@@ -74,12 +74,11 @@ def render_force_password_change_v5(user):
 
     st.stop()
 
-
 ok_startup, startup_error = startup_v5()
 if not ok_startup:
     st.error(f"Erro ao inicializar aplicação: {startup_error}")
     st.stop()
-
+    
 init_session_v5()
 
 st.sidebar.caption(f"Ambiente: {get_environment_label_v5()}")
