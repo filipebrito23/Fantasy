@@ -40,21 +40,24 @@ def load_data():
 
 
 def compute_fantasy_value(df):
-    if df.empty:
-        return df
-    df = df.copy()
-    for c in STAT_COLS:
-        if c not in df.columns:
-            df[c] = np.nan
+    cols = ["pts", "trb", "ast", "stl", "blk", "tov"]
+
+    for col in cols:
+        if col not in df.columns:
+            df[col] = 0
+
+    for col in cols:
+        df[col] = pd.to_numeric(df[col], errors="coerce").fillna(0)
+
     df["fantasy_value"] = (
-        df["pts"].fillna(0)
-        + df["trb"].fillna(0)
-        + df["ast"].fillna(0)
-        + df["stl"].fillna(0) * 1.5
-        + df["blk"].fillna(0) * 1.5
-        + df["three_p"].fillna(0)
-        - df["tov"].fillna(0)
+        df["pts"]
+        + df["trb"]
+        + df["ast"]
+        + df["stl"]
+        + df["blk"]
+        - df["tov"]
     )
+
     return df
 
 
