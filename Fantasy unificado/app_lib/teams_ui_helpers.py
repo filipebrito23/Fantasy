@@ -92,7 +92,7 @@ def get_roster_column_order(df: pd.DataFrame, visible_seasons: list[str]) -> lis
 def get_roster_column_config(visible_seasons: list[str]) -> dict:
     config = {
         "Ordem": st.column_config.NumberColumn("Ordem", width="small", format="%d"),
-        "Jogador": st.column_config.TextColumn("Jogador", width="large"),
+        "Jogador": st.column_config.TextColumn("Jogador", width="small"),
         "Posição": st.column_config.TextColumn("Posição", width="small"),
     }
 
