@@ -110,7 +110,7 @@ def get_picks_column_order(df: pd.DataFrame) -> list[str]:
 
 def get_picks_column_config() -> dict:
     return {
-        "Pick": st.column_config.TextColumn("Pick", width="medium"),
+        "Pick": st.column_config.TextColumn("Pick", width="small"),
         "Ano": st.column_config.NumberColumn("Ano", width="small", format="%d"),
         "Round": st.column_config.NumberColumn("Round", width="small", format="%d"),
         "Time original": st.column_config.TextColumn("Time original", width="medium"),
