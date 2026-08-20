@@ -47,13 +47,14 @@ def render_main_tab(page_context: dict) -> None:
     visible_seasons = page_context["visible_seasons"]
     main_positions_text = page_context["main_positions_text"]
 
-    c1, c2, c3, c4 = st.columns(4)
+    c1, c2, c3, c4,c5 = st.columns(5)
     if not main_totals.empty:
         current_main = main_totals.iloc[0].to_dict()
         c1.metric("Jogadores", len(main_roster))
         c2.metric("Salários", currency(current_main.get("Salários", 0.0)))
         c3.metric("Multas", currency(current_main.get("Multas", 0.0)))
-        c4.metric("Cap restante", currency(current_main.get("Cap restante", 0.0)))
+        c4.metric("Disponível", currency(current_main.get("Disponível", 0.0)))
+        c5.metric("Cap restante", currency(current_main.get("Cap restante", 0.0)))
 
     st.caption(f"Posições: {main_positions_text}")
 
@@ -67,7 +68,7 @@ def render_main_tab(page_context: dict) -> None:
 
     with st.expander("Totalizadores do elenco principal", expanded=False):
         main_totals_display = main_totals.copy()
-        for col in ["Salários", "Multas", "Cap restante"]:
+        for col in ["Salários", "Multas", "Disponível", "Cap restante"]:
             if col in main_totals_display.columns:
                 main_totals_display[col] = main_totals_display[col].apply(currency)
         st.dataframe(main_totals_display, use_container_width=True, hide_index=True)
@@ -99,7 +100,7 @@ def render_dev_tab(page_context: dict) -> None:
 
     with st.expander("Totalizadores de desenvolvimento", expanded=False):
         dev_totals_display = dev_totals.copy()
-        for col in ["Salários", "Cap restante"]:
+        for col in ["Salários", "Multas","Cap restante"]:
             if col in dev_totals_display.columns:
                 dev_totals_display[col] = dev_totals_display[col].apply(currency)
         st.dataframe(dev_totals_display, use_container_width=True, hide_index=True)

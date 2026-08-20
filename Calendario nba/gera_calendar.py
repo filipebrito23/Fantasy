@@ -1,33 +1,30 @@
-from nba_api.stats.endpoints import leaguegamefinder
+from nba_api.stats.endpoints import scheduleleaguev2
 import pandas as pd
 
 season = "2026-27"
 
-finder = leaguegamefinder.LeagueGameFinder(season_nullable=season)
-df = finder.get_data_frames()[0]
+schedule = scheduleleaguev2.ScheduleLeagueV2(league_id="00", season=season)
+df = schedule.get_data_frames()[0]
 
-# leaguegamefinder retorna uma linha por time/jogo
-base = df[["GAME_ID", "GAME_DATE", "MATCHUP", "TEAM_ABBREVIATION", "TEAM_NAME"]].copy()
+jogos = df[[
+    "gameId",
+    "gameDateEst",
+    "awayTeam_teamTricode",
+    "awayTeam_teamName",
+    "homeTeam_teamTricode",
+    "homeTeam_teamName",
+]].copy()
 
-home = base[base["MATCHUP"].str.contains("vs\\.", na=False)].copy()
-away = base[base["MATCHUP"].str.contains("@", na=False)].copy()
-
-home = home.rename(columns={
-    "TEAM_ABBREVIATION": "HOME_TEAM_ABBR",
-    "TEAM_NAME": "HOME_TEAM_NAME",
+jogos = jogos.rename(columns={
+    "gameId": "GAME_ID",
+    "gameDateEst": "GAME_DATE",
+    "awayTeam_teamTricode": "AWAY_TEAM_ABBR",
+    "awayTeam_teamName": "AWAY_TEAM_NAME",
+    "homeTeam_teamTricode": "HOME_TEAM_ABBR",
+    "homeTeam_teamName": "HOME_TEAM_NAME",
 })
 
-away = away.rename(columns={
-    "TEAM_ABBREVIATION": "AWAY_TEAM_ABBR",
-    "TEAM_NAME": "AWAY_TEAM_NAME",
-})
-
-jogos = pd.merge(
-    home[["GAME_ID", "GAME_DATE", "HOME_TEAM_ABBR", "HOME_TEAM_NAME"]],
-    away[["GAME_ID", "GAME_DATE", "AWAY_TEAM_ABBR", "AWAY_TEAM_NAME"]],
-    on=["GAME_ID", "GAME_DATE"],
-    how="outer"
-)
+jogos["SEASON"] = season
 
 jogos = (
     jogos
@@ -36,7 +33,6 @@ jogos = (
     .reset_index(drop=True)
 )
 
-jogos["SEASON"] = season
 jogos = jogos[[
     "SEASON",
     "GAME_DATE",
@@ -47,5 +43,5 @@ jogos = jogos[[
     "HOME_TEAM_NAME",
 ]]
 
-jogos.to_csv("nba_2026_27_jogos_gameid.csv", index=False, encoding="utf-8-sig")
-print(f"Arquivo gerado com {len(jogos)} jogos.")
+jogos.to_csv("nba_2026_27_calendario_completo.csv", index=False, encoding="utf-8-sig")
+print(f"Calendário exportado com {len(jogos)} jogos.")
