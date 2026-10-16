@@ -1,22 +1,45 @@
 import pandas as pd
-from app_lib.data_loader import SEASONS, FINE_COLS
-
-SEASON_LABELS = {
-    "26_27": "2026-27",
-    "27_28": "2027-28",
-    "28_29": "2028-29",
-    "29_30": "2029-30",
-}
-
+from app_lib.season_config import (
+    ACTIVE_SEASON,
+    SEASONS,
+    SEASON_LABELS,
+)
+from app_lib.data_loader import FINE_COLS
 
 def get_team_options(teams: pd.DataFrame) -> pd.DataFrame:
     cols = [c for c in ["team_id", "team_name"] if c in teams.columns]
     return teams[cols].drop_duplicates().sort_values("team_name").reset_index(drop=True)
 
 
-def get_visible_seasons(start_season: str) -> list[str]:
-    idx = SEASONS.index(start_season)
-    return SEASONS[idx:]
+def get_visible_seasons(
+    start_season: str,
+) -> list[str]:
+    value = str(start_season or "").strip()
+
+    if value not in SEASONS:
+        season_key_by_label = {
+            str(label): key
+            for key, label in SEASON_LABELS.items()
+        }
+
+        if value in season_key_by_label:
+            value = season_key_by_label[value]
+
+    if value not in SEASONS:
+        value = ACTIVE_SEASON
+
+    if value not in SEASONS:
+        raise ValueError(
+            "Temporada inválida: "
+            f"{start_season}. "
+            f"Esperado um destes valores: {SEASONS}"
+        )
+
+    idx = SEASONS.index(value)
+
+    return SEASONS[
+        idx:idx + 4
+    ]
 
 
 def _player_lookup(players_df: pd.DataFrame) -> pd.DataFrame:

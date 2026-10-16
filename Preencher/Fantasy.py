@@ -11,7 +11,7 @@ import streamlit as st
 from google.oauth2.service_account import Credentials
 from nba_api.stats.endpoints import boxscoretraditionalv3
 
-SPREADSHEET_ID = "17H6QAxOUbGdGnFk39oSecTgNeuI_pYYu1MMI1ubQ9PI"
+SPREADSHEET_ID = "1PKz9jPsnkaemsrcfa4MAVxdS2FSvLZy3C-KhyeQkM0U"
 SERVICE_ACCOUNT_FILE = Path(__file__).resolve().parent / "service_account.json"
 CACHE_FILE = Path(__file__).resolve().parent / "nba_boxscore_cache.json"
 
@@ -115,6 +115,12 @@ def converter_valor_planilha(valor):
 
 
 def buscar_stats_com_cache(game_id: str, player_name: str) -> tuple[dict, str]:
+    game_id = str(game_id).strip()
+
+    if not re.fullmatch(r"\d{10}", game_id):
+        log(f"GameID inválido ou mal formatado: {game_id!r}")
+        return stats_vazias(), "invalid"
+
     if game_id in CACHE and "stats" in CACHE[game_id]:
         raw_stats = CACHE[game_id]["stats"]
         if isinstance(raw_stats, list) and all(isinstance(r, dict) for r in raw_stats):
@@ -131,21 +137,30 @@ def buscar_stats_com_cache(game_id: str, player_name: str) -> tuple[dict, str]:
 
     if df_data is None:
         log(f"CACHE MISS: {game_id}; buscando via NBA API...")
-        bx = boxscoretraditionalv3.BoxScoreTraditionalV3(
-            game_id=game_id,
-            start_period=0,
-            end_period=14,
-            start_range=0,
-            end_range=2147483647,
-            range_type=0,
-            timeout=20,
-        )
-        df = bx.get_data_frames()[0]
-        df_data = df.to_dict("records")
 
-        if isinstance(df_data, list) and all(isinstance(r, dict) for r in df_data):
-            CACHE[game_id] = {"stats": df_data, "ts": datetime.now().isoformat()}
-            cache_save(CACHE)
+        try:
+            bx = boxscoretraditionalv3.BoxScoreTraditionalV3(
+                game_id=game_id,
+                start_period=0,
+                end_period=14,
+                start_range=0,
+                end_range=2147483647,
+                range_type=0,
+                timeout=20,
+            )
+            df = bx.get_data_frames()[0]
+            df_data = df.to_dict("records")
+
+            if isinstance(df_data, list) and all(isinstance(r, dict) for r in df_data):
+                CACHE[game_id] = {
+                    "stats": df_data,
+                    "ts": datetime.now().isoformat()
+                }
+                cache_save(CACHE)
+
+        except Exception as exc:
+            log(f"Erro ao buscar boxscore para GameID {game_id}: {exc}")
+            return stats_vazias(), "error"
 
     if not isinstance(df_data, list) or not all(isinstance(r, dict) for r in df_data):
         log(f"Cache/API devolveu formato inválido para {game_id}; pulando.")
@@ -156,9 +171,12 @@ def buscar_stats_com_cache(game_id: str, player_name: str) -> tuple[dict, str]:
     for row in df_data:
         first = str(row.get("firstName", "")).strip()
         last = str(row.get("familyName", "")).strip()
+
         if not first and not last:
             continue
+
         nome_api = normalizar_nome(f"{first} {last}")
+
         if alvo == nome_api:
             return {
                 "Pontos": str(row.get("points", "")),
