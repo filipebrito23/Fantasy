@@ -11,16 +11,22 @@ import streamlit as st
 from google.oauth2.service_account import Credentials
 from nba_api.stats.endpoints import boxscoretraditionalv3
 
-SPREADSHEET_ID = "1PbO2jV6lLXgEH53PqUiZFjxOtayMbdYNTCmisdc7NhM"
+
+SPREADSHEET_ID = "1RRwvkrBm8WkBq9jYe1RkUfyCKkTkMa_Eps7NpdtmKzc"
 SERVICE_ACCOUNT_FILE = Path(__file__).resolve().parent / "service_account.json"
 CACHE_FILE = Path(__file__).resolve().parent / "nba_boxscore_cache.json"
+
 
 SCOPES = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive",
 ]
 
+
 COLUNAS_STATS = ["Pontos", "Rebotes", "Assistências", "Roubos", "Tocos", "Bolas de 3", "Turnovers"]
+
+MAX_TENTATIVAS_ESCRITA = 5
+ESPERA_INICIAL_QUOTA = 65
 
 
 def log(msg):
@@ -112,6 +118,36 @@ def converter_valor_planilha(valor):
     if re.fullmatch(r"-?\d+\.\d+", valor_str):
         return float(valor_str)
     return valor_str
+
+
+def eh_erro_quota(exc):
+    texto = str(exc)
+    return "429" in texto or "Quota exceeded" in texto or "RESOURCE_EXHAUSTED" in texto
+
+
+def escrever_com_retry(ws, updates, contexto=""):
+    for tentativa in range(1, MAX_TENTATIVAS_ESCRITA + 1):
+        try:
+            ws.batch_update(updates)
+            log(f"{contexto} Escrita concluída.")
+            return True
+
+        except Exception as exc:
+            if eh_erro_quota(exc):
+                espera = ESPERA_INICIAL_QUOTA * tentativa
+                log(
+                    f"{contexto} Quota excedida (429). "
+                    f"Tentativa {tentativa}/{MAX_TENTATIVAS_ESCRITA}. "
+                    f"Aguardando {espera}s antes de tentar novamente..."
+                )
+                time.sleep(espera)
+                continue
+
+            log(f"{contexto} Erro inesperado ao escrever: {exc}")
+            return False
+
+    log(f"{contexto} Não foi possível escrever após {MAX_TENTATIVAS_ESCRITA} tentativas.")
+    return False
 
 
 def buscar_stats_com_cache(game_id: str, player_name: str) -> tuple[dict, str]:
@@ -220,9 +256,14 @@ def processar_aba(nome_aba, somente_vazias=True, callback=None):
 
     header = all_values[header_row_idx]
     rows = all_values[header_row_idx + 1:]
+
     if rows:
         max_cols = len(header)
-        rows = [row[:max_cols] + [""] * max(0, max_cols - len(row[:max_cols])) for row in rows]
+        rows = [
+            row[:max_cols] + [""] * max(0, max_cols - len(row[:max_cols]))
+            for row in rows
+        ]
+
     df = pd.DataFrame(rows, columns=header)
 
     idx_stats = {}
@@ -257,8 +298,17 @@ def processar_aba(nome_aba, somente_vazias=True, callback=None):
         jogador = str(row.get("Jogadores", "")).strip()
         game_id_cell = str(row.get("GameID", "")).strip()
 
-        valores_linha = [str(v).strip() for v in all_values[linha_planilha - 1]] if linha_planilha - 1 < len(all_values) else []
-        linha_decorativa = bool(valores_linha) and not game_id_cell and sum(1 for v in valores_linha if v) <= 2
+        valores_linha = (
+            [str(v).strip() for v in all_values[linha_planilha - 1]]
+            if linha_planilha - 1 < len(all_values)
+            else []
+        )
+
+        linha_decorativa = (
+            bool(valores_linha)
+            and not game_id_cell
+            and sum(1 for v in valores_linha if v) <= 2
+        )
 
         if linha_decorativa:
             linhas_puladas += 1
@@ -309,6 +359,30 @@ def processar_aba(nome_aba, somente_vazias=True, callback=None):
 
         stats, cache_status = buscar_stats_com_cache(game_id_cell, jogador)
 
+        if cache_status in ("error", "invalid"):
+            log(
+                f"[{nome_aba}] Linha {linha_planilha}: "
+                f"não escrevendo porque houve erro ao buscar GameID {game_id_cell}."
+            )
+
+            if callback:
+                callback({
+                    "evento": "linha_erro",
+                    "aba": nome_aba,
+                    "linha": linha_planilha,
+                    "jogador": jogador,
+                    "game_id": game_id_cell,
+                    "cache_status": cache_status,
+                    "linhas_processadas": linhas_processadas,
+                    "linhas_total": linhas_total,
+                    "linhas_preenchidas": linhas_preenchidas,
+                    "linhas_puladas": linhas_puladas,
+                    "cache_hits": cache_hits,
+                    "cache_misses": cache_misses
+                })
+
+            continue
+
         if cache_status == "hit":
             cache_hits += 1
         else:
@@ -318,16 +392,20 @@ def processar_aba(nome_aba, somente_vazias=True, callback=None):
         for stat_col in COLUNAS_STATS:
             if idx_stats.get(stat_col) is None:
                 continue
+
             val = converter_valor_planilha(stats.get(stat_col, ""))
             cell_a1 = f"{a1_col(idx_stats[stat_col])}{linha_planilha}"
-            updates.append({"range": cell_a1, "values": [[val]]})
+            updates.append({
+                "range": cell_a1,
+                "values": [[val]]
+            })
 
         if updates:
-            try:
-                ws.batch_update(updates)
-                log(f"[{nome_aba}] Linha {linha_planilha}: escrita concluída.")
-            except Exception as exc:
-                log(f"[{nome_aba}] Erro em batch_update na linha {linha_planilha}: {exc}")
+            escrever_com_retry(
+                ws,
+                updates,
+                contexto=f"[{nome_aba}] Linha {linha_planilha}:"
+            )
 
         if any(str(v).strip() for v in stats.values()):
             linhas_preenchidas += 1
@@ -350,12 +428,29 @@ def processar_aba(nome_aba, somente_vazias=True, callback=None):
 
         time.sleep(0.20)
 
+    return {
+        "aba": nome_aba,
+        "linhas_total": linhas_total,
+        "linhas_processadas": linhas_processadas,
+        "linhas_preenchidas": linhas_preenchidas,
+        "linhas_puladas": linhas_puladas,
+        "cache_hits": cache_hits,
+        "cache_misses": cache_misses,
+    }
+
+
 def processar_todas_as_abas(somente_vazias=True, callback=None):
     abas = listar_abas()
     resultados = []
+
     for nome_aba in abas:
-        resultado = processar_aba(nome_aba, somente_vazias=somente_vazias, callback=callback)
+        resultado = processar_aba(
+            nome_aba,
+            somente_vazias=somente_vazias,
+            callback=callback
+        )
         resultados.append(resultado)
+
     return resultados
 
 
