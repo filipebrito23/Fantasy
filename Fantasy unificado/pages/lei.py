@@ -655,7 +655,7 @@ def main():
         render_password_change(user)
         st.stop()
 
-    st.title("Leilão NBA Fantasy v5")
+    st.title("Leilão da Free Agency - NBA Keeper)
     main_tab, bid_tab, cap_tab, admin_tab, profile_tab = st.tabs(["Propostas", "Nova proposta", "Cap", "Admin", "Perfil"])
 
     with main_tab:
