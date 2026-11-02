@@ -11,3 +11,9 @@ Arquivos incluídos:
    `pip install -r requirements.txt`
 4. Execute:
    `Fantasy.py` ou `app.py`, se quiser ver rodando para todas as abas
+
+
+
+Uso
+
+roda Fantasy.py com o link do jogo correto
