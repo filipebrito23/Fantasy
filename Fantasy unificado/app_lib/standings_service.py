@@ -71,55 +71,129 @@ def head_to_head_record(games_df: pd.DataFrame, team_a: int, team_b: int) -> tup
     return wins_a, wins_b
 
 
-def apply_head_to_head_tiebreak(standings: pd.DataFrame, games_df: pd.DataFrame) -> pd.DataFrame:
+def apply_head_to_head_tiebreak(
+    standings: pd.DataFrame,
+    games_df: pd.DataFrame,
+) -> pd.DataFrame:
     if standings.empty:
         return standings
+
     standings = standings.copy()
+
     if "Time" not in standings.columns and "team_name" in standings.columns:
-        standings = standings.rename(columns={"team_name": "Time"})
+        standings = standings.rename(
+            columns={"team_name": "Time"}
+        )
+
     if "Time" not in standings.columns:
         standings["Time"] = standings["team_id"].astype(str)
-    standings = standings.sort_values(["Vitórias", "Saldo", "Aproveitamento", "Time"], ascending=[False, False, False, True]).reset_index(drop=True)
+
+    if "_pct" not in standings.columns:
+        if "Aproveitamento" in standings.columns:
+            standings["_pct"] = pd.to_numeric(
+                standings["Aproveitamento"]
+                .astype(str)
+                .str.replace("%", "", regex=False)
+                .str.replace(",", ".", regex=False),
+                errors="coerce",
+            ).fillna(0.0)
+        else:
+            games = standings["Jogos"].where(
+                standings["Jogos"] > 0,
+                1,
+            )
+            standings["_pct"] = (
+                standings["Vitórias"] / games * 100
+            ).round(1)
+
+    standings = standings.sort_values(
+        ["Vitórias", "Saldo", "_pct", "Time"],
+        ascending=[False, False, False, True],
+    ).reset_index(drop=True)
+
     ordered_rows = []
     i = 0
+
     while i < len(standings):
         current = standings.iloc[i]
         tied_group = [current]
         j = i + 1
+
         while j < len(standings):
             other = standings.iloc[j]
-            if other["Vitórias"] == current["Vitórias"] and other["Saldo"] == current["Saldo"] and other["Aproveitamento"] == current["Aproveitamento"]:
+
+            if (
+                other["Vitórias"] == current["Vitórias"]
+                and other["Saldo"] == current["Saldo"]
+                and other["_pct"] == current["_pct"]
+            ):
                 tied_group.append(other)
                 j += 1
             else:
                 break
+
         if len(tied_group) == 2:
             a, b = tied_group
-            wins_a, wins_b = head_to_head_record(games_df, int(a["team_id"]), int(b["team_id"]))
+            wins_a, wins_b = head_to_head_record(
+                games_df,
+                int(a["team_id"]),
+                int(b["team_id"]),
+            )
+
             if wins_b > wins_a:
                 tied_group = [b, a]
+
         elif len(tied_group) > 2:
-            tied_ids = {int(x["team_id"]) for x in tied_group}
+            tied_ids = {
+                int(x["team_id"])
+                for x in tied_group
+            }
+
             mini = []
+
             for row in tied_group:
                 team_id = int(row["team_id"])
                 wins = 0
                 losses = 0
+
                 for opp_id in tied_ids:
                     if opp_id == team_id:
                         continue
-                    wa, wb = head_to_head_record(games_df, team_id, opp_id)
+
+                    wa, wb = head_to_head_record(
+                        games_df,
+                        team_id,
+                        opp_id,
+                    )
+
                     wins += wa
                     losses += wb
+
                 mini.append((row, wins, losses))
-            tied_group = [x[0] for x in sorted(mini, key=lambda t: (-t[1], t[2], str(t[0].get("Time", ""))))]
+
+            tied_group = [
+                x[0]
+                for x in sorted(
+                    mini,
+                    key=lambda t: (
+                        -t[1],
+                        t[2],
+                        str(t[0].get("Time", "")),
+                    ),
+                )
+            ]
+
         ordered_rows.extend(tied_group)
         i = j
+
     out = pd.DataFrame(ordered_rows).reset_index(drop=True)
+
     if "Time" not in out.columns and "team_name" in out.columns:
         out = out.rename(columns={"team_name": "Time"})
+
     if "Time" not in out.columns:
         out["Time"] = out["team_id"].astype(str)
+
     return out
 
 
@@ -234,7 +308,7 @@ def build_standings(
     )
 
     standings["_pct"] = (
-        standings["Vitórias"] / total_games * 100
+        standings["Vitórias"]*1000 / (2 * total_games)
     ).round(1)
 
     standings = apply_head_to_head_tiebreak(
