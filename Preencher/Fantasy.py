@@ -12,7 +12,7 @@ from google.oauth2.service_account import Credentials
 from nba_api.stats.endpoints import boxscoretraditionalv3
 
 
-SPREADSHEET_ID = "1JLcZ-ulfMhjZ2dxuV49HGsCkSK77LoijaPvdFldI2Fw"
+SPREADSHEET_ID = "1O-DBGgH97ML9R0VZsJ-g1n8InDWd_s6e36CosxYQX1M"
 SERVICE_ACCOUNT_FILE = Path(__file__).resolve().parent / "service_account.json"
 CACHE_FILE = Path(__file__).resolve().parent / "nba_boxscore_cache.json"
 

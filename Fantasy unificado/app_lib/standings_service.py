@@ -145,7 +145,7 @@ def build_standings(games_df: pd.DataFrame, teams_df: pd.DataFrame) -> pd.DataFr
     for col in ["Jogos", "Vitórias", "Derrotas", "Empates", "Pontos a favor", "Pontos contra", "Saldo"]:
         standings[col] = standings[col].fillna(0).astype(int)
     total_games = standings["Jogos"].where(standings["Jogos"] > 0, 1)
-    pct = ((standings["Vitórias"] + 0.5 * standings["Empates"]) / (2 * total_games) * 100).round(1)
+    pct = ((standings["Vitórias"] + 0.5 * standings["Empates"])/ total_games* 100).round(1)
     standings["Aproveitamento"] = pct.map(lambda x: f"{x:.1f}%")
     standings = apply_head_to_head_tiebreak(standings, games_df).reset_index(drop=True)
     standings["Posição"] = standings.index + 1
