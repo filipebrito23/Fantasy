@@ -123,33 +123,132 @@ def apply_head_to_head_tiebreak(standings: pd.DataFrame, games_df: pd.DataFrame)
     return out
 
 
-def build_standings(games_df: pd.DataFrame, teams_df: pd.DataFrame) -> pd.DataFrame:
-    teams_lookup = build_team_lookup(teams_df).rename(columns={"team_name": "Time"}).copy()
+def build_standings(
+    games_df: pd.DataFrame,
+    teams_df: pd.DataFrame,
+) -> pd.DataFrame:
+    teams_lookup = (
+        build_team_lookup(teams_df)
+        .rename(columns={"team_name": "Time"})
+        .copy()
+    )
+
+    output_cols = [
+        "Posição",
+        "Time",
+        "Jogos",
+        "Vitórias",
+        "Derrotas",
+        "Pontos a favor",
+        "Pontos contra",
+        "Saldo",
+        "Aproveitamento",
+    ]
+
     if games_df.empty:
         out = teams_lookup.copy()
-        out[["Jogos", "Vitórias", "Derrotas", "Empates", "Saldo", "Pontos a favor", "Pontos contra"]] = 0
-        out["Aproveitamento"] = "0%"
+        out[
+            [
+                "Jogos",
+                "Vitórias",
+                "Derrotas",
+                "Saldo",
+                "Pontos a favor",
+                "Pontos contra",
+            ]
+        ] = 0
+        out["Aproveitamento"] = "0.0%"
         out["Posição"] = range(1, len(out) + 1)
-        return out[["Posição", "Time", "Jogos", "Vitórias", "Derrotas", "Empates", "Saldo", "Pontos a favor", "Pontos contra", "Aproveitamento"]]
+        return out[output_cols]
+
     long_df = build_games_long(games_df)
-    agg = long_df.groupby(["team_id", "Time"], as_index=False).agg({"win": "sum", "loss": "sum", "tie": "sum", "pts_for": "sum", "pts_against": "sum", "points_diff": "sum", "id_jogo": pd.Series.nunique}).rename(columns={"win": "Vitórias", "loss": "Derrotas", "tie": "Empates", "pts_for": "Pontos a favor", "pts_against": "Pontos contra", "points_diff": "Saldo", "id_jogo": "Jogos"})
-    standings = teams_lookup.merge(agg, on="team_id", how="left")
+
+    agg = (
+        long_df.groupby(
+            ["team_id", "Time"],
+            as_index=False,
+        )
+        .agg(
+            {
+                "win": "sum",
+                "loss": "sum",
+                "pts_for": "sum",
+                "pts_against": "sum",
+                "points_diff": "sum",
+                "id_jogo": pd.Series.nunique,
+            }
+        )
+        .rename(
+            columns={
+                "win": "Vitórias",
+                "loss": "Derrotas",
+                "pts_for": "Pontos a favor",
+                "pts_against": "Pontos contra",
+                "points_diff": "Saldo",
+                "id_jogo": "Jogos",
+            }
+        )
+    )
+
+    standings = teams_lookup.merge(
+        agg,
+        on="team_id",
+        how="left",
+    )
+
     if "Time_x" in standings.columns or "Time_y" in standings.columns:
-        tx = standings.pop("Time_x") if "Time_x" in standings.columns else None
-        ty = standings.pop("Time_y") if "Time_y" in standings.columns else None
+        tx = (
+            standings.pop("Time_x")
+            if "Time_x" in standings.columns
+            else None
+        )
+        ty = (
+            standings.pop("Time_y")
+            if "Time_y" in standings.columns
+            else None
+        )
         standings["Time"] = tx if tx is not None else ty
         if tx is not None and ty is not None:
             standings["Time"] = tx.combine_first(ty)
+
     if "Time" not in standings.columns:
         standings["Time"] = standings["team_id"].astype(str)
-    for col in ["Jogos", "Vitórias", "Derrotas", "Empates", "Pontos a favor", "Pontos contra", "Saldo"]:
-        standings[col] = standings[col].fillna(0).astype(int)
-    total_games = standings["Jogos"].where(standings["Jogos"] > 0, 1)
-    pct = ((standings["Vitórias"] + 0.5 * standings["Empates"])/ total_games* 100).round(1)
-    standings["Aproveitamento"] = pct.map(lambda x: f"{x:.1f}%")
-    standings = apply_head_to_head_tiebreak(standings, games_df).reset_index(drop=True)
+
+    for col in [
+        "Jogos",
+        "Vitórias",
+        "Derrotas",
+        "Pontos a favor",
+        "Pontos contra",
+        "Saldo",
+    ]:
+        standings[col] = (
+            standings[col]
+            .fillna(0)
+            .astype(int)
+        )
+
+    total_games = standings["Jogos"].where(
+        standings["Jogos"] > 0,
+        1,
+    )
+
+    standings["_pct"] = (
+        standings["Vitórias"] / total_games * 100
+    ).round(1)
+
+    standings = apply_head_to_head_tiebreak(
+        standings,
+        games_df,
+    ).reset_index(drop=True)
+
     standings["Posição"] = standings.index + 1
-    return standings[["Posição", "Time", "Vitórias", "Derrotas",  "Pontos a favor", "Pontos contra", "Saldo", "Aproveitamento"]]
+
+    standings["Aproveitamento"] = standings["_pct"].map(
+        lambda value: f"{value:.1f}%"
+    )
+
+    return standings[output_cols]
 
 
 def build_head_to_head_matrix(games_df: pd.DataFrame, teams_df: pd.DataFrame) -> pd.DataFrame:
