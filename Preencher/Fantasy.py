@@ -12,7 +12,7 @@ from google.oauth2.service_account import Credentials
 from nba_api.stats.endpoints import boxscoretraditionalv3
 
 
-SPREADSHEET_ID = "1yrxI0tprMeHsfenGTb4k634T8J3hqh9mM6X3BS_Jp1w"
+#SPREADSHEET_ID = "1VOT_9qme4yOtUn7gTMuXD5gUZIyFteDE44ro2pHLVFg"
 SERVICE_ACCOUNT_FILE = Path(__file__).resolve().parent / "service_account.json"
 CACHE_FILE = Path(__file__).resolve().parent / "nba_boxscore_cache.json"
 
@@ -71,17 +71,17 @@ def obter_credenciais_google():
     )
 
 
-def conectar_gsheets():
+def conectar_gsheets(spreadsheet_id):
     log("Conectando ao Google Sheets...")
     creds = obter_credenciais_google()
     client = gspread.authorize(creds)
-    spreadsheet = client.open_by_key(SPREADSHEET_ID)
+    spreadsheet = client.open_by_key(spreadsheet_id)
     log(f"Planilha: {spreadsheet.title}")
     return spreadsheet
 
 
-def listar_abas():
-    spreadsheet = conectar_gsheets()
+def listar_abas(spreadsheet_id):
+    spreadsheet = conectar_gsheets(spreadsheet_id)
     return [ws.title for ws in spreadsheet.worksheets()]
 
 
@@ -124,6 +124,18 @@ def eh_erro_quota(exc):
     texto = str(exc)
     return "429" in texto or "Quota exceeded" in texto or "RESOURCE_EXHAUSTED" in texto
 
+def extrair_spreadsheet_id(link):
+    import re
+
+    match = re.search(r"/d/([a-zA-Z0-9-_]+)", link)
+    if match:
+        return match.group(1)
+
+    match = re.search(r"key=([a-zA-Z0-9-_]+)", link)
+    if match:
+        return match.group(1)
+
+    raise ValueError("Não foi possível extrair o Spreadsheet ID do link.")
 
 def escrever_com_retry(ws, updates, contexto=""):
     for tentativa in range(1, MAX_TENTATIVAS_ESCRITA + 1):
@@ -228,8 +240,8 @@ def buscar_stats_com_cache(game_id: str, player_name: str) -> tuple[dict, str]:
     return stats_vazias(), cache_status
 
 
-def processar_aba(nome_aba, somente_vazias=True, callback=None):
-    spreadsheet = conectar_gsheets()
+def processar_aba(spreadsheet_id, nome_aba, somente_vazias=True, callback=None):
+    spreadsheet = conectar_gsheets(spreadsheet_id)
     ws = spreadsheet.worksheet(nome_aba)
 
     all_values = ws.get_all_values()
@@ -439,12 +451,13 @@ def processar_aba(nome_aba, somente_vazias=True, callback=None):
     }
 
 
-def processar_todas_as_abas(somente_vazias=True, callback=None):
-    abas = listar_abas()
+def processar_todas_as_abas(spreadsheet_id, somente_vazias=True, callback=None):
+    abas = listar_abas(spreadsheet_id)
     resultados = []
 
     for nome_aba in abas:
         resultado = processar_aba(
+            spreadsheet_id,
             nome_aba,
             somente_vazias=somente_vazias,
             callback=callback
@@ -455,4 +468,5 @@ def processar_todas_as_abas(somente_vazias=True, callback=None):
 
 
 if __name__ == "__main__":
-    processar_todas_as_abas()
+    spreadsheet_id = input("Cole o ID ou link da planilha: ").strip()
+    processar_todas_as_abas(spreadsheet_id)

@@ -127,25 +127,57 @@ st.markdown(
 with st.sidebar:
     st.header("Configurações")
 
-    try:
-        abas_disponiveis = backend.listar_abas()
-    except Exception as exc:
-        abas_disponiveis = []
-        st.error(f"Erro ao listar abas: {exc}")
+    link_ou_id = st.text_input(
+        "Cole o link ou ID da planilha",
+        placeholder="https://docs.google.com/spreadsheets/d/...",
+        key="spreadsheet_input"
+    )
+
+    spreadsheet_id = None
+
+    if link_ou_id:
+        try:
+            spreadsheet_id = backend.extrair_spreadsheet_id(link_ou_id)
+        except Exception:
+            spreadsheet_id = link_ou_id.strip()
+
+    abas_disponiveis = []
+
+    if spreadsheet_id:
+        try:
+            abas_disponiveis = backend.listar_abas(spreadsheet_id)
+        except Exception as exc:
+            st.error(f"Erro ao listar abas: {exc}")
+    else:
+        st.info("Cole o link da planilha para carregar as abas.")
 
     modo_execucao = st.radio(
         "Escopo da execução",
         ["Todas as abas", "Apenas uma aba"],
-        index=0
+        index=0,
+        key="modo_execucao"
     )
 
     if modo_execucao == "Apenas uma aba" and abas_disponiveis:
-        aba_escolhida = st.selectbox("Selecione a aba", abas_disponiveis)
+        aba_escolhida = st.selectbox(
+            "Selecione a aba",
+            abas_disponiveis,
+            key="aba_escolhida"
+        )
     else:
         aba_escolhida = None
 
-    somente_vazias = st.checkbox("Pular linhas já preenchidas", value=True)
-    mostrar_logs = st.checkbox("Mostrar logs detalhados", value=True)
+    somente_vazias = st.checkbox(
+        "Pular linhas já preenchidas",
+        value=True,
+        key="somente_vazias"
+    )
+
+    mostrar_logs = st.checkbox(
+        "Mostrar logs detalhados",
+        value=True,
+        key="mostrar_logs"
+    )
 
     st.divider()
     st.subheader("Cache local")
@@ -153,7 +185,10 @@ with st.sidebar:
     st.caption(str(CACHE_FILE))
 
     st.divider()
-    st.markdown("<div class='mini-note'>Fluxo: Google Sheets → NBA API → cache local → escrita na planilha.</div>", unsafe_allow_html=True)
+    st.markdown(
+        "<div class='mini-note'>Fluxo: Google Sheets → NBA API → cache local → escrita na planilha.</div>",
+        unsafe_allow_html=True
+    )
 
 m = st.session_state.metricas
 
@@ -220,7 +255,7 @@ def atualizar_tela():
     progress_aba.progress(pct_aba, text=f"Progresso da aba: {pct_aba}%")
 
     if mostrar_logs:
-        logs_box.text_area("Logs do processamento", "\n".join(st.session_state.logs[-300:]), height=420)
+        logs_box.code("\n".join(st.session_state.logs[-300:]),language=None)
     else:
         logs_box.info("Logs ocultos.")
 
@@ -289,14 +324,15 @@ if executar:
         if modo_execucao == "Apenas uma aba" and aba_escolhida:
             progress_total.progress(10, text=f"Processando aba {aba_escolhida}...")
             resultado = backend.processar_aba(
+                spreadsheet_id,
                 aba_escolhida,
                 somente_vazias=somente_vazias,
                 callback=callback
-            )
+        )
             st.session_state.ultima_execucao = [resultado]
             progress_total.progress(100, text="Execução concluída.")
         else:
-            abas = backend.listar_abas()
+            abas = backend.listar_abas(spreadsheet_id)
             total_abas = len(abas) if abas else 1
             resultados = []
 
@@ -304,6 +340,7 @@ if executar:
                 pct = int(((i - 1) / total_abas) * 100)
                 progress_total.progress(pct, text=f"Processando aba {aba}...")
                 resultado = backend.processar_aba(
+                    spreadsheet_id,
                     aba,
                     somente_vazias=somente_vazias,
                     callback=callback
